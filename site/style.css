@@ -937,6 +937,166 @@ tbody th {
   font-size: 12.5px;
 }
 
+/* Developer Profile Card (Inspired by warriorbiswas.vercel.app) */
+.developer-section {
+  padding: 40px 0 100px;
+}
+.developer-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .developer-card {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    gap: 32px;
+    text-align: center;
+  }
+}
+
+.developer-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.developer-avatar-ring {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, var(--pastel-blue-dark), var(--pastel-lavender-dark), var(--pastel-mint-dark));
+  box-shadow: 0 8px 24px rgba(50, 100, 168, 0.18);
+  margin-bottom: 18px;
+  position: relative;
+}
+.developer-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--pastel-blue-dark);
+  border: 3px solid var(--bg-surface);
+  letter-spacing: -0.02em;
+}
+.status-pill-online {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: var(--pastel-mint);
+  color: var(--pastel-mint-dark);
+  font-size: 12px;
+  font-weight: 650;
+  border: 1px solid rgba(47, 105, 77, 0.2);
+}
+
+.developer-bio-col h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.025em;
+}
+.developer-title-sub {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--pastel-lavender-dark);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+@media (max-width: 860px) {
+  .developer-title-sub {
+    justify-content: center;
+  }
+}
+.developer-story {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+.developer-credentials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.credential-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  font-size: 13px;
+  font-weight: 550;
+  color: var(--text-main);
+}
+.credential-icon {
+  font-size: 16px;
+}
+
+.developer-socials {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+@media (max-width: 860px) {
+  .developer-socials {
+    justify-content: center;
+  }
+}
+.dev-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-sm);
+}
+.dev-link-primary {
+  background: var(--pastel-blue);
+  color: var(--pastel-blue-dark);
+  border: 1px solid rgba(50, 100, 168, 0.2);
+}
+.dev-link-primary:hover {
+  background: #D5E4F8;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.dev-link-secondary {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-card);
+}
+.dev-link-secondary:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 /* FAQ Accordion */
 .faq-section {
   max-width: 760px;
