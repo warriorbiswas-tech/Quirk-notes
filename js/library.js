@@ -17,7 +17,7 @@
     }
 
     build() {
-      const brand = h('div', { class: 'brand' }, h('span', { class: 'brand-mark', html: BRAND_SVG }), h('span', { class: 'brand-name' }, 'Quire'), h('span', { class: 'brand-pro' }, 'Pro'));
+      const brand = h('div', { class: 'brand' }, h('span', { class: 'brand-mark', html: BRAND_SVG }), h('span', { class: 'brand-name' }, 'Quirk'), h('span', { class: 'brand-pro' }, 'Pro'));
       this.navEl = h('nav', { class: 'side-nav', 'aria-label': 'Library sections' });
       this.storageEl = h('div', { class: 'side-storage' });
       const settingsBtn = h('button', { class: 'side-link', onclick: () => this.openSettings() }, Q.icon('sliders'), h('span', null, 'Settings'));
@@ -60,7 +60,7 @@
       if (!Q.store.available) {
         b.hidden = false;
         b.className = 'lib-banner warn';
-        b.append(Q.icon('info'), h('span', null, window.QuireAndroid ? 'Storage isn’t available, so notes will be lost when you close the app.' : 'This browser is blocking storage, so notes will be lost when you close the page. Open Quire in Safari (not a private window) and add it to your Home Screen.'));
+        b.append(Q.icon('info'), h('span', null, window.QuireAndroid ? 'Storage isn’t available, so notes will be lost when you close the app.' : 'This browser is blocking storage, so notes will be lost when you close the page. Open Quirk in Safari (not a private window) and add it to your Home Screen.'));
         return;
       }
       if (U.isIPad() && !U.isStandalone() && !this.app.settings.dismissInstall) {
@@ -68,7 +68,7 @@
         b.className = 'lib-banner';
         b.append(
           Q.icon('download'),
-          h('span', null, 'For full-screen writing and reliable storage, add Quire to your Home Screen: tap Share, then “Add to Home Screen”.'),
+          h('span', null, 'For full-screen writing and reliable storage, add Quirk to your Home Screen: tap Share, then “Add to Home Screen”.'),
           h('button', { class: 'icon-btn sm', 'aria-label': 'Dismiss', onclick: () => { this.app.settings.dismissInstall = true; this.app.saveSettings(); this.renderBanner(); } }, Q.icon('close'))
         );
         return;
@@ -462,12 +462,12 @@
         sec('Appearance', UI.row('Theme', theme)),
         sec('Storage & backup',
           UI.row('Space used', est),
-          UI.row('Storage', h('button', { class: 'btn sm', onclick: async () => { const ok = await Q.store.requestPersist(); persistedTxt.textContent = ok ? 'Protected from automatic clean-up' : 'Safari declined. Adding Quire to the Home Screen protects it.'; } }, 'Protect'), persistedTxt),
+          UI.row('Storage', h('button', { class: 'btn sm', onclick: async () => { const ok = await Q.store.requestPersist(); persistedTxt.textContent = ok ? 'Protected from automatic clean-up' : 'Safari declined. Adding Quirk to the Home Screen protects it.'; } }, 'Protect'), persistedTxt),
           UI.row('Back up everything', h('button', { class: 'btn sm', onclick: () => app.backup() }, 'Create backup'), 'Saves all notebooks, folders and images into one .zip file you can keep in Files or iCloud Drive.'),
-          UI.row('Restore from backup', h('button', { class: 'btn sm', onclick: () => app.restore() }, 'Choose file…'), 'Adds notebooks from a Quire backup. Newer copies replace older ones.')),
+          UI.row('Restore from backup', h('button', { class: 'btn sm', onclick: () => app.restore() }, 'Choose file…'), 'Adds notebooks from a Quirk backup. Newer copies replace older ones.')),
         sec('About',
           h('div', { class: 'about' },
-            h('p', null, h('strong', null, 'Quire Pro'), '. Every feature is unlocked. No account, no ads, and your notes stay on this device.'),
+            h('p', null, h('strong', null, 'Quirk Pro'), '. Every feature is unlocked. No account, no ads, and your notes stay on this device.'),
             h('p', { class: 'set-hint' }, 'Tips: two-finger tap to undo · pinch to zoom · hold at the end of a stroke to snap a shape · tap the selected colour or size again to change it.'))));
       UI.sheet({ title: 'Settings', wide: true, body, className: 'sheet-settings' });
     }
@@ -475,7 +475,7 @@
   }
 
   const BRAND_SVG =
-    '<svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="8" fill="var(--accent)"/><path d="M9 8.5h9.5a4 4 0 0 1 4 4V23.5H13a4 4 0 0 1-4-4z" fill="var(--accent-ink)" opacity=".95"/><path d="M12 13h7.5M12 16.5h7.5M12 20h4.5" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/><path d="M19.6 21.6l4.9-8.6 1.9 1.1-4.9 8.6-2.3 1.2z" fill="var(--brass)"/></svg>';
+    '<svg viewBox="0 0 1024 1024" width="28" height="28" aria-hidden="true"><rect width="1024" height="1024" rx="230" fill="#1E5B4A"/><g transform="translate(512 512) scale(.86) translate(-548 -500)"><ellipse cx="475" cy="448" rx="183" ry="186" fill="none" stroke="#F7F1E3" stroke-width="84"/><path d="M660 268C664 430 650 590 640 742" fill="none" stroke="#F7F1E3" stroke-width="84" stroke-linecap="round"/><path d="M598 738C612 846 760 820 836 690C780 750 720 772 682 738zM806 194Q819 243 868 256Q819 269 806 318Q793 269 744 256Q793 243 806 194z" fill="#E3B04B"/></g></svg>';
   Q.BRAND_SVG = BRAND_SVG;
   Q.Library = Library;
 })((window.Q = window.Q || {}));

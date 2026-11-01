@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="quire_bg">#F3F4F1</color>
-    <color name="quire_icon_bg">#FFFFFF</color>
+    <color name="quire_icon_bg">#1E5B4A</color>
     <style name="QuireTheme" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowBackground">@color/quire_bg</item>
         <item name="android:statusBarColor">@color/quire_bg</item>
