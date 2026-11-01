@@ -1,25 +1,70 @@
-# Quirk Notes
+<p align="center"><img src="site/media/logo.png" width="96" height="96" alt="Quirk Notes logo"></p>
 
-Handwriting notes for iPad and Android.
+<h1 align="center">Quirk Notes</h1>
 
-## Download
+<p align="center"><strong>A free handwriting note-taking app for iPad and Android.</strong></p>
 
-Get both apps from the [latest release](https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest).
+<p align="center">
+  <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/warriorbiswas-tech/Quirk-notes?color=1D5BD8&label=release"></a>
+  <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/warriorbiswas-tech/Quirk-notes/total?color=1D5BD8"></a>
+  <img alt="iPad and Android" src="https://img.shields.io/badge/platforms-iPad%20%7C%20Android%20%7C%20Web-1D5BD8">
+</p>
 
-- **iPad (`Quirk-Notes.ipa`):** for iPadOS 17 or later. It has PencilKit ink, PDF annotation, audio recording with a live transcript, iCloud Drive sync, and AI study tools that use your own free NVIDIA key online and a downloadable on-device model otherwise. It is unsigned, so install it with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io) from a Windows PC or Mac, signing in with your Apple ID. With a free Apple ID it has to be reinstalled every 7 days. [ios/README.md](ios/README.md) has more.
-- **Android (`Quirk-Notes.apk`):** for 64-bit devices on Android 8 or later. Open the file on your device and allow the install when asked. Study with AI from a notebook's menu, using your own free NVIDIA key or an on-device model you can download in Settings. Recording and sync are iPad-only for now.
+Quirk Notes lets you handwrite with a stylus, mark up PDFs and keep everything in tidy digital notebooks. Its AI turns your notes into summaries, flashcards, quizzes and mind maps, using your own free NVIDIA key or a model that runs on your device. It costs nothing, with no subscription, no account and no ads.
 
-## Web version
+<p align="center">
+  <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk"><strong>Download for Android</strong></a> ·
+  <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa"><strong>Download for iPad</strong></a> ·
+  <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/"><strong>Try it in your browser</strong></a> ·
+  <a href="https://warriorbiswas-tech.github.io/Quirk-notes/"><strong>Website</strong></a>
+</p>
 
-The rest of this page is about the installable web version, in this folder, which the Android app is built from. It needs no App Store, Mac or Apple ID. Everything is included: no subscription, no ads, no account, and your notes stay on your device.
+<p align="center"><img src="site/media/demo.gif" width="720" alt="Quirk Notes in use: opening a notebook, handwriting a title, sketching a labelled diagram and highlighting a word"></p>
 
-**Open it:** https://warriorbiswas-tech.github.io/Quirk-notes/
+## Quickstart
 
-Or run it yourself with Docker, then open http://localhost:8080:
+**In a browser, right now:** [open the web version](https://warriorbiswas-tech.github.io/Quirk-notes/app/).
+
+**On Android** (64-bit, Android 8 or later): [download the APK](https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk) on your device, open it and allow the install.
+
+**On iPad** (iPadOS 17 or later): [download the IPA](https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa) on a Windows PC or Mac and install it with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io). It is unsigned, so with a free Apple ID it has to be reinstalled every 7 days.
+
+**With Docker**, then open http://localhost:8080:
 
 ```bash
 docker run -p 8080:80 ghcr.io/warriorbiswas-tech/quirk-notes
 ```
+
+The [guide](https://warriorbiswas-tech.github.io/Quirk-notes/guide.html) covers installing, setting up AI and backups.
+
+## Why Quirk Notes
+
+- **Free, for everything.** Looking for a free alternative to note apps like GoodNotes or Notability? Nothing here is locked behind a subscription.
+- **Ink that feels right.** Fountain pen, ballpoint, brush and pencil, with pressure, tapering and palm rejection.
+- **PDFs you can write on.** Annotate textbooks and worksheets, search their text and export them again.
+- **AI that studies with you.** Chat with your notes, and get summaries, flashcards, quizzes and mind maps.
+- **Your key, or no key.** Bring a free NVIDIA key for large online models, or download a model that runs with no internet.
+- **Your notes stay yours.** They live on your device, and nothing goes to NVIDIA unless you add a key.
+
+| | iPad | Android | Browser |
+| --- | --- | --- | --- |
+| Handwriting and stylus | Yes | Yes | Yes |
+| PDF annotation | Yes | Yes | Yes |
+| AI study tools | Yes | Yes | No |
+| On-device AI (one 1.1 GB download) | Yes | Yes | No |
+| Recording with live transcript | Yes | Not yet | No |
+| Sync | iCloud Drive | Not yet | No |
+
+<p align="center">
+  <img src="site/media/library.png" width="560" alt="The notebook library">
+  <img src="site/media/android-phone.png" width="190" alt="Quirk Notes on an Android phone">
+</p>
+
+## Web version
+
+The rest of this page is about the installable web version, in this folder, which the Android app is built from. It needs no App Store, Mac or Apple ID, and your notes stay on your device.
+
+**Open it:** https://warriorbiswas-tech.github.io/Quirk-notes/app/
 
 ## Install on iPad (A16 or any iPad)
 

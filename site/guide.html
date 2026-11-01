@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quirk Notes guide: install on iPad and Android, set up AI</title>
+  <meta name="description" content="How to install Quirk Notes on Android and iPad, set up AI study tools with a free NVIDIA key or an on-device model, and back up your notes.">
+  <link rel="canonical" href="https://warriorbiswas-tech.github.io/Quirk-notes/guide.html">
+  <meta name="theme-color" content="#1D5BD8">
+  <link rel="icon" type="image/png" href="media/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="./"><img src="media/logo.png" alt="" width="34" height="34"> Quirk Notes</a>
+    <nav>
+      <a href="guide.html">Guide</a>
+      <a href="https://github.com/warriorbiswas-tech/Quirk-notes">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="guide">
+    <h1>Guide</h1>
+
+    <section id="android">
+      <h2>Install on Android</h2>
+      <p>You need a 64-bit device on Android 8 or later.</p>
+      <ol>
+        <li><a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">Download Quirk-Notes.apk</a> on your device.</li>
+        <li>Open the file. If Android asks, allow your browser to install apps.</li>
+        <li>Open <strong>Quirk Notes</strong> from your home screen.</li>
+      </ol>
+      <p>To update, install the newer file over the old one. Your notes stay.</p>
+    </section>
+
+    <section id="ipad">
+      <h2>Install on iPad</h2>
+      <p>You need iPadOS 17 or later, and a Windows PC or Mac for the install.</p>
+      <ol>
+        <li><a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">Download Quirk-Notes.ipa</a> on your computer.</li>
+        <li>Install <a href="https://sideloadly.io">Sideloadly</a> or <a href="https://altstore.io">AltStore</a>, and connect your iPad.</li>
+        <li>Open the file with it and sign in with your Apple ID.</li>
+      </ol>
+      <p>With a free Apple ID, the app has to be reinstalled every 7 days.</p>
+    </section>
+
+    <section id="web">
+      <h2>Use it in a browser</h2>
+      <p>On any iPad, <a href="app/">open the web version</a> in Safari, tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>. It runs full screen and works offline. It has writing and PDFs, but no AI, recording or sync.</p>
+    </section>
+
+    <section id="ai">
+      <h2>Set up AI</h2>
+      <p>Use either option, or both. With both, your key answers first and the on-device model takes over if that fails.</p>
+      <h3>With a free NVIDIA key</h3>
+      <ol>
+        <li>Get a free key from <a href="https://build.nvidia.com">build.nvidia.com</a>.</li>
+        <li>Add it in Settings. On Android that's <strong>Settings › AI › Set up</strong>, and on iPad <strong>Settings › Online AI</strong>.</li>
+      </ol>
+      <p>Your key is stored on your device. The notes the study tools work on are sent to NVIDIA.</p>
+      <h3>With the on-device model</h3>
+      <p>In the same place, tap <strong>Download model</strong>. It's a one-time 1.1 GB download, best on Wi-Fi, and nothing leaves your device afterwards. On Android it needs about 4 GB of memory, and answers are slower than online.</p>
+      <h3>Study with your notes</h3>
+      <p>On Android, open a notebook, tap <strong>⋯</strong> and choose <strong>Study with AI</strong> for chat, summaries, key points, flashcards, quizzes, mind maps and teach back. The handwriting reader downloads once the first time, so connect to the internet for that.</p>
+    </section>
+
+    <section id="backup">
+      <h2>Back up your notes</h2>
+      <p>Notes live on your device, so uninstalling the app or clearing its data removes them. In <strong>Settings › Storage &amp; backup</strong>, tap <strong>Create backup</strong> to save everything as one file, and <strong>Restore from backup</strong> to bring it back.</p>
+    </section>
+
+    <section id="docker">
+      <h2>Host the web version yourself</h2>
+      <pre><code>docker run -p 8080:80 ghcr.io/warriorbiswas-tech/quirk-notes</code></pre>
+      <p>Then open <code>http://localhost:8080</code>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="./">Home</a>
+    <a href="https://github.com/warriorbiswas-tech/Quirk-notes">Source on GitHub</a>
+    <a href="https://github.com/warriorbiswas-tech/Quirk-notes/issues">Report a problem</a>
+  </footer>
+</body>
+</html>
