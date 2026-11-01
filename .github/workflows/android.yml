@@ -1,0 +1,110 @@
+name: Android app
+
+on:
+  push:
+    paths:
+      - "android/**"
+      - "index.html"
+      - "css/**"
+      - "js/**"
+      - "icons/**"
+      - "vendor/**"
+      - ".github/workflows/android.yml"
+  pull_request:
+    paths:
+      - "android/**"
+      - "index.html"
+      - "css/**"
+      - "js/**"
+      - "icons/**"
+      - "vendor/**"
+      - ".github/workflows/android.yml"
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: android
+
+jobs:
+  checks:
+    name: Checks on an emulator
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v5
+        with:
+          gradle-version: "8.13"
+      - name: Allow the emulator to use KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Run the checks and take screenshots
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          working-directory: android
+          script: |
+            gradle connectedDebugAndroidTest --stacktrace
+            gradle installDebug
+            mkdir -p build/screens
+            adb shell am start -W -n com.warriorbiswas.quire/.MainActivity
+            sleep 8
+            adb exec-out screencap -p > build/screens/phone.png
+            adb shell wm size 1600x2560
+            adb shell wm density 280
+            sleep 6
+            adb exec-out screencap -p > build/screens/tablet.png
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: android-checks
+          path: |
+            android/build/screens
+            android/app/build/reports/androidTests
+
+  apk:
+    name: APK
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v5
+        with:
+          gradle-version: "8.13"
+      - name: Restore the signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ]; then
+            echo "::warning::No signing key is set, so this APK uses a temporary key and can't update an earlier install."
+            exit 0
+          fi
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/quire.p12"
+          echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/quire.p12" >> "$GITHUB_ENV"
+      - name: Build
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: gradle assembleRelease
+      - name: Check the signature
+        run: |
+          "$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)/apksigner" verify --print-certs app/build/outputs/apk/release/app-release.apk
+          cp app/build/outputs/apk/release/app-release.apk Quire.apk
+      - uses: actions/upload-artifact@v7
+        with:
+          name: Quire-apk
+          path: android/Quire.apk
+          retention-days: 30

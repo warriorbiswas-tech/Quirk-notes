@@ -7,6 +7,13 @@ Handwriting notes for iPad and Apple Pencil, in two versions:
 
 **Open Quire:** https://warriorbiswas-tech.github.io/freenotees/
 
+## Download
+
+Get the apps from the [latest release](https://github.com/warriorbiswas-tech/freenotees/releases/latest).
+
+- **Android (`Quire.apk`):** Quire as an Android app, for Android 8 or later. Open the file on your device and allow the install when asked. It has everything in Quire, but none of Margin's AI, recording or iCloud features.
+- **iPad (`Margin.ipa`):** the native iPad app, for iPadOS 17 or later. It is unsigned, so install it with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io) from a Windows PC or Mac, signing in with your Apple ID. With a free Apple ID it has to be reinstalled every 7 days.
+
 ## Install on iPad (A16 or any iPad)
 
 1. Open the link above in **Safari** on the iPad. Other browsers can't install apps on iPadOS.
@@ -67,3 +74,4 @@ python3 -m http.server 8000
 - `js/render.js` holds the tiled page renderer. `js/editor.js` and `js/editor-ui.js` hold the notebook editor.
 - `sw.js` is the offline service worker. Bump `VERSION` in it when you change the list of app files.
 - `vendor/pdfjs/` is pdf.js 3.11.174 (Apache-2.0), used for PDF import.
+- `android/` wraps these same files in an Android app. Run `gradle assembleDebug` in that folder, with the Android SDK and Gradle 8.13 installed.

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="quire_bg">#121513</color>
+    <style name="QuireTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/quire_bg</item>
+        <item name="android:statusBarColor">@color/quire_bg</item>
+        <item name="android:navigationBarColor">@color/quire_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

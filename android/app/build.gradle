@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+}
+
+// The web app in the repository root is the app; it is copied in at build time.
+def webAssets = layout.buildDirectory.dir('generated/web')
+def copyWeb = tasks.register('copyWeb', Sync) {
+    from(rootProject.file('..')) {
+        include 'index.html', 'manifest.webmanifest', 'css/**', 'js/**', 'icons/**', 'vendor/**'
+    }
+    into(webAssets.map { it.dir('www') })
+}
+
+def keystorePath = System.getenv('ANDROID_KEYSTORE_PATH')
+
+android {
+    namespace 'com.warriorbiswas.quire'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.warriorbiswas.quire'
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName '1.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    signingConfigs {
+        if (keystorePath) {
+            release {
+                storeFile file(keystorePath)
+                storeType 'pkcs12'
+                storePassword System.getenv('ANDROID_KEYSTORE_PASSWORD')
+                keyAlias 'quire'
+                keyPassword System.getenv('ANDROID_KEYSTORE_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Without the release key, this build is signed with the debug key for local testing.
+            signingConfig keystorePath ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        main.assets.srcDir(webAssets)
+    }
+}
+
+tasks.named('preBuild') {
+    dependsOn copyWeb
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.14.0'
+
+    androidTestImplementation 'androidx.test:core:1.6.1'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+}
