@@ -1,6 +1,6 @@
 {
   "name": "Quire Notes",
-  "short_name": "Quire",
+  "short_name": "Quire Notes",
   "description": "A handwriting notebook for iPad and Apple Pencil.",
   "start_url": "./",
   "scope": "./",

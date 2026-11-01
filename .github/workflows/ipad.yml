@@ -95,9 +95,9 @@ jobs:
           cp -R build/Release-iphoneos/Margin.app Payload/
           test -f Payload/Margin.app/Frameworks/llama.framework/llama
           test -f Payload/Margin.app/Frameworks/whisper.framework/whisper
-          zip -qry Margin.ipa Payload
+          zip -qry Quire-Notes.ipa Payload
       - uses: actions/upload-artifact@v7
         with:
-          name: Margin-ipa
-          path: ios/Margin.ipa
+          name: Quire-Notes-ipa
+          path: ios/Quire-Notes.ipa
           retention-days: 30

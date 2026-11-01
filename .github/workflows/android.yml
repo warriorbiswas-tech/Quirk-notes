@@ -102,9 +102,9 @@ jobs:
       - name: Check the signature
         run: |
           "$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)/apksigner" verify --print-certs app/build/outputs/apk/release/app-release.apk
-          cp app/build/outputs/apk/release/app-release.apk Quire.apk
+          cp app/build/outputs/apk/release/app-release.apk Quire-Notes.apk
       - uses: actions/upload-artifact@v7
         with:
-          name: Quire-apk
-          path: android/Quire.apk
+          name: Quire-Notes-apk
+          path: android/Quire-Notes.apk
           retention-days: 30

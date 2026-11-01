@@ -121,7 +121,7 @@ struct LibraryView: View {
                 prompt?.action(name)
             }
         }
-        .alert("Margin", isPresented: Binding(get: { library.lastError != nil }, set: { if !$0 { library.lastError = nil } })) {
+        .alert("Quire Notes", isPresented: Binding(get: { library.lastError != nil }, set: { if !$0 { library.lastError = nil } })) {
             Button("OK") {}
         } message: {
             Text(library.lastError ?? "")
@@ -270,7 +270,7 @@ struct LibraryView: View {
                 Label("Recently Deleted", systemImage: "trash").tag(Shelf.trash)
             }
         }
-        .navigationTitle("Margin")
+        .navigationTitle("Quire Notes")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button("Settings", systemImage: "gearshape") { showSettings = true }
@@ -472,7 +472,7 @@ struct ICloudBanner: View {
             VStack(alignment: .leading, spacing: 10) {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Keep Every Note in iCloud").font(.subheadline.weight(.semibold))
-                    Text("Choose a folder in iCloud Drive and Margin saves all your notes and annotations there.")
+                    Text("Choose a folder in iCloud Drive and Quire Notes saves all your notes and annotations there.")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
@@ -669,7 +669,7 @@ struct SettingsView: View {
                 } header: {
                     Text("iCloud Sync")
                 } footer: {
-                    Text("In the picker, open iCloud Drive and choose or create a folder. Margin keeps your notes in it and syncs when you open the app, close a note or leave the app. Choose the same folder on another device to get them there.")
+                    Text("In the picker, open iCloud Drive and choose or create a folder. Quire Notes keeps your notes in it and syncs when you open the app, close a note or leave the app. Choose the same folder on another device to get them there.")
                 }
             }
             .navigationTitle("Settings")

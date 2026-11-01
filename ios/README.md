@@ -1,4 +1,4 @@
-# Margin
+# Quire Notes for iPad
 
 A note-taking and PDF annotation app for iPad, built for lectures, textbooks and meetings. The AI runs on large models at NVIDIA with your own free key, and on the iPad itself when you're offline.
 
@@ -11,7 +11,7 @@ A note-taking and PDF annotation app for iPad, built for lectures, textbooks and
 
 ## AI
 
-Add a free API key from [build.nvidia.com](https://build.nvidia.com) in Settings › Online AI and the study tools use a large open model on NVIDIA's servers. Margin asks NVIDIA which models the key can reach and uses the best of DeepSeek V4 Pro, DeepSeek V4 Flash, Kimi K2, DeepSeek V3.1, Qwen3 235B, gpt-oss 120B and Llama 3.3 70B, or the one you choose. The key stays in the iPad's keychain, and the notes a tool works on are sent to NVIDIA. The free tier allows about 40 requests a minute.
+Add a free API key from [build.nvidia.com](https://build.nvidia.com) in Settings › Online AI and the study tools use a large open model on NVIDIA's servers. Quire Notes asks NVIDIA which models the key can reach and uses the best of DeepSeek V4 Pro, DeepSeek V4 Flash, Kimi K2, DeepSeek V3.1, Qwen3 235B, gpt-oss 120B and Llama 3.3 70B, or the one you choose. The key stays in the iPad's keychain, and the notes a tool works on are sent to NVIDIA. The free tier allows about 40 requests a minute.
 
 Without a key, without a connection, or whenever NVIDIA can't answer, the same tools run on the iPad, and nothing leaves it. Recordings are always transcribed on the iPad. The on-device models download once from Hugging Face, each pinned to a checksum:
 
@@ -25,7 +25,7 @@ Without a key, without a connection, or whenever NVIDIA can't answer, the same t
 
 Open `Margin.xcodeproj` in Xcode and run on an iPad with iPadOS 17 or later. The engines in `Vendor/` have no Simulator slice, so AI features are unavailable there and everything else works.
 
-Without a Mac: every push to `main` that changes the app builds an unsigned `Margin.ipa`. Open the latest run under Actions › iPad app, download `Margin-ipa` from Artifacts and unzip it, then install `Margin.ipa` with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io) from a Windows PC or Mac, signing in with your Apple ID. With a free Apple ID the app has to be reinstalled every 7 days. Downloads expire after 30 days; Run workflow on the same page builds a fresh one.
+Without a Mac: every push to `main` that changes the app builds an unsigned `Quire-Notes.ipa`. Open the latest run under Actions › iPad app, download `Quire-Notes-ipa` from Artifacts and unzip it, then install `Quire-Notes.ipa` with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io) from a Windows PC or Mac, signing in with your Apple ID. With a free Apple ID the app has to be reinstalled every 7 days. Downloads expire after 30 days; Run workflow on the same page builds a fresh one.
 
 ## Checks
 

@@ -175,7 +175,7 @@ struct ReminderSheet: View {
         Task {
             let center = UNUserNotificationCenter.current()
             guard (try? await center.requestAuthorization(options: [.alert, .sound])) == true else {
-                problem = "Allow notifications for Margin in Settings to use reminders."
+                problem = "Allow notifications for Quire Notes in Settings to use reminders."
                 return
             }
             let content = UNMutableNotificationContent()

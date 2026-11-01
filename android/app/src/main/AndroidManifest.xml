@@ -7,7 +7,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Quire"
+        android:label="Quire Notes"
         android:largeHeap="true"
         android:theme="@style/QuireTheme">
         <activity

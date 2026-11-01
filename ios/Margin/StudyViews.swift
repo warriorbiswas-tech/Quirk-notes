@@ -163,7 +163,7 @@ struct MindMapView: View {
             do {
                 root = try await generate()
             } catch is CancellationError {
-                self.error = "Stopped because Margin left the screen. Try again."
+                self.error = "Stopped because Quire Notes left the screen. Try again."
             } catch {
                 self.error = error.localizedDescription
             }
@@ -302,7 +302,7 @@ struct TeachBackView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Explain a topic from this note in your own words. Margin compares it with your notes and shows you what's missing.")
+            Text("Explain a topic from this note in your own words. Quire Notes compares it with your notes and shows you what's missing.")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .padding(.horizontal)
@@ -473,7 +473,7 @@ struct ChatView: View {
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: 12) {
                         if messages.isEmpty {
-                            Text("Ask anything. Margin finds the right pages first, so this works on long books too, and nothing leaves your iPad.").foregroundStyle(.secondary)
+                            Text("Ask anything. Quire Notes finds the right pages first, so this works on long books too, and nothing leaves your iPad.").foregroundStyle(.secondary)
                         }
                         ForEach(Array(messages.enumerated()), id: \.offset) { i, message in
                             Text(message.role == "user" ? AttributedString(message.text) : TextTools.styled(message.text))
@@ -616,7 +616,7 @@ struct CardsView: View {
                 model.note.flashcards += cards.map { Flashcard(front: $0.front, back: $0.back) }
                 model.scheduleSave()
             } catch is CancellationError {
-                self.error = "Stopped because Margin left the screen. Try again."
+                self.error = "Stopped because Quire Notes left the screen. Try again."
             } catch {
                 self.error = error.localizedDescription
             }
@@ -737,7 +737,7 @@ struct QuizView: View {
                 questions = try await generate()
                 answers = [:]
             } catch is CancellationError {
-                self.error = "Stopped because Margin left the screen. Try again."
+                self.error = "Stopped because Quire Notes left the screen. Try again."
             } catch {
                 self.error = error.localizedDescription
             }

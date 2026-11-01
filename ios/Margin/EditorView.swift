@@ -274,7 +274,7 @@ struct EditorView: View {
                 }
             }
             .animation(.easeOut(duration: 0.2), value: model.notice)
-            .alert("Margin", isPresented: messageShown) {
+            .alert("Quire Notes", isPresented: messageShown) {
                 Button("OK") {}
             } message: {
                 Text(model.message ?? "")
@@ -1121,7 +1121,7 @@ struct TranscriptSheet: View {
                 }
             }
             .sheet(item: $result) { TextResultSheet(title: resultTitle, text: $0.text) }
-            .alert("Margin", isPresented: Binding(get: { problem != nil }, set: { if !$0 { problem = nil } })) {
+            .alert("Quire Notes", isPresented: Binding(get: { problem != nil }, set: { if !$0 { problem = nil } })) {
                 Button("OK") {}
             } message: {
                 Text(problem ?? "")
