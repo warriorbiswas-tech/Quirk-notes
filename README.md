@@ -5,7 +5,7 @@ Handwriting notes for iPad and Apple Pencil, in two versions:
 - **Margin** is the native iPad app, written in Swift, in [`ios/`](ios/). It has PencilKit ink, PDF annotation, audio recording with a live transcript, iCloud Drive sync, and AI study tools that use NVIDIA's free models online and a model on the iPad when offline. [ios/README.md](ios/README.md) explains how to build and install it.
 - **Quire** is an installable web app, in this folder. It needs no App Store, Mac or Apple ID. Everything is included: no subscription, no ads, no account, and your notes stay on your iPad. The rest of this page is about Quire.
 
-**Open Quire:** https://autoneural.github.io/freenotees/
+**Open Quire:** https://warriorbiswas-tech.github.io/freenotees/
 
 ## Install on iPad (A16 or any iPad)
 
