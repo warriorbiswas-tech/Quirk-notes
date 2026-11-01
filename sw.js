@@ -1,5 +1,5 @@
 // Serve app files from the cache and refresh them in the background.
-const VERSION = 'quire-v7';
+const VERSION = 'quire-v8';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'css/app.css',
   'js/util.js', 'js/icons.js', 'js/store.js', 'js/model.js', 'js/ink.js', 'js/paper.js', 'js/stickers.js',

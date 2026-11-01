@@ -475,7 +475,7 @@
   }
 
   const BRAND_SVG =
-    '<svg viewBox="0 0 1024 1024" width="28" height="28" aria-hidden="true"><rect width="1024" height="1024" rx="230" fill="#1E5B4A"/><g transform="translate(512 512) scale(.86) translate(-548 -500)"><ellipse cx="475" cy="448" rx="183" ry="186" fill="none" stroke="#F7F1E3" stroke-width="84"/><path d="M660 268C664 430 650 590 640 742" fill="none" stroke="#F7F1E3" stroke-width="84" stroke-linecap="round"/><path d="M598 738C612 846 760 820 836 690C780 750 720 772 682 738zM806 194Q819 243 868 256Q819 269 806 318Q793 269 744 256Q793 243 806 194z" fill="#E3B04B"/></g></svg>';
+    '<svg viewBox="0 0 1024 1024" width="28" height="28" aria-hidden="true"><rect width="1024" height="1024" rx="230" fill="#1D5BD8"/><g transform="translate(512 512) scale(.9) translate(-530 -525)" fill="#FFF" stroke="#FFF"><ellipse cx="475" cy="448" rx="183" ry="186" fill="none" stroke-width="84"/><path d="M660 268C664 430 650 590 640 742" fill="none" stroke-width="84" stroke-linecap="round"/><path d="M598 738C612 846 760 820 836 690C780 750 720 772 682 738z" stroke="none"/></g></svg>';
   Q.BRAND_SVG = BRAND_SVG;
   Q.Library = Library;
 })((window.Q = window.Q || {}));
