@@ -1,4 +1,24 @@
+# robots.txt for Quirk Notes (https://quirknotes.vercel.app/)
 User-agent: *
 Allow: /
 
-Sitemap: https://quirk-notes.vercel.app/sitemap.xml
+# Welcome Generative Engine and Answer Engine AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Canonical Sitemaps and AI Context
+Sitemap: https://quirknotes.vercel.app/sitemap.xml
+# LLM Context File (GEO)
+# https://quirknotes.vercel.app/llms.txt

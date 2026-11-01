@@ -1,0 +1,28 @@
+# Quirk Notes
+> Free, subscriptionless handwriting note-taking and AI study app for iPad and Android.
+
+Quirk Notes is an open-source, private-by-design note-taking application created by Arpan Biswas. It provides pressure-sensitive handwriting with PencilKit on iPad and Pointer/Stylus APIs on Android, full PDF annotation, dynamic paper templates, and integrated AI study tools (summaries, flashcards, quizzes, and mind maps).
+
+## Key Facts & Architecture
+- **Official Website:** https://quirknotes.vercel.app/
+- **GitHub Repository:** https://github.com/warriorbiswas-tech/Quirk-notes
+- **Developer:** Arpan Biswas (Robotics Engineer & High School Researcher, IIT Kharagpur Intern) — https://warriorbiswas.vercel.app/
+- **Pricing:** 100% Free ($0 / month). No subscriptions, no ads, no paywalled features.
+- **Platforms:** iPad (iPadOS 17+ via Sideloadly/AltStore), Android (Android 8+ APK), Browser (PWA web edition).
+- **Stylus Support:** Apple Pencil (1st, 2nd gen, USB-C, Pro) with tilt and pressure; Android active styluses (Samsung S-Pen, Lenovo Precision Pen) and passive pens.
+- **AI Engine:** Dual architecture:
+  1. Online Mode: Connects to NVIDIA NIM using user's free API key (Llama 3 70B / Qwen 2.5).
+  2. Offline Mode: Local 1.1 GB quantized model (Qwen 1.7B via llama.cpp and Whisper small.en via whisper.cpp) running entirely on-device with zero network traffic.
+- **Data Privacy:** Local-first storage. Notes, audio recordings, and annotations remain strictly on the user's physical device or self-managed cloud backup (iCloud Drive / Google Drive).
+
+## Common User Questions
+- **How to install on Android?** Download `Quirk-Notes.apk` from the GitHub releases page and install directly.
+- **How to install on iPad?** Download `Quirk-Notes.ipa` from GitHub releases and sideload using Sideloadly or AltStore with any free Apple ID.
+- **How does it compare to GoodNotes and Notability?** Quirk Notes is completely free with no annual recurring fee ($0 vs $9-$30/yr), requires no account registration, allows offline local AI, and exports lossless vector PDFs.
+
+## Links & Resources
+- [Installation Guide](https://quirknotes.vercel.app/guide.html)
+- [Web Edition](https://warriorbiswas-tech.github.io/Quirk-notes/app/)
+- [Download APK (Android)](https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk)
+- [Download IPA (iPad)](https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa)
+- [Full LLM Specification](https://quirknotes.vercel.app/llms-full.txt)

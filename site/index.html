@@ -3,32 +3,168 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quirk Notes: Free Handwriting & AI Study Notebook</title>
-  <meta name="description" content="Quirk Notes is a minimalist, subscription-free note-taking app for iPad and Android. Pressure-sensitive stylus handwriting, PDF annotation, and private AI study tools.">
-  <link rel="canonical" href="https://quirk-notes.vercel.app/">
-  <meta name="theme-color" content="#FAF8F5" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0E1013" media="(prefers-color-scheme: dark)">
   
+  <!-- Primary SEO Meta Tags -->
+  <title>Quirk Notes — Free Handwriting &amp; AI Study Notebook for iPad &amp; Android</title>
+  <meta name="title" content="Quirk Notes — Free Handwriting &amp; AI Study Notebook for iPad &amp; Android">
+  <meta name="description" content="Quirk Notes is an aesthetic, subscription-free handwriting note-taking app for iPad and Android. Native Apple Pencil &amp; stylus pressure, vector PDF annotation, and private offline AI study flashcards with zero monthly fees.">
+  <meta name="keywords" content="Quirk Notes, free handwriting app, GoodNotes alternative, Notability alternative, iPad note taking, Apple Pencil notes, Android stylus notes, PDF annotation, offline AI notes, AI flashcards, Arpan Biswas, warriorbiswas">
+  <meta name="author" content="Arpan Biswas">
+  <meta name="creator" content="Arpan Biswas">
+  <meta name="publisher" content="Arpan Biswas">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://quirknotes.vercel.app/">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- GEO (Generative Engine Optimization) Specification Link -->
+  <link rel="alternate" type="text/plain" href="https://quirknotes.vercel.app/llms.txt" title="LLM Site Context">
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Quirk Notes: Free Handwriting & AI Study Notebook">
-  <meta property="og:description" content="Write with a stylus, mark up PDFs, and study with AI. No subscription, no account, zero ads.">
-  <meta property="og:url" content="https://quirk-notes.vercel.app/">
+  <meta property="og:site_name" content="Quirk Notes">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://quirknotes.vercel.app/">
+  <meta property="og:title" content="Quirk Notes — Free Handwriting &amp; AI Study Notebook">
+  <meta property="og:description" content="Write like paper, study with AI. No subscription, no account wall, zero ads. Built with love for iPad and Android.">
   <meta property="og:image" content="https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:image:alt" content="Quirk Notes handwritten notebook and AI study cards preview">
+  <meta property="og:video" content="https://quirknotes.vercel.app/media/brag.mp4">
+  <meta property="og:video:type" content="video/mp4">
+  <meta property="og:video:width" content="1920">
+  <meta property="og:video:height" content="1080">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  
+  <meta name="twitter:site" content="@warriorbiswas">
+  <meta name="twitter:creator" content="@warriorbiswas">
+  <meta name="twitter:url" content="https://quirknotes.vercel.app/">
+  <meta name="twitter:title" content="Quirk Notes — Free Handwriting &amp; AI Study Notebook">
+  <meta name="twitter:description" content="Write like paper, study with AI. 100% free with pressure-sensitive ink, vector PDF markup, and offline AI study tools.">
+  <meta name="twitter:image" content="https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png">
+  <link rel="apple-touch-icon" href="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png">
   <link rel="stylesheet" href="style.css">
-  
+
+  <!-- AEO & GEO Structured JSON-LD Knowledge Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Quirk Notes",
-    "applicationCategory": "ProductivityApplication",
-    "operatingSystem": "iPadOS 17, Android 8",
-    "description": "A free handwriting note-taking app for iPad and Android with PDF annotation and AI study tools.",
-    "url": "https://quirk-notes.vercel.app/",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://quirknotes.vercel.app/#software",
+        "name": "Quirk Notes",
+        "alternateName": "QuirkNotes",
+        "applicationCategory": "EducationalApplication, ProductivityApplication",
+        "operatingSystem": "iPadOS 17+, Android 8+, Modern Web Browsers",
+        "description": "An open-source, subscription-free handwriting note-taking and PDF annotation app for iPad and Android with offline on-device AI study tools.",
+        "url": "https://quirknotes.vercel.app/",
+        "downloadUrl": "https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest",
+        "image": "https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png",
+        "screenshot": "https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "author": {
+          "@type": "Person",
+          "@id": "https://quirknotes.vercel.app/#builder",
+          "name": "Arpan Biswas",
+          "url": "https://warriorbiswas.vercel.app/",
+          "jobTitle": "Robotics Engineer & High School Researcher",
+          "sameAs": [
+            "https://warriorbiswas.vercel.app/",
+            "https://github.com/warriorbiswas-tech",
+            "https://linkedin.com/in/warriorbiswas"
+          ]
+        },
+        "featureList": [
+          "Native Apple Pencil & stylus pressure sensitivity",
+          "Dynamic ink velocity tapering and palm rejection",
+          "Vector PDF import, annotation, and lossless export",
+          "AI notebook summarization, quizzes, and spaced-repetition flashcards",
+          "Dual AI backend: Free NVIDIA NIM online API or 1.1GB offline local model",
+          "12 paper templates including Cornell, Dotted, Lined, Isometric, and Music Staves",
+          "100% local device storage with zero telemetry or subscription lock-in"
+        ]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://quirknotes.vercel.app/#video",
+        "name": "Quirk Notes Launch Film — Product Overview",
+        "description": "Official 21-second product overview showing stylus handwriting on iPad/Android and instant AI study flashcard generation.",
+        "thumbnailUrl": "https://quirknotes.vercel.app/media/brag.jpg",
+        "uploadDate": "2026-11-01T23:00:00+05:30",
+        "duration": "PT21S",
+        "contentUrl": "https://quirknotes.vercel.app/media/brag.mp4",
+        "embedUrl": "https://quirknotes.vercel.app/#video-tour"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://quirknotes.vercel.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Quirk Notes really 100% free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Quirk Notes is 100% free with zero monthly subscriptions, no account wall, and no ads. When using online AI, users can connect their own free NVIDIA NIM API key, or download the 1.1GB offline model for unlimited local queries."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Quirk Notes compare to GoodNotes and Notability?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unlike GoodNotes and Notability which charge annual recurring subscriptions ($9-$30/year) and enforce cloud account lock-in, Quirk Notes is completely free ($0/month), works 100% offline, stores notes locally on your device, and offers on-device AI study tools."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I install Quirk Notes on Android and iPad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On Android, download the Quirk-Notes.apk file directly from GitHub releases and tap install. On iPad, download the Quirk-Notes.ipa and install it using Sideloadly or AltStore with any free Apple ID."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which styluses work with Quirk Notes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apple Pencil (1st gen, 2nd gen, USB-C, and Apple Pencil Pro) on iPad with tilt and pressure sensitivity. On Android, all active styluses (Samsung S-Pen, Lenovo Precision Pen, Xiaomi Smart Pen) as well as universal capacitive styluses and touch are supported."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who developed Quirk Notes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quirk Notes was created by Arpan Biswas, a robotics engineer and high school researcher who previously interned at IIT Kharagpur developing autonomous LiDAR platforms."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://quirknotes.vercel.app/#website",
+        "url": "https://quirknotes.vercel.app/",
+        "name": "Quirk Notes",
+        "description": "Free Handwriting & AI Study Notebook for iPad & Android",
+        "publisher": {
+          "@type": "Person",
+          "name": "Arpan Biswas",
+          "url": "https://warriorbiswas.vercel.app/"
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -38,6 +174,7 @@
     <div class="ambient-blob ambient-blob-1"></div>
     <div class="ambient-blob ambient-blob-2"></div>
     <div class="ambient-blob ambient-blob-3"></div>
+    <div class="ambient-blob ambient-blob-4"></div>
   </div>
 
   <!-- Sticky Glassmorphic Navbar -->
@@ -47,13 +184,15 @@
         <div class="brand-logo-wrap">
           <img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="Quirk Notes" width="28" height="28">
         </div>
-        <span>Quirk Notes</span>
-        <span class="brand-tag">v1.1.0</span>
+        <span class="brand-title">Quirk Notes</span>
+        <span class="brand-tag">v1.1</span>
       </a>
       <nav>
+        <a href="#video-tour">Film</a>
+        <a href="#motion-demo">Interactive</a>
         <a href="#features">Features</a>
         <a href="#compare">Devices</a>
-        <a href="#developer">Developer</a>
+        <a href="#developer">Builder</a>
         <a href="guide.html">Guide</a>
         <a class="btn-nav-github" href="https://github.com/warriorbiswas-tech/Quirk-notes" target="_blank" rel="noopener">
           <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
@@ -68,14 +207,14 @@
     <section class="hero">
       <div class="pill-badge">
         <span class="pill-dot"></span>
-        <span>Subscription-Free · Offline AI · Native Stylus Ink</span>
+        <span>Open-Source · Subscription-Free · Offline AI · Native Stylus Ink</span>
       </div>
       <h1>
         Write like paper.<br>
         <span class="pastel-highlight">Study with AI.</span>
       </h1>
       <p class="lead">
-        A minimalist, pressure-sensitive handwriting notebook for iPad and Android. Zero monthly subscriptions, no account wall, and total offline privacy.
+        A minimalist, pressure-sensitive handwriting notebook for iPad and Android. Zero monthly subscriptions, no account lock-in, and private AI that can run directly on your device.
       </p>
       <div class="actions">
         <a class="btn btn-pastel-green" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
@@ -86,22 +225,98 @@
           <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.76 1.04-1.82.93-2.88-.9.04-2 .6-2.65 1.36-.58.67-.99 1.74-.86 2.78.99.08 2-.51 2.58-1.26z"/></svg>
           Download for iPad
         </a>
+        <a class="btn btn-pastel-lavender" href="#video-tour">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Video Film
+        </a>
         <a class="btn btn-outline" href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">
-          Open Web Edition
+          Open Web Edition &rarr;
         </a>
       </div>
       <p class="small-meta">
-        No account needed &nbsp;·&nbsp; iPad installs with Sideloadly or AltStore. <a href="guide.html#ipad">Installation guide &rarr;</a>
+        No account required &nbsp;·&nbsp; iPad installs with Sideloadly or AltStore. <a href="guide.html#ipad">Installation guide &rarr;</a>
       </p>
     </section>
 
-    <!-- Motion Graphics Interactive Showcase -->
-    <section class="motion-stage" aria-label="Interactive note-taking and AI study demonstration">
-      <div class="floating-badge badge-1">
-        <span>✨ 0% Fees · Forever Free</span>
+    <!-- SECTION 1: THE BRAG VIDEO THEATER SHOWCASE -->
+    <section class="video-theater-section" id="video-tour" aria-label="Product Showcase Film">
+      <div class="theater-glow-aura" aria-hidden="true"></div>
+
+      <div class="theater-container">
+        <!-- Modern Device Top Bar -->
+        <div class="theater-header-bar">
+          <div class="theater-window-dots">
+            <span class="w-dot dot-coral"></span>
+            <span class="w-dot dot-honey"></span>
+            <span class="w-dot dot-mint"></span>
+          </div>
+          <div class="theater-title-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span>Quirk Notes — Official Launch Film (21s · 1080p 60fps)</span>
+          </div>
+          <div class="theater-status-badge">
+            <span class="pulse-beacon"></span>
+            <span>Real App Capture</span>
+          </div>
+        </div>
+
+        <!-- Video Player Wrapper -->
+        <div class="video-viewport">
+          <video
+            id="film"
+            class="film-player"
+            src="media/brag.mp4"
+            poster="media/brag.jpg"
+            playsinline
+            muted
+            loop
+            preload="auto"
+            aria-label="Quirk Notes product video: writing with stylus in a notebook, then studying with AI flashcards">
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Floating Badges -->
+          <div class="film-tag-float tag-top-left">
+            <span>✨ Zero Subscription · Forever Free</span>
+          </div>
+          <div class="film-tag-float tag-bottom-right">
+            <span>⚡ Swift & AVFoundation Native Render</span>
+          </div>
+
+          <!-- Glassmorphic Custom Player Bar -->
+          <div class="theater-controls-bar">
+            <button class="theater-ctrl-btn" id="film-play-toggle" type="button" aria-label="Toggle Play/Pause">
+              <svg id="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg id="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+
+            <!-- Scrubber Timeline -->
+            <div class="theater-timeline-track" id="film-timeline" role="slider" aria-label="Video timeline" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <div class="theater-timeline-fill" id="film-progress"></div>
+            </div>
+
+            <span class="theater-timer" id="film-timer">00:00 / 00:21</span>
+
+            <button class="theater-ctrl-pill" id="film-sound-toggle" type="button" aria-pressed="false" aria-label="Toggle sound">
+              <svg id="icon-sound-off" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"/></svg>
+              <svg id="icon-sound-on" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <span id="film-sound-text">Sound on</span>
+            </button>
+
+            <button class="theater-ctrl-btn" id="film-fullscreen-btn" type="button" aria-label="Fullscreen">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="floating-badge badge-2">
-        <span>🔒 100% Local Device Storage</span>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE MOTION GRAPHICS STAGE -->
+    <section class="motion-stage" id="motion-demo" aria-label="Interactive note-taking and AI study demonstration">
+      <div class="section-header" style="margin-bottom: 28px;">
+        <span class="section-tag">Interactive Motion Workbench</span>
+        <h2 class="title">Feel the ink flow. Watch AI think.</h2>
+        <p class="sub">Test the virtual stylus, explore dynamic stroke reveals, and flip live study flashcards.</p>
       </div>
 
       <div class="motion-card-outer">
@@ -113,11 +328,11 @@
             <span class="stage-dot dot-green"></span>
           </div>
           <div class="stage-title">
-            <span>Lecture Notes — Neuroscience & Synaptic Memory</span>
+            <span>Lecture Notebook — Cognitive Neuroscience & Synaptic Memory</span>
           </div>
           <div class="stage-status">
             <span class="pulse-circle"></span>
-            <span>Live Ink Engine</span>
+            <span>Live Ink Canvas</span>
           </div>
         </div>
 
@@ -126,7 +341,7 @@
           <!-- Left: Digital Notebook with Animated Handwriting Reveal -->
           <div class="notebook-page">
             <div class="page-header">
-              <span class="page-title">Bio 301: Synaptic Plasticity</span>
+              <span class="page-title">Bio 301: Synaptic Plasticity &amp; LTP</span>
               <span class="page-date">PAGE 04 / 12</span>
             </div>
 
@@ -243,7 +458,7 @@
       </div>
     </section>
 
-    <!-- Pastel Minimalist Feature Cards -->
+    <!-- SECTION 3: PASTEL MINIMALIST FEATURE CARDS -->
     <section class="features-section" id="features">
       <div class="section-header">
         <span class="section-tag">Pure Focus · Zero Clutter</span>
@@ -290,7 +505,7 @@
       </div>
     </section>
 
-    <!-- Device Comparison Matrix -->
+    <!-- SECTION 4: DEVICE COMPARISON MATRIX -->
     <section class="compare-section" id="compare">
       <div class="section-header">
         <span class="section-tag">Cross-Platform Availability</span>
@@ -352,7 +567,7 @@
       </div>
     </section>
 
-    <!-- About the Developer (Inspired by warriorbiswas.vercel.app) -->
+    <!-- SECTION 5: ABOUT THE DEVELOPER (Inspired by warriorbiswas.vercel.app) -->
     <section class="developer-section" id="developer">
       <div class="section-header">
         <span class="section-tag">About the Builder</span>
@@ -421,7 +636,7 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- SECTION 6: FAQ ACCORDION -->
     <section class="faq-section">
       <div class="section-header">
         <span class="section-tag">Frequently Asked Questions</span>
@@ -429,7 +644,7 @@
       </div>
 
       <div class="faq-list">
-        <details class="faq-item">
+        <details class="faq-item" open>
           <summary>Is Quirk Notes really 100% free?</summary>
           <p>Yes. Every feature is free with zero subscription, zero user tracking, and no ads. When using online AI, you provide your own free NVIDIA API key (which includes 1,000 monthly free calls), or you can download the 1.1GB offline model for unlimited local queries.</p>
         </details>
@@ -448,7 +663,7 @@
       </div>
     </section>
 
-    <!-- Final CTA Banner -->
+    <!-- SECTION 7: FINAL CTA BANNER -->
     <div class="cta-banner">
       <h2>Start your first notebook today.</h2>
       <p>Clean handwriting, instant AI study flashcards, and true ownership of your notes.</p>
@@ -481,10 +696,121 @@
     </div>
   </footer>
 
-  <!-- Interactive Motion Script -->
+  <!-- Interactive Scripts: Video Player & Motion Workbench -->
   <script>
     (function() {
-      // Interactive 3D Flashcard Flip
+      // 1. Film Player Controls
+      var film = document.getElementById('film');
+      var playToggle = document.getElementById('film-play-toggle');
+      var iconPlay = document.getElementById('icon-play');
+      var iconPause = document.getElementById('icon-pause');
+      var soundToggle = document.getElementById('film-sound-toggle');
+      var iconSoundOn = document.getElementById('icon-sound-on');
+      var iconSoundOff = document.getElementById('icon-sound-off');
+      var soundText = document.getElementById('film-sound-text');
+      var timeline = document.getElementById('film-timeline');
+      var progress = document.getElementById('film-progress');
+      var timer = document.getElementById('film-timer');
+      var fullscreenBtn = document.getElementById('film-fullscreen-btn');
+
+      if (film) {
+        // Attempt autoplay muted
+        film.muted = true;
+        var playPromise = film.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function() {
+            // Autoplay prevented, show play icon
+            if (iconPlay && iconPause) {
+              iconPlay.style.display = 'block';
+              iconPause.style.display = 'none';
+            }
+          });
+        }
+
+        // Play/Pause Toggle
+        if (playToggle) {
+          playToggle.addEventListener('click', function() {
+            if (film.paused) {
+              film.play();
+              iconPlay.style.display = 'none';
+              iconPause.style.display = 'block';
+            } else {
+              film.pause();
+              iconPlay.style.display = 'block';
+              iconPause.style.display = 'none';
+            }
+          });
+        }
+
+        // Click on video to toggle play
+        film.addEventListener('click', function() {
+          if (playToggle) playToggle.click();
+        });
+
+        // Sound Toggle
+        if (soundToggle) {
+          soundToggle.addEventListener('click', function() {
+            film.muted = !film.muted;
+            var isMuted = film.muted;
+            soundToggle.setAttribute('aria-pressed', String(!isMuted));
+            if (iconSoundOn && iconSoundOff && soundText) {
+              if (isMuted) {
+                iconSoundOff.style.display = 'block';
+                iconSoundOn.style.display = 'none';
+                soundText.textContent = 'Sound on';
+              } else {
+                iconSoundOff.style.display = 'none';
+                iconSoundOn.style.display = 'block';
+                soundText.textContent = 'Sound off';
+              }
+            }
+          });
+        }
+
+        // Progress Tracking & Timer
+        film.addEventListener('timeupdate', function() {
+          if (film.duration) {
+            var pct = (film.currentTime / film.duration) * 100;
+            if (progress) progress.style.width = pct + '%';
+            if (timeline) timeline.setAttribute('aria-valuenow', Math.round(pct));
+            
+            var curM = Math.floor(film.currentTime / 60);
+            var curS = Math.floor(film.currentTime % 60);
+            var durM = Math.floor(film.duration / 60);
+            var durS = Math.floor(film.duration % 60);
+            if (timer) {
+              timer.textContent = 
+                (curM < 10 ? '0' + curM : curM) + ':' + (curS < 10 ? '0' + curS : curS) + ' / ' +
+                (durM < 10 ? '0' + durM : durM) + ':' + (durS < 10 ? '0' + durS : durS);
+            }
+          }
+        });
+
+        // Click scrubber to seek
+        if (timeline) {
+          timeline.addEventListener('click', function(e) {
+            var rect = timeline.getBoundingClientRect();
+            var pos = (e.clientX - rect.left) / rect.width;
+            if (film.duration) {
+              film.currentTime = pos * film.duration;
+            }
+          });
+        }
+
+        // Fullscreen
+        if (fullscreenBtn) {
+          fullscreenBtn.addEventListener('click', function() {
+            if (!document.fullscreenElement) {
+              if (film.requestFullscreen) film.requestFullscreen();
+              else if (film.webkitRequestFullscreen) film.webkitRequestFullscreen();
+            } else {
+              if (document.exitFullscreen) document.exitFullscreen();
+            }
+          });
+        }
+      }
+
+      // 2. Interactive 3D Flashcard Flip
       var card = document.getElementById('study-card');
       if (card) {
         card.addEventListener('click', function() {
@@ -492,16 +818,16 @@
         });
       }
 
-      // Interactive Tool Switcher
+      // 3. Interactive Tool Switcher
       var toolBtns = document.querySelectorAll('.tool-btn');
       var strokeTitle = document.getElementById('stroke-title');
       
       var toolColors = {
-        fountain: '#1D3557',
-        ballpoint: '#3D405B',
-        highlighter: '#E6A15C',
+        fountain: '#2B3A67',
+        ballpoint: '#495057',
+        highlighter: '#E69F53',
         lasso: '#2D6A4F',
-        ai: '#7E6CD9'
+        ai: '#6E56CF'
       };
 
       toolBtns.forEach(function(btn) {
