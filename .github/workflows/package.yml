@@ -1,0 +1,40 @@
+name: Web package
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to publish
+        required: true
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE: ghcr.io/warriorbiswas-tech/quirk-notes
+  VERSION: ${{ inputs.version || github.event.release.tag_name }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build
+        run: docker build -t "$IMAGE:${VERSION#v}" -t "$IMAGE:latest" .
+      - name: Check that it serves the app
+        run: |
+          docker run -d --name quirk -p 8080:80 "$IMAGE:latest"
+          sleep 2
+          curl -fsS http://localhost:8080/ | grep -q "Quirk Notes"
+          for file in sw.js manifest.webmanifest js/main.js css/app.css icons/icon-512.png vendor/pdfjs/pdf.min.js; do
+            curl -fsS -o /dev/null "http://localhost:8080/$file"
+          done
+          docker rm -f quirk
+      - name: Publish
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          docker push "$IMAGE:${VERSION#v}"
+          docker push "$IMAGE:latest"

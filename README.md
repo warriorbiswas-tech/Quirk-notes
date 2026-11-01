@@ -15,6 +15,12 @@ The rest of this page is about the installable web version, in this folder, whic
 
 **Open it:** https://warriorbiswas-tech.github.io/Quirk-notes/
 
+Or run it yourself with Docker, then open http://localhost:8080:
+
+```bash
+docker run -p 8080:80 ghcr.io/warriorbiswas-tech/quirk-notes
+```
+
 ## Install on iPad (A16 or any iPad)
 
 1. Open the link above in **Safari** on the iPad. Other browsers can't install apps on iPadOS.
