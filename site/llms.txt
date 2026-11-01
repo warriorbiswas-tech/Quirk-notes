@@ -26,3 +26,4 @@ Quirk Notes is an open-source, private-by-design note-taking application created
 - [Download APK (Android)](https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk)
 - [Download IPA (iPad)](https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa)
 - [Full LLM Specification](https://quirknotes.vercel.app/llms-full.txt)
+

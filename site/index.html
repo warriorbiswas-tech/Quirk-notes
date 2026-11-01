@@ -7,26 +7,26 @@
   <!-- Primary SEO Meta Tags -->
   <title>Quirk Notes — Free Handwriting &amp; AI Study Notebook for iPad &amp; Android</title>
   <meta name="title" content="Quirk Notes — Free Handwriting &amp; AI Study Notebook for iPad &amp; Android">
-  <meta name="description" content="Quirk Notes is an aesthetic, subscription-free handwriting note-taking app for iPad and Android. Native Apple Pencil &amp; stylus pressure, vector PDF annotation, and private offline AI study flashcards with zero monthly fees.">
+  <meta name="description" content="Quirk Notes is an open-source, subscription-free handwriting notebook for iPad and Android. Low-latency stylus ink, vector PDF markup, and private on-device AI study tools with zero monthly fees.">
   <meta name="keywords" content="Quirk Notes, free handwriting app, GoodNotes alternative, Notability alternative, iPad note taking, Apple Pencil notes, Android stylus notes, PDF annotation, offline AI notes, AI flashcards, Arpan Biswas, warriorbiswas">
   <meta name="author" content="Arpan Biswas">
   <meta name="creator" content="Arpan Biswas">
   <meta name="publisher" content="Arpan Biswas">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://quirknotes.vercel.app/">
-  <meta name="theme-color" content="#FAF7F2">
+  <meta name="theme-color" content="#FBF9F5">
   <link rel="manifest" href="manifest.json">
   
-  <!-- GEO (Generative Engine Optimization) Specification Link -->
+  <!-- GEO (Generative Engine Optimization) Specification -->
   <link rel="alternate" type="text/plain" href="https://quirknotes.vercel.app/llms.txt" title="LLM Site Context">
 
-  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <!-- Open Graph / Social Meta -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Quirk Notes">
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://quirknotes.vercel.app/">
   <meta property="og:title" content="Quirk Notes — Free Handwriting &amp; AI Study Notebook">
-  <meta property="og:description" content="Write like paper, study with AI. No subscription, no account wall, zero ads. Built with love for iPad and Android.">
+  <meta property="og:description" content="Write like paper, study with AI. No subscription, no account wall, zero ads. Built for iPad and Android.">
   <meta property="og:image" content="https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
@@ -66,7 +66,6 @@
         "url": "https://quirknotes.vercel.app/",
         "downloadUrl": "https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest",
         "image": "https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png",
-        "screenshot": "https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -86,7 +85,7 @@
           ]
         },
         "featureList": [
-          "Native Apple Pencil & stylus pressure sensitivity",
+          "Native Apple Pencil & active stylus pressure sensitivity",
           "Dynamic ink velocity tapering and palm rejection",
           "Vector PDF import, annotation, and lossless export",
           "AI notebook summarization, quizzes, and spaced-repetition flashcards",
@@ -104,7 +103,7 @@
         "uploadDate": "2026-11-01T23:00:00+05:30",
         "duration": "PT21S",
         "contentUrl": "https://quirknotes.vercel.app/media/brag.mp4",
-        "embedUrl": "https://quirknotes.vercel.app/#video-tour"
+        "embedUrl": "https://quirknotes.vercel.app/#film"
       },
       {
         "@type": "FAQPage",
@@ -169,640 +168,599 @@
   </script>
 </head>
 <body>
-  <!-- Ambient Pastel Gradient Aura -->
-  <div class="ambient-glow" aria-hidden="true">
-    <div class="ambient-blob ambient-blob-1"></div>
-    <div class="ambient-blob ambient-blob-2"></div>
-    <div class="ambient-blob ambient-blob-3"></div>
-    <div class="ambient-blob ambient-blob-4"></div>
-  </div>
-
-  <!-- Sticky Glassmorphic Navbar -->
-  <header class="bar-wrap">
-    <div class="bar">
+  <!-- Quiet Architectural Header -->
+  <header class="site-header">
+    <div class="header-inner">
       <a class="brand" href="./">
-        <div class="brand-logo-wrap">
-          <img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="Quirk Notes" width="28" height="28">
-        </div>
-        <span class="brand-title">Quirk Notes</span>
-        <span class="brand-tag">v1.1</span>
+        <img class="brand-logo" src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="Quirk Notes Icon" width="28" height="28">
+        <span class="brand-name">Quirk Notes</span>
       </a>
-      <nav>
-        <a href="#video-tour">Film</a>
-        <a href="#motion-demo">Interactive</a>
-        <a href="#features">Features</a>
-        <a href="#compare">Devices</a>
-        <a href="#developer">Builder</a>
-        <a href="guide.html">Guide</a>
-        <a class="btn-nav-github" href="https://github.com/warriorbiswas-tech/Quirk-notes" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-          GitHub
-        </a>
+
+      <nav class="site-nav">
+        <a class="nav-link" href="#film">Film</a>
+        <a class="nav-link" href="#workbench">Interactive</a>
+        <a class="nav-link" href="#capabilities">Features</a>
+        <a class="nav-link" href="#builder">Builder</a>
+        <a class="nav-link" href="guide.html">Installation</a>
       </nav>
+
+      <div class="header-actions">
+        <a class="btn-github" href="https://github.com/warriorbiswas-tech/Quirk-notes" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          <span>Star on GitHub</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="pill-badge">
-        <span class="pill-dot"></span>
-        <span>Open-Source · Subscription-Free · Offline AI · Native Stylus Ink</span>
-      </div>
-      <h1>
-        Write like paper.<br>
-        <span class="pastel-highlight">Study with AI.</span>
-      </h1>
-      <p class="lead">
-        A minimalist, pressure-sensitive handwriting notebook for iPad and Android. Zero monthly subscriptions, no account lock-in, and private AI that can run directly on your device.
-      </p>
-      <div class="actions">
-        <a class="btn btn-pastel-green" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download for Android
-        </a>
-        <a class="btn btn-pastel-blue" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.76 1.04-1.82.93-2.88-.9.04-2 .6-2.65 1.36-.58.67-.99 1.74-.86 2.78.99.08 2-.51 2.58-1.26z"/></svg>
-          Download for iPad
-        </a>
-        <a class="btn btn-pastel-lavender" href="#video-tour">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          Watch Video Film
-        </a>
-        <a class="btn btn-outline" href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">
-          Open Web Edition &rarr;
-        </a>
-      </div>
-      <p class="small-meta">
-        No account required &nbsp;·&nbsp; iPad installs with Sideloadly or AltStore. <a href="guide.html#ipad">Installation guide &rarr;</a>
-      </p>
-    </section>
-
-    <!-- SECTION 1: THE BRAG VIDEO THEATER SHOWCASE -->
-    <section class="video-theater-section" id="video-tour" aria-label="Product Showcase Film">
-      <div class="theater-glow-aura" aria-hidden="true"></div>
-
-      <div class="theater-container">
-        <!-- Modern Device Top Bar -->
-        <div class="theater-header-bar">
-          <div class="theater-window-dots">
-            <span class="w-dot dot-coral"></span>
-            <span class="w-dot dot-honey"></span>
-            <span class="w-dot dot-mint"></span>
-          </div>
-          <div class="theater-title-badge">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span>Quirk Notes — Official Launch Film (21s · 1080p 60fps)</span>
-          </div>
-          <div class="theater-status-badge">
-            <span class="pulse-beacon"></span>
-            <span>Real App Capture</span>
-          </div>
+    <!-- Editorial Asymmetrical Hero -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Handwritten notes.<br>
+          Completely free.
+        </h1>
+        <p class="hero-statement">
+          Write with low-latency stylus pressure on iPad and Android, mark up PDFs in vector resolution, and generate instant study flashcards with private AI. Zero monthly subscriptions. Zero cloud lock-in.
+        </p>
+        <div class="hero-cta-group">
+          <a class="cta-btn cta-primary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download for Android</span>
+          </a>
+          <a class="cta-btn cta-secondary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.76 1.04-1.82.93-2.88-.9.04-2 .6-2.65 1.36-.58.67-.99 1.74-.86 2.78.99.08 2-.51 2.58-1.26z"/></svg>
+            <span>Download for iPad</span>
+          </a>
+          <a class="cta-link" href="https://warriorbiswas-tech.github.io/Quirk-notes/app/" target="_blank" rel="noopener">
+            <span>Open Web Edition</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
         </div>
-
-        <!-- Video Player Wrapper -->
-        <div class="video-viewport">
-          <video
-            id="film"
-            class="film-player"
-            src="media/brag.mp4"
-            poster="media/brag.jpg"
-            playsinline
-            muted
-            loop
-            preload="auto"
-            aria-label="Quirk Notes product video: writing with stylus in a notebook, then studying with AI flashcards">
-            Your browser does not support the video tag.
-          </video>
-
-          <!-- Floating Badges -->
-          <div class="film-tag-float tag-top-left">
-            <span>✨ Zero Subscription · Forever Free</span>
+        <div class="hero-specs-row">
+          <div class="spec-item">
+            <span class="spec-label">Latency</span>
+            <span class="spec-val">9ms PencilKit</span>
           </div>
-          <div class="film-tag-float tag-bottom-right">
-            <span>⚡ Swift & AVFoundation Native Render</span>
+          <div class="spec-divider"></div>
+          <div class="spec-item">
+            <span class="spec-label">Pricing</span>
+            <span class="spec-val">$0 / month</span>
           </div>
-
-          <!-- Glassmorphic Custom Player Bar -->
-          <div class="theater-controls-bar">
-            <button class="theater-ctrl-btn" id="film-play-toggle" type="button" aria-label="Toggle Play/Pause">
-              <svg id="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <svg id="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-            </button>
-
-            <!-- Scrubber Timeline -->
-            <div class="theater-timeline-track" id="film-timeline" role="slider" aria-label="Video timeline" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-              <div class="theater-timeline-fill" id="film-progress"></div>
-            </div>
-
-            <span class="theater-timer" id="film-timer">00:00 / 00:21</span>
-
-            <button class="theater-ctrl-pill" id="film-sound-toggle" type="button" aria-pressed="false" aria-label="Toggle sound">
-              <svg id="icon-sound-off" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"/></svg>
-              <svg id="icon-sound-on" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-              <span id="film-sound-text">Sound on</span>
-            </button>
-
-            <button class="theater-ctrl-btn" id="film-fullscreen-btn" type="button" aria-label="Fullscreen">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-            </button>
+          <div class="spec-divider"></div>
+          <div class="spec-item">
+            <span class="spec-label">Offline AI</span>
+            <span class="spec-val">1.1 GB Local Qwen</span>
+          </div>
+          <div class="spec-divider"></div>
+          <div class="spec-item">
+            <span class="spec-label">Data Privacy</span>
+            <span class="spec-val">100% On-Device</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: INTERACTIVE MOTION GRAPHICS STAGE -->
-    <section class="motion-stage" id="motion-demo" aria-label="Interactive note-taking and AI study demonstration">
-      <div class="section-header" style="margin-bottom: 28px;">
-        <span class="section-tag">Interactive Motion Workbench</span>
-        <h2 class="title">Feel the ink flow. Watch AI think.</h2>
-        <p class="sub">Test the virtual stylus, explore dynamic stroke reveals, and flip live study flashcards.</p>
-      </div>
+    <!-- SECTION 1: CINEMATIC PRODUCT FILM THEATER -->
+    <section class="film-section" id="film">
+      <div class="film-container">
+        <!-- Apple Studio Hardware Bezel -->
+        <div class="studio-bezel">
+          <div class="bezel-topbar">
+            <div class="bezel-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="bezel-title">Quirk Notes — Product Overview (21s · 1080p 60fps)</div>
+            <div class="bezel-badge">Real Footage</div>
+          </div>
 
-      <div class="motion-card-outer">
-        <!-- Stage Top Bar -->
-        <div class="stage-bar">
-          <div class="stage-dots">
-            <span class="stage-dot dot-red"></span>
-            <span class="stage-dot dot-yellow"></span>
-            <span class="stage-dot dot-green"></span>
-          </div>
-          <div class="stage-title">
-            <span>Lecture Notebook — Cognitive Neuroscience & Synaptic Memory</span>
-          </div>
-          <div class="stage-status">
-            <span class="pulse-circle"></span>
-            <span>Live Ink Canvas</span>
+          <div class="video-stage">
+            <video
+              id="player"
+              class="studio-video"
+              src="media/brag.mp4"
+              poster="media/brag.jpg"
+              playsinline
+              muted
+              loop
+              preload="auto"
+              aria-label="Quirk Notes product video: stylus handwriting in notebook, followed by AI study flashcard generation">
+            </video>
+
+            <!-- Tactile Liquid Glass Player Bar -->
+            <div class="glass-player-dock">
+              <button class="glass-play-btn" id="play-btn" type="button" aria-label="Play or pause">
+                <svg id="svg-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <svg id="svg-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+
+              <div class="glass-scrubber-track" id="timeline" role="slider" aria-label="Playback scrubber">
+                <div class="glass-scrubber-fill" id="progress"></div>
+              </div>
+
+              <span class="glass-time" id="time-display">00:00 / 00:21</span>
+
+              <button class="glass-sound-pill" id="sound-btn" type="button" aria-pressed="false" aria-label="Toggle audio">
+                <svg id="svg-sound-muted" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"/></svg>
+                <svg id="svg-sound-on" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                <span id="sound-label">Sound on</span>
+              </button>
+
+              <button class="glass-expand-btn" id="fs-btn" type="button" aria-label="Fullscreen">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              </button>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Stage Main Split Grid -->
-        <div class="stage-content">
-          <!-- Left: Digital Notebook with Animated Handwriting Reveal -->
-          <div class="notebook-page">
-            <div class="page-header">
-              <span class="page-title">Bio 301: Synaptic Plasticity &amp; LTP</span>
-              <span class="page-date">PAGE 04 / 12</span>
-            </div>
+    <!-- SECTION 2: INTERACTIVE INK & AI WORKBENCH -->
+    <section class="workbench-section" id="workbench">
+      <div class="section-lead">
+        <h2 class="section-title">The tactile feel of fine stationery.</h2>
+        <p class="section-desc">Try the virtual ink canvas below or flip the neural study flashcard.</p>
+      </div>
 
-            <!-- Animated SVG Handwriting Paths -->
-            <svg class="svg-handwriting" viewBox="0 0 540 290" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Highlighter Stroke under title -->
-              <path class="highlighter-stroke" d="M 32 64 L 380 64" />
+      <div class="workbench-grid">
+        <!-- Left: Interactive Canvas -->
+        <div class="canvas-panel">
+          <div class="panel-header">
+            <span class="sheet-title">Lecture Note — Biophysics &amp; Memory</span>
+            <span class="sheet-page">Sheet 04 / 12</span>
+          </div>
 
-              <!-- Handwritten Title -->
-              <path class="ink-stroke" id="stroke-title" d="M 34 62 C 50 42, 60 70, 75 52 C 90 38, 105 65, 120 50 C 140 40, 160 62, 175 48 C 195 38, 215 60, 235 48 C 255 40, 275 62, 300 50 C 320 40, 345 60, 375 52" />
+          <div class="canvas-viewport" id="draw-container">
+            <canvas id="interactive-canvas" width="600" height="340"></canvas>
+            
+            <!-- SVG Guided Ink Stroke Trace -->
+            <svg class="canvas-guide-svg" viewBox="0 0 600 340" fill="none">
+              <path class="guide-highlighter" d="M 40 58 L 360 58" />
+              <path class="guide-pen" id="animated-title-path" d="M 42 56 C 65 38, 80 64, 105 46 C 130 32, 145 60, 170 44 C 200 36, 220 58, 250 42 C 280 34, 305 56, 335 44" />
+              <path class="guide-pen" style="animation-delay: 1.2s;" d="M 42 108 C 80 104, 130 110, 170 106 C 220 102, 270 110, 320 106 C 360 104, 410 110, 460 108" />
+              <path class="guide-pen" style="animation-delay: 2.2s;" d="M 42 148 C 90 144, 150 150, 200 146 M 220 140 L 244 156 M 244 140 L 220 156 M 260 148 L 285 148 C 310 140, 335 154, 360 146" />
               
-              <!-- Handwritten Body Text Line 1 -->
-              <path class="ink-stroke" style="animation-delay: 0.8s;" d="M 34 112 C 60 108, 90 114, 120 110 C 160 106, 200 114, 240 108 C 280 106, 320 112, 360 108 C 390 106, 420 112, 450 110" />
-              
-              <!-- Handwritten Body Text Line 2 with Formula -->
-              <path class="ink-stroke" style="animation-delay: 1.5s;" d="M 34 150 C 70 148, 110 152, 140 148 C 170 146, 210 152, 250 148 M 270 142 L 290 158 M 290 142 L 270 158 M 305 150 L 325 150 M 340 146 C 360 138, 380 156, 400 148" />
+              <!-- Synaptic node diagram -->
+              <circle cx="120" cy="240" r="18" class="guide-diagram" />
+              <path class="guide-diagram" d="M 138 240 C 180 220, 240 260, 282 240" />
+              <circle cx="300" cy="240" r="18" class="guide-diagram" />
+              <path class="guide-diagram" d="M 318 240 C 350 230, 400 250, 432 240" />
+              <circle cx="450" cy="240" r="18" class="guide-diagram" />
 
-              <!-- Synapse Node Diagram -->
-              <circle cx="110" cy="225" r="16" class="diagram-stroke" />
-              <path class="diagram-stroke" d="M 126 225 C 170 205, 230 245, 274 225" />
-              <circle cx="290" cy="225" r="16" class="diagram-stroke" />
-              <path class="diagram-stroke" d="M 306 225 C 340 215, 380 235, 414 225" />
-              <circle cx="430" cy="225" r="16" class="diagram-stroke" />
-
-              <text x="102" y="230" font-size="11" font-family="monospace" fill="currentColor">N₁</text>
-              <text x="282" y="230" font-size="11" font-family="monospace" fill="currentColor">N₂</text>
-              <text x="422" y="230" font-size="11" font-family="monospace" fill="currentColor">N₃</text>
+              <text x="113" y="245" font-size="12" font-family="-apple-system, sans-serif" fill="#716F6A">S₁</text>
+              <text x="293" y="245" font-size="12" font-family="-apple-system, sans-serif" fill="#716F6A">S₂</text>
+              <text x="443" y="245" font-size="12" font-family="-apple-system, sans-serif" fill="#716F6A">S₃</text>
             </svg>
 
-            <!-- Stylus Graphic Cursor Following Ink -->
-            <div class="stylus-indicator" aria-hidden="true">
-              <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
-                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" fill="#FFFFFF" stroke="#3264A8" stroke-width="1.8"/>
-                <circle cx="3" cy="21" r="2" fill="#5B4897"/>
-              </svg>
-            </div>
-
-            <!-- Interactive Tool Switcher Dock -->
-            <div class="floating-dock">
-              <button class="tool-btn active" type="button" data-tool="fountain">
-                <span>🖋️ Fountain</span>
-              </button>
-              <button class="tool-btn" type="button" data-tool="ballpoint">
-                <span>🖊️ Ballpoint</span>
-              </button>
-              <button class="tool-btn" type="button" data-tool="highlighter">
-                <span>🖍️ Pastel Glow</span>
-              </button>
-              <button class="tool-btn" type="button" data-tool="lasso">
-                <span>✂️ Lasso</span>
-              </button>
-              <button class="tool-btn" type="button" data-tool="ai">
-                <span>✨ AI Copilot</span>
-              </button>
+            <div class="canvas-draw-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+              <span>Click or drag to draw anywhere</span>
             </div>
           </div>
 
-          <!-- Right: Interactive 3D AI Flashcard Motion Graphic -->
-          <div class="ai-study-stage">
-            <div class="ai-stage-header">
-              <div class="ai-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-                <span>AI STUDY ASSISTANT</span>
-              </div>
-              <h2 class="ai-headline">Instant Flashcards & Quizzes</h2>
-              <p class="ai-sub">Generated directly from your handwritten notes.</p>
-            </div>
+          <!-- Tactile Tool Palette Dock -->
+          <div class="tool-palette-dock">
+            <button class="palette-btn active" data-color="#141416" data-size="2" type="button">
+              <span class="palette-swatch swatch-obsidian"></span>
+              <span>Fountain</span>
+            </button>
+            <button class="palette-btn" data-color="#3A5A8C" data-size="1.5" type="button">
+              <span class="palette-swatch swatch-navy"></span>
+              <span>Ballpoint</span>
+            </button>
+            <button class="palette-btn" data-color="rgba(245, 185, 105, 0.45)" data-size="14" type="button">
+              <span class="palette-swatch swatch-amber"></span>
+              <span>Pastel Highlighter</span>
+            </button>
+            <button class="palette-btn" data-color="#2D6A4F" data-size="2.2" type="button">
+              <span class="palette-swatch swatch-forest"></span>
+              <span>Fine Script</span>
+            </button>
+            <button class="palette-btn palette-clear" id="canvas-clear" type="button">
+              <span>Clear Canvas</span>
+            </button>
+          </div>
+        </div>
 
-            <!-- 3D Flippable Interactive Flashcard -->
-            <div class="flip-card-wrap" id="study-card" title="Click to flip flashcard">
-              <div class="flip-card-inner">
-                <!-- Card Front -->
-                <div class="flip-face flip-front">
-                  <div>
-                    <span class="flip-tag">FLASHCARD · QUESTION</span>
-                    <div class="flip-question">
-                      How does synaptic plasticity strengthen memories during deep study?
-                    </div>
-                  </div>
-                  <div class="flip-prompt">
-                    <span>Topic: Hebbian Learning</span>
-                    <span style="font-weight: 600;">Tap to Flip &rarr;</span>
-                  </div>
+        <!-- Right: 3D Study Flashcard -->
+        <div class="study-panel">
+          <div class="panel-header">
+            <span class="sheet-title">AI Study Assistant</span>
+            <span class="sheet-page">Instant Flashcard</span>
+          </div>
+
+          <div class="flip-card-stage" id="study-card" title="Click to flip flashcard">
+            <div class="flip-card-3d">
+              <!-- Front Face -->
+              <div class="card-face card-front">
+                <div class="card-category">SYNAPTIC PLASTICITY · HEBBIAN THEORY</div>
+                <div class="card-prompt">
+                  How does continuous neural stimulation consolidate short-term thoughts into permanent memories?
                 </div>
-                <!-- Card Back -->
-                <div class="flip-face flip-back">
-                  <div>
-                    <span class="flip-tag">ANSWER & KEY CONCEPT</span>
-                    <div class="flip-answer">
-                      "Neurons that fire together, wire together." Repeated stimulation releases neurotransmitters that increase synaptic conductance and consolidate long-term potentiation.
-                    </div>
-                  </div>
-                  <div class="flip-prompt">
-                    <span>✓ Confidence: Mastered</span>
-                    <span style="font-weight: 600;">Tap to Return &larr;</span>
-                  </div>
+                <div class="card-action">
+                  <span>Topic: Neurobiology</span>
+                  <span class="action-trigger">Click to Flip &rarr;</span>
+                </div>
+              </div>
+
+              <!-- Back Face -->
+              <div class="card-face card-back">
+                <div class="card-category">ANSWER &amp; KEY CONCEPT</div>
+                <div class="card-prompt card-answer-text">
+                  "Neurons that fire together, wire together." Persistent depolarization releases calcium ions that insert AMPA receptors into post-synaptic membranes, establishing long-term potentiation (LTP).
+                </div>
+                <div class="card-action">
+                  <span class="confidence-tag">✓ Retention: High</span>
+                  <span class="action-trigger">&larr; Return to Question</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Dual Engine Indicators -->
-            <div class="ai-chips">
-              <div class="ai-chip">
-                <span class="chip-dot chip-dot-green"></span>
-                <span>Free NVIDIA API Key</span>
-              </div>
-              <div class="ai-chip">
-                <span class="chip-dot chip-dot-purple"></span>
-                <span>1.1 GB Offline Local Model</span>
-              </div>
+          <div class="ai-architecture-chips">
+            <div class="arch-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+              <span>NVIDIA NIM Cloud (Free API Key)</span>
+            </div>
+            <div class="arch-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+              <span>1.1 GB Local Model (llama.cpp)</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: PASTEL MINIMALIST FEATURE CARDS -->
-    <section class="features-section" id="features">
-      <div class="section-header">
-        <span class="section-tag">Pure Focus · Zero Clutter</span>
-        <h2 class="title">Everything you need to write and learn.</h2>
-        <p class="sub">Crafted for Apple Pencil and Android styluses with the warmth and texture of fine physical paper.</p>
+    <!-- SECTION 3: BENTO CAPABILITIES SHOWCASE -->
+    <section class="capabilities-section" id="capabilities">
+      <div class="section-lead">
+        <h2 class="section-title">Designed with discipline. Built without shortcuts.</h2>
+        <p class="section-desc">Every element of Quirk Notes is designed around real stylus workflows rather than subscription paywalls.</p>
       </div>
 
-      <div class="points-grid">
-        <article class="point-card">
-          <div class="point-icon icon-blue">🖋️</div>
-          <h3>Natural Ink Dynamics</h3>
-          <p>Variable pressure sensitivity, dynamic velocity tapering, and complete palm rejection across iPad and Android tablets.</p>
+      <div class="bento-grid">
+        <!-- Bento 1: Large Editor Preview -->
+        <article class="bento-card bento-hero">
+          <div class="bento-text">
+            <div class="bento-tag">PencilKit &amp; Active Stylus</div>
+            <h3 class="bento-title">Low-latency pressure engine.</h3>
+            <p class="bento-desc">
+              9ms hardware inking on iPad with Apple Pencil tilt and pressure curves. On Android, active S-Pen and precision styluses register sub-millimeter coordinates with native palm rejection.
+            </p>
+          </div>
+          <div class="bento-media">
+            <img class="bento-img" src="media/editor.png" alt="Quirk Notes handwritten notebook editor interface" loading="lazy" width="700" height="420">
+          </div>
         </article>
 
-        <article class="point-card">
-          <div class="point-icon icon-mint">📄</div>
-          <h3>Direct PDF Annotation</h3>
-          <p>Import lecture handouts, mark up slide decks, search typed and handwritten text, and export lossless vector PDFs.</p>
+        <!-- Bento 2: PDF Annotation -->
+        <article class="bento-card">
+          <div class="bento-text">
+            <div class="bento-tag">Vector Precision</div>
+            <h3 class="bento-title">Direct PDF annotation.</h3>
+            <p class="bento-desc">
+              Import textbook chapters, lecture slides, and contracts. Annotations live in an independent vector layer that never pixelates on zoom, with lossless PDF export.
+            </p>
+          </div>
+          <div class="bento-media">
+            <img class="bento-img" src="media/demo.gif" alt="Animated demonstration of PDF annotation and handwriting" loading="lazy" width="360" height="240">
+          </div>
         </article>
 
-        <article class="point-card">
-          <div class="point-icon icon-lavender">🧠</div>
-          <h3>AI Study Engine</h3>
-          <p>Summarize entire notebooks, generate instant spaced-repetition flashcards, practice quizzes, and interactive mind maps.</p>
+        <!-- Bento 3: Notebook Library -->
+        <article class="bento-card">
+          <div class="bento-text">
+            <div class="bento-tag">Organization</div>
+            <h3 class="bento-title">Structured notebooks.</h3>
+            <p class="bento-desc">
+              Nested folders, multi-subject notebooks, custom book covers, and rapid search across typed and handwritten pages.
+            </p>
+          </div>
+          <div class="bento-media">
+            <img class="bento-img" src="media/library.png" alt="Quirk Notes document library and notebook shelves" loading="lazy" width="360" height="240">
+          </div>
         </article>
 
-        <article class="point-card">
-          <div class="point-icon icon-peach">⚡</div>
-          <h3>Your Key or Offline</h3>
-          <p>Use your own free NVIDIA NIM key for cloud speed, or download the 1.1GB offline model to study anywhere with no Wi-Fi.</p>
-        </article>
-
-        <article class="point-card">
-          <div class="point-icon icon-yellow">📐</div>
-          <h3>Paper for Every Discipline</h3>
-          <p>Dotted, graph, lined, Cornell, music staff, isometric sheets, and magnetic shapes that snap naturally into alignment.</p>
-        </article>
-
-        <article class="point-card">
-          <div class="point-icon icon-rose">🔒</div>
-          <h3>Private by Design</h3>
-          <p>Your notes belong exclusively to you. They stay on your local device with no user account, no cloud lock-in, and zero ads.</p>
+        <!-- Bento 4: Mobile Android -->
+        <article class="bento-card bento-wide">
+          <div class="bento-text">
+            <div class="bento-tag">Cross-Platform Sync</div>
+            <h3 class="bento-title">iPad, Android tablet, and phone.</h3>
+            <p class="bento-desc">
+              Take notes in lecture on your iPad, review flashcards on your Android phone during your commute, and open read-only vector notebooks on any web browser.
+            </p>
+          </div>
+          <div class="bento-media-center">
+            <img class="bento-img-phone" src="media/android-phone.png" alt="Quirk Notes running on Android smartphone" loading="lazy" width="240" height="480">
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- SECTION 4: DEVICE COMPARISON MATRIX -->
-    <section class="compare-section" id="compare">
-      <div class="section-header">
-        <span class="section-tag">Cross-Platform Availability</span>
-        <h2 class="title">Transparent comparison across devices.</h2>
-        <p class="sub">A completely free alternative to GoodNotes and Notability with all feature capabilities stated honestly.</p>
+    <!-- SECTION 4: TRANSPARENT DEVICE COMPARISON -->
+    <section class="matrix-section">
+      <div class="section-lead">
+        <h2 class="section-title">An honest comparison.</h2>
+        <p class="section-desc">Compare Quirk Notes against commercial subscription note-taking apps.</p>
       </div>
 
-      <div class="table-card">
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th style="width: 40%;">Feature</th>
-                <th>iPad (iPadOS 17+)</th>
-                <th>Android (8+)</th>
-                <th>Browser</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Handwriting & Stylus Pressure</th>
-                <td><span class="badge-check">✓ Native Apple Pencil</span></td>
-                <td><span class="badge-check">✓ Active Stylus</span></td>
-                <td><span class="badge-check">✓ Pointer API</span></td>
-              </tr>
-              <tr>
-                <th>PDF Annotation & Export</th>
-                <td><span class="badge-check">✓ Included</span></td>
-                <td><span class="badge-check">✓ Included</span></td>
-                <td><span class="badge-check">✓ Included</span></td>
-              </tr>
-              <tr>
-                <th>AI Flashcards, Summaries & Quizzes</th>
-                <td><span class="badge-check">✓ Included</span></td>
-                <td><span class="badge-check">✓ Included</span></td>
-                <td><span class="badge-muted">Offline only</span></td>
-              </tr>
-              <tr>
-                <th>On-Device Offline Local AI (1.1 GB)</th>
-                <td><span class="badge-check">✓ CoreML / NDK</span></td>
-                <td><span class="badge-check">✓ Local NDK</span></td>
-                <td><span class="badge-muted">Not yet</span></td>
-              </tr>
-              <tr>
-                <th>Paper Templates (Cornell, Dotted, Staves)</th>
-                <td><span class="badge-check">✓ All 12 Styles</span></td>
-                <td><span class="badge-check">✓ All 12 Styles</span></td>
-                <td><span class="badge-check">✓ All 12 Styles</span></td>
-              </tr>
-              <tr>
-                <th>Pricing & Subscription</th>
-                <td><span class="badge-check">Free ($0 / mo)</span></td>
-                <td><span class="badge-check">Free ($0 / mo)</span></td>
-                <td><span class="badge-check">Free ($0 / mo)</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="table-container">
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th class="col-feature">Feature</th>
+              <th class="col-highlight">Quirk Notes</th>
+              <th>GoodNotes 6</th>
+              <th>Notability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-feature">Monthly Subscription</td>
+              <td class="col-highlight"><strong>$0 / month</strong> (Free forever)</td>
+              <td>$9.99 – $29.99 / year</td>
+              <td>$14.99 / year</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Account Requirement</td>
+              <td class="col-highlight"><strong>None</strong> (Zero sign-in)</td>
+              <td>Mandatory account</td>
+              <td>Mandatory account</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Offline Local AI</td>
+              <td class="col-highlight"><strong>Included</strong> (1.1 GB Qwen model)</td>
+              <td>Cloud-only paywall</td>
+              <td>Cloud-only paywall</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Native Stylus Pressure</td>
+              <td class="col-highlight"><strong>Apple Pencil &amp; Android</strong></td>
+              <td>Apple Pencil only</td>
+              <td>Apple Pencil only</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Data Storage Location</td>
+              <td class="col-highlight"><strong>Local device only</strong></td>
+              <td>Vendor proprietary cloud</td>
+              <td>Vendor proprietary cloud</td>
+            </tr>
+            <tr>
+              <td class="col-feature">Vector PDF Export</td>
+              <td class="col-highlight"><strong>Lossless vector</strong></td>
+              <td>Included</td>
+              <td>Included</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
-    <!-- SECTION 5: ABOUT THE DEVELOPER (Inspired by warriorbiswas.vercel.app) -->
-    <section class="developer-section" id="developer">
-      <div class="section-header">
-        <span class="section-tag">About the Builder</span>
-        <h2 class="title">Crafted by Arpan Biswas.</h2>
-        <p class="sub">Building open, autonomous, and private tools that respect user freedom.</p>
+    <!-- SECTION 5: ABOUT THE BUILDER (Inspired by warriorbiswas.vercel.app) -->
+    <section class="builder-section" id="builder">
+      <div class="section-lead">
+        <h2 class="section-title">About the Builder</h2>
       </div>
 
-      <div class="developer-card">
-        <div class="developer-avatar-col">
-          <div class="developer-avatar-ring">
-            <div class="developer-avatar-inner">AB</div>
-          </div>
-          <div class="status-pill-online">
-            <span class="pulse-circle" style="background: currentColor;"></span>
-            <span>Available for Research</span>
+      <div class="builder-card">
+        <div class="builder-profile-col">
+          <div class="builder-avatar">AB</div>
+          <div class="builder-badge">
+            <span class="status-dot"></span>
+            <span>Research &amp; Systems</span>
           </div>
         </div>
 
-        <div class="developer-bio-col">
-          <h3>Arpan Biswas</h3>
-          <div class="developer-title-sub">
-            <span>Robotics Engineer &amp; High School Researcher</span>
-            <span>·</span>
-            <span>IIT Kharagpur Intern</span>
+        <div class="builder-content-col">
+          <div class="builder-name-row">
+            <h3 class="builder-name">Arpan Biswas</h3>
+            <span class="builder-role">Robotics Engineer &amp; High School Researcher</span>
           </div>
-          <p class="developer-story">
-            I built Quirk Notes out of frustration with predatory subscription walls, cloud account requirements, and proprietary file formats in modern note-taking apps. My background is in autonomous systems and AI robotics (Summer Research Intern at <strong>IIT Kharagpur</strong> working on autonomous LiDAR platforms like <em>MineScout</em> with ROS and Raspberry Pi). I design software that delivers raw performance, local-first data ownership, and zero monthly fees.
+          
+          <p class="builder-bio">
+            I built Quirk Notes out of frustration with predatory subscriptions, account paywalls, and proprietary file formats in modern software. My primary research is in autonomous robotics and AI systems—previously a Summer Research Intern at <strong>IIT Kharagpur</strong> working on autonomous LiDAR exploration platforms like <em>MineScout</em> using ROS and embedded systems. I believe tools for students and researchers should be fast, private, and free.
           </p>
-          <div class="developer-credentials">
-            <div class="credential-item">
-              <span class="credential-icon">🎓</span>
-              <span>IIT Kharagpur Research Intern</span>
-            </div>
-            <div class="credential-item">
-              <span class="credential-icon">🤖</span>
-              <span>Autonomous Robotics &amp; LiDAR</span>
-            </div>
-            <div class="credential-item">
-              <span class="credential-icon">🏆</span>
-              <span>1st Place Regional Science Fair</span>
-            </div>
-            <div class="credential-item">
-              <span class="credential-icon">📍</span>
-              <span>Salt Lake, West Bengal, India</span>
-            </div>
+
+          <div class="builder-tags-grid">
+            <div class="tag-item">🎓 IIT Kharagpur Research Intern</div>
+            <div class="tag-item">🤖 Autonomous LiDAR &amp; ROS Systems</div>
+            <div class="tag-item">🏆 1st Place Regional Science Fair</div>
+            <div class="tag-item">📍 Salt Lake, West Bengal, India</div>
           </div>
-          <div class="developer-socials">
-            <a class="dev-link-btn dev-link-primary" href="https://warriorbiswas.vercel.app/" target="_blank" rel="noopener">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
-              warriorbiswas.vercel.app
+
+          <div class="builder-links-row">
+            <a class="builder-btn btn-portfolio" href="https://warriorbiswas.vercel.app/" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>warriorbiswas.vercel.app</span>
             </a>
-            <a class="dev-link-btn dev-link-secondary" href="https://github.com/warriorbiswas-tech" target="_blank" rel="noopener">
+            <a class="builder-btn" href="https://github.com/warriorbiswas-tech" target="_blank" rel="noopener">
               <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-              GitHub
+              <span>GitHub</span>
             </a>
-            <a class="dev-link-btn dev-link-secondary" href="https://linkedin.com/in/warriorbiswas" target="_blank" rel="noopener">
+            <a class="builder-btn" href="https://linkedin.com/in/warriorbiswas" target="_blank" rel="noopener">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              LinkedIn
+              <span>LinkedIn</span>
             </a>
-            <a class="dev-link-btn dev-link-secondary" href="mailto:biswasarpan90@gmail.com">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Email
+            <a class="builder-btn" href="mailto:biswasarpan90@gmail.com">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Email</span>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: FAQ ACCORDION -->
+    <!-- SECTION 6: FREQUENTLY ASKED QUESTIONS -->
     <section class="faq-section">
-      <div class="section-header">
-        <span class="section-tag">Frequently Asked Questions</span>
-        <h2 class="title">Common questions answered.</h2>
+      <div class="section-lead">
+        <h2 class="section-title">Frequently asked questions.</h2>
       </div>
 
-      <div class="faq-list">
-        <details class="faq-item" open>
-          <summary>Is Quirk Notes really 100% free?</summary>
-          <p>Yes. Every feature is free with zero subscription, zero user tracking, and no ads. When using online AI, you provide your own free NVIDIA API key (which includes 1,000 monthly free calls), or you can download the 1.1GB offline model for unlimited local queries.</p>
+      <div class="faq-accordion">
+        <details class="faq-row" open>
+          <summary class="faq-question">Is Quirk Notes really 100% free with no catches?</summary>
+          <div class="faq-answer">
+            <p>Yes. Every feature is completely free with zero subscription, zero user telemetry, and no ads. When using online AI, you provide your own free NVIDIA NIM API key (which includes 1,000 free monthly calls), or you can download the 1.1GB offline model for unlimited local queries on your device.</p>
+          </div>
         </details>
-        <details class="faq-item">
-          <summary>How do I install Quirk Notes on Android and iPad?</summary>
-          <p>On Android, download the <code>Quirk-Notes.apk</code> directly and tap install. On iPad, download the <code>Quirk-Notes.ipa</code> and install it using Sideloadly or AltStore from a Mac or PC. For full step-by-step instructions, view our <a href="guide.html">Installation Guide</a>.</p>
+
+        <details class="faq-row">
+          <summary class="faq-question">How do I install Quirk Notes on Android and iPad?</summary>
+          <div class="faq-answer">
+            <p>On Android, download the <code>Quirk-Notes.apk</code> directly from our releases page and tap install. On iPad, download <code>Quirk-Notes.ipa</code> and install it via Sideloadly or AltStore from a Mac or Windows PC with any free Apple ID. For a complete step-by-step walkthrough, see our <a href="guide.html">Installation Guide</a>.</p>
+          </div>
         </details>
-        <details class="faq-item">
-          <summary>What stylus hardware is supported?</summary>
-          <p>Apple Pencil (1st, 2nd gen, USB-C, and Pro) on iPad with tilt and pressure. On Android, all active styluses (Samsung S-Pen, Lenovo Precision Pen, Xiaomi Smart Pen) as well as universal capacitive pens and finger input are supported.</p>
+
+        <details class="faq-row">
+          <summary class="faq-question">Which styluses and tablets are supported?</summary>
+          <div class="faq-answer">
+            <p>Apple Pencil (1st, 2nd gen, USB-C, and Apple Pencil Pro) on iPad with tilt and pressure. On Android, all active styluses (Samsung S-Pen, Lenovo Precision Pen, Xiaomi Smart Pen) as well as universal capacitive pens and finger touch are supported.</p>
+          </div>
         </details>
-        <details class="faq-item">
-          <summary>Where are my notebooks saved?</summary>
-          <p>All note data, PDF annotations, and study cards are stored locally in sandbox storage on your device. We never run a cloud server that holds your handwriting or notes.</p>
+
+        <details class="faq-row">
+          <summary class="faq-question">Where are my notebooks saved?</summary>
+          <div class="faq-answer">
+            <p>All note data, PDF annotations, and study cards are stored locally in sandbox storage on your physical device. We never run a cloud server that holds your handwriting or notes.</p>
+          </div>
         </details>
       </div>
     </section>
 
-    <!-- SECTION 7: FINAL CTA BANNER -->
-    <div class="cta-banner">
-      <h2>Start your first notebook today.</h2>
-      <p>Clean handwriting, instant AI study flashcards, and true ownership of your notes.</p>
-      <div class="actions">
-        <a class="btn btn-pastel-green" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
-          Download APK (Android)
-        </a>
-        <a class="btn btn-pastel-blue" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">
-          Download IPA (iPad)
-        </a>
-        <a class="btn btn-outline" href="https://github.com/warriorbiswas-tech/Quirk-notes" target="_blank" rel="noopener">
-          View GitHub Repository
-        </a>
+    <!-- SECTION 7: FINAL CALL TO ACTION -->
+    <section class="cta-section">
+      <div class="cta-box">
+        <h2 class="cta-headline">Start your first notebook.</h2>
+        <p class="cta-sub">Clean handwriting, instant AI study flashcards, and true ownership of your notes.</p>
+        <div class="cta-buttons">
+          <a class="cta-btn cta-primary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
+            Download APK (Android)
+          </a>
+          <a class="cta-btn cta-secondary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">
+            Download IPA (iPad)
+          </a>
+          <a class="cta-btn cta-tertiary" href="https://github.com/warriorbiswas-tech/Quirk-notes" target="_blank" rel="noopener">
+            View on GitHub
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
-  <!-- Minimalist Footer -->
-  <footer>
-    <div>
-      <strong>Quirk Notes</strong> &nbsp;·&nbsp; Crafted with care by <a href="https://warriorbiswas.vercel.app/" target="_blank" rel="noopener" style="font-weight: 600; text-decoration: underline;">Arpan Biswas</a>
-    </div>
-    <div class="footer-links">
-      <a href="#developer">About Builder</a>
-      <a href="https://warriorbiswas.vercel.app/" target="_blank" rel="noopener">warriorbiswas.vercel.app</a>
-      <a href="guide.html">Install Guide</a>
-      <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">Web App</a>
-      <a href="https://github.com/warriorbiswas-tech/Quirk-notes">GitHub</a>
-      <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases">Releases</a>
+  <!-- Quiet Editorial Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-copy">Quirk Notes &nbsp;·&nbsp; Crafted by <a href="https://warriorbiswas.vercel.app/" target="_blank" rel="noopener">Arpan Biswas</a></span>
+      </div>
+      <div class="footer-nav">
+        <a href="#builder">Builder</a>
+        <a href="https://warriorbiswas.vercel.app/" target="_blank" rel="noopener">warriorbiswas.vercel.app</a>
+        <a href="guide.html">Installation</a>
+        <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">Web App</a>
+        <a href="https://github.com/warriorbiswas-tech/Quirk-notes">GitHub</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Interactive Scripts: Video Player & Motion Workbench -->
+  <!-- Native Video Player & Interactive Inking Engine -->
   <script>
     (function() {
-      // 1. Film Player Controls
-      var film = document.getElementById('film');
-      var playToggle = document.getElementById('film-play-toggle');
-      var iconPlay = document.getElementById('icon-play');
-      var iconPause = document.getElementById('icon-pause');
-      var soundToggle = document.getElementById('film-sound-toggle');
-      var iconSoundOn = document.getElementById('icon-sound-on');
-      var iconSoundOff = document.getElementById('icon-sound-off');
-      var soundText = document.getElementById('film-sound-text');
-      var timeline = document.getElementById('film-timeline');
-      var progress = document.getElementById('film-progress');
-      var timer = document.getElementById('film-timer');
-      var fullscreenBtn = document.getElementById('film-fullscreen-btn');
+      // 1. Apple Studio Video Player Controls
+      var player = document.getElementById('player');
+      var playBtn = document.getElementById('play-btn');
+      var svgPlay = document.getElementById('svg-play');
+      var svgPause = document.getElementById('svg-pause');
+      var soundBtn = document.getElementById('sound-btn');
+      var svgSoundOn = document.getElementById('svg-sound-on');
+      var svgSoundMuted = document.getElementById('svg-sound-muted');
+      var soundLabel = document.getElementById('sound-label');
+      var timeline = document.getElementById('timeline');
+      var progress = document.getElementById('progress');
+      var timeDisplay = document.getElementById('time-display');
+      var fsBtn = document.getElementById('fs-btn');
 
-      if (film) {
-        // Attempt autoplay muted
-        film.muted = true;
-        var playPromise = film.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(function() {
-            // Autoplay prevented, show play icon
-            if (iconPlay && iconPause) {
-              iconPlay.style.display = 'block';
-              iconPause.style.display = 'none';
+      if (player) {
+        player.muted = true;
+        var p = player.play();
+        if (p !== undefined) {
+          p.catch(function() {
+            if (svgPlay && svgPause) {
+              svgPlay.style.display = 'block';
+              svgPause.style.display = 'none';
             }
           });
         }
 
-        // Play/Pause Toggle
-        if (playToggle) {
-          playToggle.addEventListener('click', function() {
-            if (film.paused) {
-              film.play();
-              iconPlay.style.display = 'none';
-              iconPause.style.display = 'block';
+        if (playBtn) {
+          playBtn.addEventListener('click', function() {
+            if (player.paused) {
+              player.play();
+              svgPlay.style.display = 'none';
+              svgPause.style.display = 'block';
             } else {
-              film.pause();
-              iconPlay.style.display = 'block';
-              iconPause.style.display = 'none';
+              player.pause();
+              svgPlay.style.display = 'block';
+              svgPause.style.display = 'none';
             }
           });
         }
 
-        // Click on video to toggle play
-        film.addEventListener('click', function() {
-          if (playToggle) playToggle.click();
+        player.addEventListener('click', function() {
+          if (playBtn) playBtn.click();
         });
 
-        // Sound Toggle
-        if (soundToggle) {
-          soundToggle.addEventListener('click', function() {
-            film.muted = !film.muted;
-            var isMuted = film.muted;
-            soundToggle.setAttribute('aria-pressed', String(!isMuted));
-            if (iconSoundOn && iconSoundOff && soundText) {
-              if (isMuted) {
-                iconSoundOff.style.display = 'block';
-                iconSoundOn.style.display = 'none';
-                soundText.textContent = 'Sound on';
-              } else {
-                iconSoundOff.style.display = 'none';
-                iconSoundOn.style.display = 'block';
-                soundText.textContent = 'Sound off';
-              }
+        if (soundBtn) {
+          soundBtn.addEventListener('click', function() {
+            player.muted = !player.muted;
+            var isMuted = player.muted;
+            soundBtn.setAttribute('aria-pressed', String(!isMuted));
+            if (isMuted) {
+              svgSoundMuted.style.display = 'block';
+              svgSoundOn.style.display = 'none';
+              soundLabel.textContent = 'Sound on';
+            } else {
+              svgSoundMuted.style.display = 'none';
+              svgSoundOn.style.display = 'block';
+              soundLabel.textContent = 'Sound off';
             }
           });
         }
 
-        // Progress Tracking & Timer
-        film.addEventListener('timeupdate', function() {
-          if (film.duration) {
-            var pct = (film.currentTime / film.duration) * 100;
+        player.addEventListener('timeupdate', function() {
+          if (player.duration) {
+            var pct = (player.currentTime / player.duration) * 100;
             if (progress) progress.style.width = pct + '%';
             if (timeline) timeline.setAttribute('aria-valuenow', Math.round(pct));
             
-            var curM = Math.floor(film.currentTime / 60);
-            var curS = Math.floor(film.currentTime % 60);
-            var durM = Math.floor(film.duration / 60);
-            var durS = Math.floor(film.duration % 60);
-            if (timer) {
-              timer.textContent = 
-                (curM < 10 ? '0' + curM : curM) + ':' + (curS < 10 ? '0' + curS : curS) + ' / ' +
-                (durM < 10 ? '0' + durM : durM) + ':' + (durS < 10 ? '0' + durS : durS);
+            var cM = Math.floor(player.currentTime / 60);
+            var cS = Math.floor(player.currentTime % 60);
+            var dM = Math.floor(player.duration / 60);
+            var dS = Math.floor(player.duration % 60);
+            if (timeDisplay) {
+              timeDisplay.textContent = 
+                (cM < 10 ? '0' + cM : cM) + ':' + (cS < 10 ? '0' + cS : cS) + ' / ' +
+                (dM < 10 ? '0' + dM : dM) + ':' + (dS < 10 ? '0' + dS : dS);
             }
           }
         });
 
-        // Click scrubber to seek
         if (timeline) {
           timeline.addEventListener('click', function(e) {
             var rect = timeline.getBoundingClientRect();
             var pos = (e.clientX - rect.left) / rect.width;
-            if (film.duration) {
-              film.currentTime = pos * film.duration;
+            if (player.duration) {
+              player.currentTime = pos * player.duration;
             }
           });
         }
 
-        // Fullscreen
-        if (fullscreenBtn) {
-          fullscreenBtn.addEventListener('click', function() {
+        if (fsBtn) {
+          fsBtn.addEventListener('click', function() {
             if (!document.fullscreenElement) {
-              if (film.requestFullscreen) film.requestFullscreen();
-              else if (film.webkitRequestFullscreen) film.webkitRequestFullscreen();
+              if (player.requestFullscreen) player.requestFullscreen();
+              else if (player.webkitRequestFullscreen) player.webkitRequestFullscreen();
             } else {
               if (document.exitFullscreen) document.exitFullscreen();
             }
@@ -810,36 +768,93 @@
         }
       }
 
-      // 2. Interactive 3D Flashcard Flip
-      var card = document.getElementById('study-card');
-      if (card) {
-        card.addEventListener('click', function() {
-          card.classList.toggle('flipped');
+      // 2. Interactive Drawing Canvas
+      var canvas = document.getElementById('interactive-canvas');
+      var container = document.getElementById('draw-container');
+      if (canvas && container) {
+        var ctx = canvas.getContext('2d');
+        var isDrawing = false;
+        var currentColor = '#141416';
+        var currentSize = 2;
+
+        function resizeCanvas() {
+          var rect = container.getBoundingClientRect();
+          var dpr = window.devicePixelRatio || 1;
+          canvas.width = rect.width * dpr;
+          canvas.height = rect.height * dpr;
+          canvas.style.width = rect.width + 'px';
+          canvas.style.height = rect.height + 'px';
+          ctx.scale(dpr, dpr);
+          ctx.lineCap = 'round';
+          ctx.lineJoin = 'round';
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        function getPos(e) {
+          var rect = canvas.getBoundingClientRect();
+          var clientX = e.clientX || (e.touches && e.touches[0].clientX);
+          var clientY = e.clientY || (e.touches && e.touches[0].clientY);
+          return {
+            x: clientX - rect.left,
+            y: clientY - rect.top
+          };
+        }
+
+        function start(e) {
+          isDrawing = true;
+          var pos = getPos(e);
+          ctx.beginPath();
+          ctx.moveTo(pos.x, pos.y);
+          ctx.strokeStyle = currentColor;
+          ctx.lineWidth = currentSize;
+        }
+
+        function draw(e) {
+          if (!isDrawing) return;
+          var pos = getPos(e);
+          ctx.lineTo(pos.x, pos.y);
+          ctx.stroke();
+        }
+
+        function stop() {
+          isDrawing = false;
+        }
+
+        canvas.addEventListener('mousedown', start);
+        canvas.addEventListener('mousemove', draw);
+        window.addEventListener('mouseup', stop);
+
+        canvas.addEventListener('touchstart', function(e) { e.preventDefault(); start(e); });
+        canvas.addEventListener('touchmove', function(e) { e.preventDefault(); draw(e); });
+        window.addEventListener('touchend', stop);
+
+        // Palette Buttons
+        var paletteBtns = document.querySelectorAll('.palette-btn:not(.palette-clear)');
+        paletteBtns.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            paletteBtns.forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            currentColor = btn.getAttribute('data-color');
+            currentSize = parseFloat(btn.getAttribute('data-size'));
+          });
         });
+
+        var clearBtn = document.getElementById('canvas-clear');
+        if (clearBtn) {
+          clearBtn.addEventListener('click', function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+          });
+        }
       }
 
-      // 3. Interactive Tool Switcher
-      var toolBtns = document.querySelectorAll('.tool-btn');
-      var strokeTitle = document.getElementById('stroke-title');
-      
-      var toolColors = {
-        fountain: '#2B3A67',
-        ballpoint: '#495057',
-        highlighter: '#E69F53',
-        lasso: '#2D6A4F',
-        ai: '#6E56CF'
-      };
-
-      toolBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          toolBtns.forEach(function(b) { b.classList.remove('active'); });
-          btn.classList.add('active');
-          var tool = btn.getAttribute('data-tool');
-          if (strokeTitle && toolColors[tool]) {
-            strokeTitle.style.stroke = toolColors[tool];
-          }
+      // 3. 3D Flashcard Flip Interaction
+      var studyCard = document.getElementById('study-card');
+      if (studyCard) {
+        studyCard.addEventListener('click', function() {
+          studyCard.classList.toggle('is-flipped');
         });
-      });
+      }
     })();
   </script>
 </body>
