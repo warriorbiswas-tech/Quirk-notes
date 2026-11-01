@@ -89,11 +89,12 @@
     g.drawImage(img, 0, 0, c.width, c.height);
     const blob = await U.canvasToBlob(c, type, 0.9);
     const out = await U.decodeImage(blob);
+    const { width, height } = c;
     U.freeCanvas(c);
     try {
       if (img.close) img.close();
     } catch (e) {}
-    return { blob, w: c.width || Math.round(w * k), h: c.height || Math.round(h * k), img: out, type };
+    return { blob, w: width, h: height, img: out, type };
   };
 
   IO.storeImage = async function (prep) {
