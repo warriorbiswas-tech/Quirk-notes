@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://warriorbiswas-tech.github.io/Quirk-notes/</loc></url>
-  <url><loc>https://warriorbiswas-tech.github.io/Quirk-notes/guide.html</loc></url>
-  <url><loc>https://warriorbiswas-tech.github.io/Quirk-notes/app/</loc></url>
+  <url><loc>https://quirk-notes.vercel.app/</loc></url>
+  <url><loc>https://quirk-notes.vercel.app/guide.html</loc></url>
 </urlset>

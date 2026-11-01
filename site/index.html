@@ -3,18 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quirk Notes: free handwriting note-taking app for iPad and Android</title>
-  <meta name="description" content="Quirk Notes is a free note-taking app for iPad and Android. Handwrite with a stylus, annotate PDFs and study with AI. No subscription, no account, no ads.">
-  <link rel="canonical" href="https://warriorbiswas-tech.github.io/Quirk-notes/">
-  <meta name="theme-color" content="#1D5BD8">
+  <title>Quirk Notes: Free Handwriting & AI Study Notebook</title>
+  <meta name="description" content="Quirk Notes is a minimalist, subscription-free note-taking app for iPad and Android. Pressure-sensitive stylus handwriting, PDF annotation, and private AI study tools.">
+  <link rel="canonical" href="https://quirk-notes.vercel.app/">
+  <meta name="theme-color" content="#FAF8F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1013" media="(prefers-color-scheme: dark)">
+  
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Quirk Notes: free handwriting notes for iPad and Android">
-  <meta property="og:description" content="Handwrite with a stylus, annotate PDFs and study with AI. No subscription, no account, no ads.">
-  <meta property="og:url" content="https://warriorbiswas-tech.github.io/Quirk-notes/">
+  <meta property="og:title" content="Quirk Notes: Free Handwriting & AI Study Notebook">
+  <meta property="og:description" content="Write with a stylus, mark up PDFs, and study with AI. No subscription, no account, zero ads.">
+  <meta property="og:url" content="https://quirk-notes.vercel.app/">
   <meta property="og:image" content="https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="media/logo.png">
+  
+  <link rel="icon" type="image/png" href="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png">
   <link rel="stylesheet" href="style.css">
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,113 +27,423 @@
     "applicationCategory": "ProductivityApplication",
     "operatingSystem": "iPadOS 17, Android 8",
     "description": "A free handwriting note-taking app for iPad and Android with PDF annotation and AI study tools.",
-    "image": "https://warriorbiswas-tech.github.io/Quirk-notes/media/social-preview.png",
-    "url": "https://warriorbiswas-tech.github.io/Quirk-notes/",
+    "url": "https://quirk-notes.vercel.app/",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
 </head>
 <body>
-  <header class="bar">
-    <a class="brand" href="./"><img src="media/logo.png" alt="" width="34" height="34"> Quirk Notes</a>
-    <nav>
-      <a href="guide.html">Guide</a>
-      <a href="https://github.com/warriorbiswas-tech/Quirk-notes">GitHub</a>
-    </nav>
+  <!-- Ambient Pastel Gradient Aura -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="ambient-blob ambient-blob-1"></div>
+    <div class="ambient-blob ambient-blob-2"></div>
+    <div class="ambient-blob ambient-blob-3"></div>
+  </div>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="bar-wrap">
+    <div class="bar">
+      <a class="brand" href="./">
+        <div class="brand-logo-wrap">
+          <img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="Quirk Notes" width="28" height="28">
+        </div>
+        <span>Quirk Notes</span>
+        <span class="brand-tag">v1.1.0</span>
+      </a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#compare">Devices</a>
+        <a href="guide.html">Guide</a>
+        <a class="btn-nav-github" href="https://github.com/warriorbiswas-tech/Quirk-notes" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
-      <h1>Handwritten notes, completely free.</h1>
-      <p class="lead">Quirk Notes is a note-taking app for iPad and Android. Write with a stylus, mark up PDFs and turn your notes into flashcards, quizzes and summaries with AI. There is no subscription, no account and no ads.</p>
+      <div class="pill-badge">
+        <span class="pill-dot"></span>
+        <span>Subscription-Free · Offline AI · Native Stylus Ink</span>
+      </div>
+      <h1>
+        Write like paper.<br>
+        <span class="pastel-highlight">Study with AI.</span>
+      </h1>
+      <p class="lead">
+        A minimalist, pressure-sensitive handwriting notebook for iPad and Android. Zero monthly subscriptions, no account wall, and total offline privacy.
+      </p>
       <div class="actions">
-        <a class="btn primary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">Download for Android</a>
-        <a class="btn" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">Download for iPad</a>
-        <a class="btn" href="app/">Try it in your browser</a>
+        <a class="btn btn-pastel-green" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download for Android
+        </a>
+        <a class="btn btn-pastel-blue" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.76 1.04-1.82.93-2.88-.9.04-2 .6-2.65 1.36-.58.67-.99 1.74-.86 2.78.99.08 2-.51 2.58-1.26z"/></svg>
+          Download for iPad
+        </a>
+        <a class="btn btn-outline" href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">
+          Open Web Edition
+        </a>
       </div>
-      <p class="small">The iPad app installs with Sideloadly or AltStore, not the App Store. <a href="guide.html#ipad">See how</a>.</p>
-      <img class="demo" src="media/demo.gif" width="800" height="561" alt="Quirk Notes in use: opening a notebook, handwriting a title, sketching a labelled diagram and highlighting a word">
+      <p class="small-meta">
+        No account needed &nbsp;·&nbsp; iPad installs with Sideloadly or AltStore. <a href="guide.html#ipad">Installation guide &rarr;</a>
+      </p>
     </section>
 
-    <section>
-      <h2>Everything a paper notebook does, and more</h2>
-      <div class="grid">
-        <article>
-          <h3>Ink that feels right</h3>
-          <p>Fountain pen, ballpoint, brush and pencil with pressure and tapering. Palm rejection keeps your hand off the page.</p>
+    <!-- Motion Graphics Interactive Showcase -->
+    <section class="motion-stage" aria-label="Interactive note-taking and AI study demonstration">
+      <div class="floating-badge badge-1">
+        <span>✨ 0% Fees · Forever Free</span>
+      </div>
+      <div class="floating-badge badge-2">
+        <span>🔒 100% Local Device Storage</span>
+      </div>
+
+      <div class="motion-card-outer">
+        <!-- Stage Top Bar -->
+        <div class="stage-bar">
+          <div class="stage-dots">
+            <span class="stage-dot dot-red"></span>
+            <span class="stage-dot dot-yellow"></span>
+            <span class="stage-dot dot-green"></span>
+          </div>
+          <div class="stage-title">
+            <span>Lecture Notes — Neuroscience & Synaptic Memory</span>
+          </div>
+          <div class="stage-status">
+            <span class="pulse-circle"></span>
+            <span>Live Ink Engine</span>
+          </div>
+        </div>
+
+        <!-- Stage Main Split Grid -->
+        <div class="stage-content">
+          <!-- Left: Digital Notebook with Animated Handwriting Reveal -->
+          <div class="notebook-page">
+            <div class="page-header">
+              <span class="page-title">Bio 301: Synaptic Plasticity</span>
+              <span class="page-date">PAGE 04 / 12</span>
+            </div>
+
+            <!-- Animated SVG Handwriting Paths -->
+            <svg class="svg-handwriting" viewBox="0 0 540 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Highlighter Stroke under title -->
+              <path class="highlighter-stroke" d="M 32 64 L 380 64" />
+
+              <!-- Handwritten Title -->
+              <path class="ink-stroke" id="stroke-title" d="M 34 62 C 50 42, 60 70, 75 52 C 90 38, 105 65, 120 50 C 140 40, 160 62, 175 48 C 195 38, 215 60, 235 48 C 255 40, 275 62, 300 50 C 320 40, 345 60, 375 52" />
+              
+              <!-- Handwritten Body Text Line 1 -->
+              <path class="ink-stroke" style="animation-delay: 0.8s;" d="M 34 112 C 60 108, 90 114, 120 110 C 160 106, 200 114, 240 108 C 280 106, 320 112, 360 108 C 390 106, 420 112, 450 110" />
+              
+              <!-- Handwritten Body Text Line 2 with Formula -->
+              <path class="ink-stroke" style="animation-delay: 1.5s;" d="M 34 150 C 70 148, 110 152, 140 148 C 170 146, 210 152, 250 148 M 270 142 L 290 158 M 290 142 L 270 158 M 305 150 L 325 150 M 340 146 C 360 138, 380 156, 400 148" />
+
+              <!-- Synapse Node Diagram -->
+              <circle cx="110" cy="225" r="16" class="diagram-stroke" />
+              <path class="diagram-stroke" d="M 126 225 C 170 205, 230 245, 274 225" />
+              <circle cx="290" cy="225" r="16" class="diagram-stroke" />
+              <path class="diagram-stroke" d="M 306 225 C 340 215, 380 235, 414 225" />
+              <circle cx="430" cy="225" r="16" class="diagram-stroke" />
+
+              <text x="102" y="230" font-size="11" font-family="monospace" fill="currentColor">N₁</text>
+              <text x="282" y="230" font-size="11" font-family="monospace" fill="currentColor">N₂</text>
+              <text x="422" y="230" font-size="11" font-family="monospace" fill="currentColor">N₃</text>
+            </svg>
+
+            <!-- Stylus Graphic Cursor Following Ink -->
+            <div class="stylus-indicator" aria-hidden="true">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" fill="#FFFFFF" stroke="#3264A8" stroke-width="1.8"/>
+                <circle cx="3" cy="21" r="2" fill="#5B4897"/>
+              </svg>
+            </div>
+
+            <!-- Interactive Tool Switcher Dock -->
+            <div class="floating-dock">
+              <button class="tool-btn active" type="button" data-tool="fountain">
+                <span>🖋️ Fountain</span>
+              </button>
+              <button class="tool-btn" type="button" data-tool="ballpoint">
+                <span>🖊️ Ballpoint</span>
+              </button>
+              <button class="tool-btn" type="button" data-tool="highlighter">
+                <span>🖍️ Pastel Glow</span>
+              </button>
+              <button class="tool-btn" type="button" data-tool="lasso">
+                <span>✂️ Lasso</span>
+              </button>
+              <button class="tool-btn" type="button" data-tool="ai">
+                <span>✨ AI Copilot</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Interactive 3D AI Flashcard Motion Graphic -->
+          <div class="ai-study-stage">
+            <div class="ai-stage-header">
+              <div class="ai-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <span>AI STUDY ASSISTANT</span>
+              </div>
+              <h2 class="ai-headline">Instant Flashcards & Quizzes</h2>
+              <p class="ai-sub">Generated directly from your handwritten notes.</p>
+            </div>
+
+            <!-- 3D Flippable Interactive Flashcard -->
+            <div class="flip-card-wrap" id="study-card" title="Click to flip flashcard">
+              <div class="flip-card-inner">
+                <!-- Card Front -->
+                <div class="flip-face flip-front">
+                  <div>
+                    <span class="flip-tag">FLASHCARD · QUESTION</span>
+                    <div class="flip-question">
+                      How does synaptic plasticity strengthen memories during deep study?
+                    </div>
+                  </div>
+                  <div class="flip-prompt">
+                    <span>Topic: Hebbian Learning</span>
+                    <span style="font-weight: 600;">Tap to Flip &rarr;</span>
+                  </div>
+                </div>
+                <!-- Card Back -->
+                <div class="flip-face flip-back">
+                  <div>
+                    <span class="flip-tag">ANSWER & KEY CONCEPT</span>
+                    <div class="flip-answer">
+                      "Neurons that fire together, wire together." Repeated stimulation releases neurotransmitters that increase synaptic conductance and consolidate long-term potentiation.
+                    </div>
+                  </div>
+                  <div class="flip-prompt">
+                    <span>✓ Confidence: Mastered</span>
+                    <span style="font-weight: 600;">Tap to Return &larr;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Engine Indicators -->
+            <div class="ai-chips">
+              <div class="ai-chip">
+                <span class="chip-dot chip-dot-green"></span>
+                <span>Free NVIDIA API Key</span>
+              </div>
+              <div class="ai-chip">
+                <span class="chip-dot chip-dot-purple"></span>
+                <span>1.1 GB Offline Local Model</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pastel Minimalist Feature Cards -->
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <span class="section-tag">Pure Focus · Zero Clutter</span>
+        <h2 class="title">Everything you need to write and learn.</h2>
+        <p class="sub">Crafted for Apple Pencil and Android styluses with the warmth and texture of fine physical paper.</p>
+      </div>
+
+      <div class="points-grid">
+        <article class="point-card">
+          <div class="point-icon icon-blue">🖋️</div>
+          <h3>Natural Ink Dynamics</h3>
+          <p>Variable pressure sensitivity, dynamic velocity tapering, and complete palm rejection across iPad and Android tablets.</p>
         </article>
-        <article>
-          <h3>PDFs you can write on</h3>
-          <p>Bring in textbooks and worksheets, annotate them, and search their text. Export as PDF whenever you need to share.</p>
+
+        <article class="point-card">
+          <div class="point-icon icon-mint">📄</div>
+          <h3>Direct PDF Annotation</h3>
+          <p>Import lecture handouts, mark up slide decks, search typed and handwritten text, and export lossless vector PDFs.</p>
         </article>
-        <article>
-          <h3>AI that studies with you</h3>
-          <p>Chat with your notes, then get summaries, flashcards, quizzes and mind maps. Your handwriting is read so the AI can use it.</p>
+
+        <article class="point-card">
+          <div class="point-icon icon-lavender">🧠</div>
+          <h3>AI Study Engine</h3>
+          <p>Summarize entire notebooks, generate instant spaced-repetition flashcards, practice quizzes, and interactive mind maps.</p>
         </article>
-        <article>
-          <h3>Your own key, or none at all</h3>
-          <p>Use a free NVIDIA key for large online models, or download a model that runs on your device with no internet.</p>
+
+        <article class="point-card">
+          <div class="point-icon icon-peach">⚡</div>
+          <h3>Your Key or Offline</h3>
+          <p>Use your own free NVIDIA NIM key for cloud speed, or download the 1.1GB offline model to study anywhere with no Wi-Fi.</p>
         </article>
-        <article>
-          <h3>Paper for every subject</h3>
-          <p>Ruled, grid, dot, Cornell, music staff and planners, plus stickers, shapes that snap into place and a lasso to rearrange.</p>
+
+        <article class="point-card">
+          <div class="point-icon icon-yellow">📐</div>
+          <h3>Paper for Every Discipline</h3>
+          <p>Dotted, graph, lined, Cornell, music staff, isometric sheets, and magnetic shapes that snap naturally into alignment.</p>
         </article>
-        <article>
-          <h3>Your notes stay yours</h3>
-          <p>Notes live on your device, with no account to make. Online AI only sends notes to NVIDIA if you add a key.</p>
+
+        <article class="point-card">
+          <div class="point-icon icon-rose">🔒</div>
+          <h3>Private by Design</h3>
+          <p>Your notes belong exclusively to you. They stay on your local device with no user account, no cloud lock-in, and zero ads.</p>
         </article>
       </div>
     </section>
 
-    <section class="shots">
-      <img src="media/library.png" width="800" height="561" loading="lazy" alt="The notebook library with colourful covers">
-      <img src="media/android-phone.png" width="495" height="1100" loading="lazy" alt="Quirk Notes on an Android phone">
-    </section>
+    <!-- Device Comparison Matrix -->
+    <section class="compare-section" id="compare">
+      <div class="section-header">
+        <span class="section-tag">Cross-Platform Availability</span>
+        <h2 class="title">Transparent comparison across devices.</h2>
+        <p class="sub">A completely free alternative to GoodNotes and Notability with all feature capabilities stated honestly.</p>
+      </div>
 
-    <section>
-      <h2>A free alternative to paid note apps</h2>
-      <p>If you are looking for a free alternative to apps like GoodNotes or Notability, here is what you get and what to expect.</p>
-      <div class="table">
-        <table>
-          <thead><tr><th></th><th>iPad</th><th>Android</th><th>Browser</th></tr></thead>
-          <tbody>
-            <tr><th>Handwriting and stylus</th><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-            <tr><th>PDF annotation</th><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-            <tr><th>AI study tools</th><td>Yes</td><td>Yes</td><td>No</td></tr>
-            <tr><th>On-device AI (one 1.1 GB download)</th><td>Yes</td><td>Yes</td><td>No</td></tr>
-            <tr><th>Recording with live transcript</th><td>Yes</td><td>Not yet</td><td>No</td></tr>
-            <tr><th>Sync</th><td>iCloud Drive</td><td>Not yet</td><td>No</td></tr>
-            <tr><th>How to install</th><td>Sideload</td><td>APK file</td><td>Open or add to Home Screen</td></tr>
-          </tbody>
-        </table>
+      <div class="table-card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 40%;">Feature</th>
+                <th>iPad (iPadOS 17+)</th>
+                <th>Android (8+)</th>
+                <th>Browser</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Handwriting & Stylus Pressure</th>
+                <td><span class="badge-check">✓ Native Apple Pencil</span></td>
+                <td><span class="badge-check">✓ Active Stylus</span></td>
+                <td><span class="badge-check">✓ Pointer API</span></td>
+              </tr>
+              <tr>
+                <th>PDF Annotation & Export</th>
+                <td><span class="badge-check">✓ Included</span></td>
+                <td><span class="badge-check">✓ Included</span></td>
+                <td><span class="badge-check">✓ Included</span></td>
+              </tr>
+              <tr>
+                <th>AI Flashcards, Summaries & Quizzes</th>
+                <td><span class="badge-check">✓ Included</span></td>
+                <td><span class="badge-check">✓ Included</span></td>
+                <td><span class="badge-muted">Offline only</span></td>
+              </tr>
+              <tr>
+                <th>On-Device Offline Local AI (1.1 GB)</th>
+                <td><span class="badge-check">✓ CoreML / NDK</span></td>
+                <td><span class="badge-check">✓ Local NDK</span></td>
+                <td><span class="badge-muted">Not yet</span></td>
+              </tr>
+              <tr>
+                <th>Paper Templates (Cornell, Dotted, Staves)</th>
+                <td><span class="badge-check">✓ All 12 Styles</span></td>
+                <td><span class="badge-check">✓ All 12 Styles</span></td>
+                <td><span class="badge-check">✓ All 12 Styles</span></td>
+              </tr>
+              <tr>
+                <th>Pricing & Subscription</th>
+                <td><span class="badge-check">Free ($0 / mo)</span></td>
+                <td><span class="badge-check">Free ($0 / mo)</span></td>
+                <td><span class="badge-check">Free ($0 / mo)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
-    <section class="faq">
-      <h2>Questions</h2>
-      <h3>Is it really free?</h3>
-      <p>Yes. Every feature is included, with no subscription, ads or account. NVIDIA's free key has its own limits, and the on-device model has none.</p>
-      <h3>Why isn't it in the App Store or Google Play?</h3>
-      <p>Quirk Notes is distributed directly for now. On Android you install the file, and on iPad you use Sideloadly or AltStore. With a free Apple ID, the iPad app has to be reinstalled every 7 days.</p>
-      <h3>What do I need for the on-device AI?</h3>
-      <p>A one-time 1.1 GB download. On Android it needs about 4 GB of memory, and answers are slower than online.</p>
-      <h3>Which stylus works?</h3>
-      <p>Apple Pencil on iPad and styluses on Android. You can also write with your finger.</p>
-    </section>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="section-header">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="title">Common questions answered.</h2>
+      </div>
 
-    <section class="end">
-      <h2>Start your first notebook</h2>
-      <div class="actions center">
-        <a class="btn primary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest">Get Quirk Notes</a>
-        <a class="btn" href="guide.html">Read the guide</a>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is Quirk Notes really 100% free?</summary>
+          <p>Yes. Every feature is free with zero subscription, zero user tracking, and no ads. When using online AI, you provide your own free NVIDIA API key (which includes 1,000 monthly free calls), or you can download the 1.1GB offline model for unlimited local queries.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I install Quirk Notes on Android and iPad?</summary>
+          <p>On Android, download the <code>Quirk-Notes.apk</code> directly and tap install. On iPad, download the <code>Quirk-Notes.ipa</code> and install it using Sideloadly or AltStore from a Mac or PC. For full step-by-step instructions, view our <a href="guide.html">Installation Guide</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What stylus hardware is supported?</summary>
+          <p>Apple Pencil (1st, 2nd gen, USB-C, and Pro) on iPad with tilt and pressure. On Android, all active styluses (Samsung S-Pen, Lenovo Precision Pen, Xiaomi Smart Pen) as well as universal capacitive pens and finger input are supported.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Where are my notebooks saved?</summary>
+          <p>All note data, PDF annotations, and study cards are stored locally in sandbox storage on your device. We never run a cloud server that holds your handwriting or notes.</p>
+        </details>
       </div>
     </section>
+
+    <!-- Final CTA Banner -->
+    <div class="cta-banner">
+      <h2>Start your first notebook today.</h2>
+      <p>Clean handwriting, instant AI study flashcards, and true ownership of your notes.</p>
+      <div class="actions">
+        <a class="btn btn-pastel-green" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
+          Download APK (Android)
+        </a>
+        <a class="btn btn-pastel-blue" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">
+          Download IPA (iPad)
+        </a>
+        <a class="btn btn-outline" href="https://github.com/warriorbiswas-tech/Quirk-notes" target="_blank" rel="noopener">
+          View GitHub Repository
+        </a>
+      </div>
+    </div>
   </main>
 
+  <!-- Minimalist Footer -->
   <footer>
-    <a href="guide.html">Guide</a>
-    <a href="https://github.com/warriorbiswas-tech/Quirk-notes">Source on GitHub</a>
-    <a href="https://github.com/warriorbiswas-tech/Quirk-notes/issues">Report a problem</a>
+    <div>
+      <strong>Quirk Notes</strong> &nbsp;·&nbsp; Open-source handwriting & AI study notes
+    </div>
+    <div class="footer-links">
+      <a href="guide.html">Install Guide</a>
+      <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">Web App</a>
+      <a href="https://github.com/warriorbiswas-tech/Quirk-notes">GitHub</a>
+      <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases">Releases</a>
+      <a href="https://github.com/warriorbiswas-tech/Quirk-notes/issues">Report Issue</a>
+    </div>
   </footer>
+
+  <!-- Interactive Motion Script -->
+  <script>
+    (function() {
+      // Interactive 3D Flashcard Flip
+      var card = document.getElementById('study-card');
+      if (card) {
+        card.addEventListener('click', function() {
+          card.classList.toggle('flipped');
+        });
+      }
+
+      // Interactive Tool Switcher
+      var toolBtns = document.querySelectorAll('.tool-btn');
+      var strokeTitle = document.getElementById('stroke-title');
+      
+      var toolColors = {
+        fountain: '#1D3557',
+        ballpoint: '#3D405B',
+        highlighter: '#E6A15C',
+        lasso: '#2D6A4F',
+        ai: '#7E6CD9'
+      };
+
+      toolBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          toolBtns.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var tool = btn.getAttribute('data-tool');
+          if (strokeTitle && toolColors[tool]) {
+            strokeTitle.style.stroke = toolColors[tool];
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
