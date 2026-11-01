@@ -309,13 +309,13 @@
       p1.els = [
         T(56, 58, 420, 'Welcome to Quire', 30, { f: 'serif', b: 1 }),
         wave(58, 104, 248, '#2453C6'),
-        T(56, 122, 470, 'A notebook for Apple Pencil. Everything is unlocked: pens, shapes, PDFs, planners, stickers and export.', 13, { c: '#48484A' }),
+        T(56, 122, 470, `A notebook for ${U.stylusName()}. Everything is unlocked: pens, shapes, PDFs, planners, stickers and export.`, 13, { c: '#48484A' }),
         T(56, 186, 220, 'Write', 17, { b: 1 }),
         T(56, 210, 220, 'Pick the pen in the toolbar. Tap the selected colour or size again to fine-tune it.', 12),
         T(316, 186, 220, 'Navigate', 17, { b: 1 }),
         T(316, 210, 220, 'One finger scrolls, two fingers pinch to zoom. Two-finger tap undoes, three-finger tap redoes.', 12),
         T(56, 300, 220, 'Perfect shapes', 17, { b: 1 }),
-        T(56, 324, 220, 'Draw a circle or box and keep the Pencil down for a moment. It snaps into shape.', 12),
+        T(56, 324, 220, `Draw a circle or box and keep the ${U.isAndroid() ? 'stylus' : 'Pencil'} down for a moment. It snaps into shape.`, 12),
         T(316, 300, 220, 'Move anything', 17, { b: 1 }),
         T(316, 324, 220, 'The lasso circles ink, text and images. Drag to move, use the corners to resize, the top dot to rotate.', 12),
         shape({ kind: 'ellipse', cx: 120, cy: 440, a: 52, b: 34, rot: 0 }, '#D2343C', 1.8),
@@ -328,7 +328,7 @@
         T(56, 610, 470, 'Import a PDF from Files to annotate it. Export any notebook or page as a PDF or image from the ⋯ menu.', 12),
         { t: 'k', id: U.uid('e'), x: 470, y: 560, w: 64, h: 64, r: 0.12, n: 'star' },
         { t: 'k', id: U.uid('e'), x: 56, y: 680, w: 92, h: 27.6, r: 0, n: 'label-idea' },
-        T(160, 684, 380, 'Your notes are saved on this iPad as you write.', 12, { c: '#48484A' }),
+        T(160, 684, 380, `Your notes are saved on this ${U.deviceName()} as you write.`, 12, { c: '#48484A' }),
       ].map(fix);
       const p2 = M.newPage({ size: 'a4', tpl: 'ruled', paper: 'ivory' });
       p2.els = [T(70, 40, 400, 'Try it here', 22, { f: 'hand', c: '#2453C6' })].map(fix);

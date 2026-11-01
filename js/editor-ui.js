@@ -407,7 +407,7 @@
     this.finishText();
     if (this.sel) this.clearSelection();
     if (this.tool !== 'text' && isNew) this.setTool('text');
-    const ta = h('textarea', { class: 'ed-text', spellcheck: true, autocapitalize: 'sentences', 'aria-label': 'Text box', rows: 1, placeholder: U.isTouch() ? 'Type, or write here with Apple Pencil' : 'Type here' });
+    const ta = h('textarea', { class: 'ed-text', spellcheck: true, autocapitalize: 'sentences', 'aria-label': 'Text box', rows: 1, placeholder: U.isTouch() && !U.isAndroid() ? 'Type, or write here with Apple Pencil' : 'Type here' });
     ta.value = el.txt || '';
     this.textEdit = { pvId: pv.page.id, el: Object.assign({}, el), isNew: !!isNew, ta, orig: el };
     if (!isNew) this.renderer.setHidden([el.id]);
@@ -551,7 +551,7 @@
       { label: 'Draw with finger', icon: 'hand', checked: this.fingerDraws(), onClick: () => {
         this.settings.fingerDraw = this.fingerDraws() ? 'off' : 'on';
         this.app.saveSettings();
-        Q.ui.toast(this.fingerDraws() ? 'Fingers draw. Use two fingers to scroll.' : 'Fingers scroll and zoom. Draw with Apple Pencil.');
+        Q.ui.toast(this.fingerDraws() ? 'Fingers draw. Use two fingers to scroll.' : `Fingers scroll and zoom. Draw with ${U.stylusName()}.`);
       } },
     ], { align: 'end' });
   };

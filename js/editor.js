@@ -185,7 +185,7 @@
         for (const p of dirty) this.dirty.add(p.id);
         for (const id of removed) this.removed.add(id);
         this.setSaveState('error');
-        Q.ui.toast('Couldn’t save. Free up storage on this iPad, then try again.', { error: true });
+        Q.ui.toast(`Couldn’t save. Free up storage on this ${U.deviceName()}, then try again.`, { error: true });
       }
     }
     async flush() {
@@ -284,7 +284,7 @@
       if (!this.settings.penSeen) {
         this.settings.penSeen = true;
         this.app.saveSettings();
-        if (this.settings.fingerDraw === 'auto') Q.ui.toast('Apple Pencil detected. Fingers now scroll, zoom and tap.');
+        if (this.settings.fingerDraw === 'auto') Q.ui.toast((U.isAndroid() ? 'Stylus' : 'Apple Pencil') + ' detected. Fingers now scroll, zoom and tap.');
         this.updateChrome();
       }
     }

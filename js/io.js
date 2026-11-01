@@ -4,7 +4,32 @@
   const M = Q.model;
   const IO = (Q.io = {});
 
+  // Hands a file to the Android app in pieces, which then asks where to save it.
+  async function saveOnAndroid(blob, filename) {
+    const CHUNK = 3 * 1024 * 1024; // a multiple of 3, so each piece is valid base64 by itself
+    const bridge = window.QuireAndroid;
+    bridge.begin(filename, blob.type || 'application/octet-stream');
+    for (let at = 0; at < blob.size; at += CHUNK) {
+      const dataUrl = await new Promise((res, rej) => {
+        const r = new FileReader();
+        r.onload = () => res(r.result);
+        r.onerror = () => rej(r.error);
+        r.readAsDataURL(blob.slice(at, at + CHUNK));
+      });
+      bridge.append(dataUrl.slice(dataUrl.indexOf(',') + 1));
+    }
+    return new Promise((res) => {
+      IO.androidSaved = res;
+      bridge.finish();
+    });
+  }
+
   async function deliver(blob, filename) {
+    if (window.QuireAndroid) {
+      const r = await saveOnAndroid(blob, filename).catch(() => 'failed');
+      if (r === 'failed') Q.ui.toast('Couldn’t save ' + filename, { error: true });
+      return r;
+    }
     try {
       const file = new File([blob], filename, { type: blob.type || 'application/octet-stream' });
       if (navigator.canShare && navigator.canShare({ files: [file] }) && U.isTouch()) {
@@ -22,6 +47,8 @@
     setTimeout(() => URL.revokeObjectURL(url), 60000);
     return 'downloaded';
   }
+  IO.deliver = deliver;
+
   // Show a "ready" sheet so the share sheet opens from a fresh tap (iPad requires it).
   IO.offerFile = function (blob, filename, label) {
     const name = U.h('div', { class: 'file-name' }, filename);
@@ -33,7 +60,7 @@
       actions: [
         { label: 'Close' },
         {
-          label: U.isTouch() ? 'Save or share…' : 'Download',
+          label: window.QuireAndroid ? 'Save…' : U.isTouch() ? 'Save or share…' : 'Download',
           primary: true,
           onClick: async () => {
             const r = await deliver(blob, filename);
@@ -83,6 +110,11 @@
       input.addEventListener('change', () => {
         done = true;
         resolve(Array.from(input.files || []));
+        input.remove();
+      });
+      input.addEventListener('cancel', () => {
+        done = true;
+        resolve([]);
         input.remove();
       });
       // iPad fires no event on cancel; resolve empty when focus returns
