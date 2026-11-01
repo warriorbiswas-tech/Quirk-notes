@@ -284,7 +284,7 @@
       if (!this.settings.penSeen) {
         this.settings.penSeen = true;
         this.app.saveSettings();
-        if (this.settings.fingerDraw === 'auto') Q.ui.toast((U.isAndroid() ? 'Stylus' : 'Apple Pencil') + ' detected. Fingers now scroll, zoom and tap.');
+        if (this.settings.fingerDraw === 'auto') Q.ui.toast((U.isIPad() ? 'Apple Pencil' : 'Stylus') + ' detected. Fingers now scroll, zoom and tap.');
         this.updateChrome();
       }
     }

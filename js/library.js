@@ -448,13 +448,13 @@
       const sec = (title, ...rows) => h('section', { class: 'set-sec' }, h('h3', { class: 'set-title' }, title), h('div', { class: 'set-card' }, rows));
       const finger = UI.seg([{ id: 'auto', label: 'Automatic' }, { id: 'on', label: 'Always' }, { id: 'off', label: 'Never' }], s.fingerDraw, (v) => { s.fingerDraw = v; save(); }, { small: true });
       const theme = UI.seg([{ id: 'system', label: 'System' }, { id: 'light', label: 'Light' }, { id: 'dark', label: 'Dark' }], s.theme, (v) => { s.theme = v; save(); app.applyTheme(); }, { small: true });
-      const persistedTxt = h('span', { class: 'set-hint' }, Q.store.persisted ? 'Protected from automatic clean-up' : (U.isAndroid() ? 'Not protected yet. It may be cleared if the device runs low on space.' : 'Not protected yet. Safari may clear it if the iPad runs low on space.'));
+      const persistedTxt = h('span', { class: 'set-hint' }, Q.store.persisted ? 'Protected from automatic clean-up' : (U.isIPad() ? 'Not protected yet. Safari may clear it if the iPad runs low on space.' : 'Not protected yet. It may be cleared if the device runs low on space.'));
       const est = h('span', { class: 'set-val' }, '…');
       Q.store.estimate().then((e) => { est.textContent = e && e.usage != null ? U.fmtBytes(e.usage) + (e.quota ? ' of ' + U.fmtBytes(e.quota) : '') : 'Unknown'; });
       const body = h('div', { class: 'settings' },
         sec('Writing',
           UI.row('Draw with finger', finger, `Automatic: fingers draw until you use ${U.stylusName()}, then they scroll and zoom.`),
-          UI.row('Pressure sensitivity', UI.slider(0, 1, 0.05, s.pressure, (v) => { s.pressure = v; app.saveSettingsSoon(); }, (v) => Math.round(v * 100) + '%'), (U.isAndroid() ? 'Styluses that report pressure use it. For others, line width follows your writing speed instead.' : 'Apple Pencil (1st generation) reports pressure. Apple Pencil (USB-C) doesn’t, so line width follows your writing speed instead.')),
+          UI.row('Pressure sensitivity', UI.slider(0, 1, 0.05, s.pressure, (v) => { s.pressure = v; app.saveSettingsSoon(); }, (v) => Math.round(v * 100) + '%'), (U.isIPad() ? 'Apple Pencil (1st generation) reports pressure. Apple Pencil (USB-C) doesn’t, so line width follows your writing speed instead.' : 'Styluses that report pressure use it. For others, line width follows your writing speed instead.')),
           UI.row('Smoothing', UI.slider(0, 1, 0.05, s.smoothing, (v) => { s.smoothing = v; app.saveSettingsSoon(); }, (v) => Math.round(v * 100) + '%'), 'Higher values steady shaky lines but add a little lag.'),
           UI.row('Hold to draw shapes', UI.toggle(s.shapeHold, (v) => { s.shapeHold = v; save(); }, 'Hold to draw shapes'), 'Pause at the end of a stroke to turn it into a perfect line, circle or box.'),
           UI.row('Shape snapping strength', UI.slider(0, 1, 0.05, s.snap == null ? 0.5 : s.snap, (v) => { s.snap = v; app.saveSettingsSoon(); }, (v) => Math.round(v * 100) + '%'), 'Higher snaps sooner and accepts rougher shapes.'),

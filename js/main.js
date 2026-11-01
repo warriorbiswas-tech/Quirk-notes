@@ -315,7 +315,7 @@
         T(316, 186, 220, 'Navigate', 17, { b: 1 }),
         T(316, 210, 220, 'One finger scrolls, two fingers pinch to zoom. Two-finger tap undoes, three-finger tap redoes.', 12),
         T(56, 300, 220, 'Perfect shapes', 17, { b: 1 }),
-        T(56, 324, 220, `Draw a circle or box and keep the ${U.isAndroid() ? 'stylus' : 'Pencil'} down for a moment. It snaps into shape.`, 12),
+        T(56, 324, 220, `Draw a circle or box and keep the ${U.isIPad() ? 'Pencil' : 'stylus'} down for a moment. It snaps into shape.`, 12),
         T(316, 300, 220, 'Move anything', 17, { b: 1 }),
         T(316, 324, 220, 'The lasso circles ink, text and images. Drag to move, use the corners to resize, the top dot to rotate.', 12),
         shape({ kind: 'ellipse', cx: 120, cy: 440, a: 52, b: 34, rot: 0 }, '#D2343C', 1.8),

@@ -293,8 +293,8 @@
   U.isTouch = () => 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   U.isIPad = () => /iPad/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   U.isAndroid = () => /Android/.test(navigator.userAgent);
-  U.stylusName = () => (U.isAndroid() ? 'your stylus' : 'Apple Pencil');
-  U.deviceName = () => (U.isAndroid() ? 'device' : 'iPad');
+  U.stylusName = () => (U.isIPad() ? 'Apple Pencil' : 'your stylus');
+  U.deviceName = () => (U.isIPad() ? 'iPad' : 'device');
   U.isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
 
   // Serialized async queue: tasks run one after another.
