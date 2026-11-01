@@ -1,6 +1,8 @@
 .gradle/
 build/
 local.properties
+.cxx/
+app/src/androidTest/assets/
 *.p12
 *.jks
 *.keystore

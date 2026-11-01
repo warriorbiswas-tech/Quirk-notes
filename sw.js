@@ -1,9 +1,9 @@
 // Serve app files from the cache and refresh them in the background.
-const VERSION = 'quire-v8';
+const VERSION = 'quire-v9';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'css/app.css',
   'js/util.js', 'js/icons.js', 'js/store.js', 'js/model.js', 'js/ink.js', 'js/paper.js', 'js/stickers.js',
-  'js/render.js', 'js/ui.js', 'js/pickers.js', 'js/io.js', 'js/editor.js', 'js/editor-ui.js', 'js/library.js', 'js/main.js',
+  'js/render.js', 'js/ui.js', 'js/pickers.js', 'js/io.js', 'js/editor.js', 'js/editor-ui.js', 'js/library.js', 'js/ai.js', 'js/study.js', 'js/main.js',
   'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png',
 ];
 const LATER = ['vendor/pdfjs/pdf.min.js', 'vendor/pdfjs/pdf.worker.min.js'];

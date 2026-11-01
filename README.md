@@ -7,7 +7,7 @@ Handwriting notes for iPad and Android.
 Get both apps from the [latest release](https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest).
 
 - **iPad (`Quirk-Notes.ipa`):** for iPadOS 17 or later. It has PencilKit ink, PDF annotation, audio recording with a live transcript, iCloud Drive sync, and AI study tools that use your own free NVIDIA key online and a downloadable on-device model otherwise. It is unsigned, so install it with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io) from a Windows PC or Mac, signing in with your Apple ID. With a free Apple ID it has to be reinstalled every 7 days. [ios/README.md](ios/README.md) has more.
-- **Android (`Quirk-Notes.apk`):** for Android 8 or later. Open the file on your device and allow the install when asked.
+- **Android (`Quirk-Notes.apk`):** for 64-bit devices on Android 8 or later. Open the file on your device and allow the install when asked. Study with AI from a notebook's menu, using your own free NVIDIA key or an on-device model you can download in Settings. Recording and sync are iPad-only for now.
 
 ## Web version
 

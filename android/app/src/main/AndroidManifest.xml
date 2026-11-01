@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Only used to fetch the handwriting font (Caveat). Everything else is in the app. -->
+    <!-- For the handwriting font, the AI models and online AI. Notes stay on the device unless a key is added. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
 

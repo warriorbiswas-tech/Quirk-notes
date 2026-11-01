@@ -44,6 +44,7 @@ public class MainActivity extends Activity {
     private static final int SAVE_FILE = 2;
 
     WebView web;
+    AiBridge ai;
     private ValueCallback<Uri[]> pendingPick;
     private File exportFile;
     private OutputStream exportStream;
@@ -99,6 +100,8 @@ public class MainActivity extends Activity {
             }
         });
         web.addJavascriptInterface(new Bridge(), "QuireAndroid");
+        ai = new AiBridge(this);
+        web.addJavascriptInterface(ai, "QuirkAI");
 
         // Keeps the page clear of the status bar, navigation bar and keyboard.
         FrameLayout root = new FrameLayout(this);
@@ -148,7 +151,14 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        if (level >= TRIM_MEMORY_RUNNING_LOW) ai.lowOnMemory();
+    }
+
+    @Override
     protected void onDestroy() {
+        ai.close();
         web.destroy();
         super.onDestroy();
     }

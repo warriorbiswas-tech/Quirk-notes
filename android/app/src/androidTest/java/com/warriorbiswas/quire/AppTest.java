@@ -32,7 +32,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AppTest {
     private static final long WAIT_MS = 60_000;
 
-    private static String eval(ActivityScenario<MainActivity> app, String js) throws Exception {
+    static String eval(ActivityScenario<MainActivity> app, String js) throws Exception {
         CountDownLatch done = new CountDownLatch(1);
         AtomicReference<String> value = new AtomicReference<>();
         app.onActivity(a -> a.web.evaluateJavascript(js, v -> {
@@ -43,8 +43,12 @@ public class AppTest {
         return value.get();
     }
 
-    private static void waitFor(ActivityScenario<MainActivity> app, String js) throws Exception {
-        long end = SystemClock.uptimeMillis() + WAIT_MS;
+    static void waitFor(ActivityScenario<MainActivity> app, String js) throws Exception {
+        waitFor(app, js, WAIT_MS);
+    }
+
+    static void waitFor(ActivityScenario<MainActivity> app, String js, long timeout) throws Exception {
+        long end = SystemClock.uptimeMillis() + timeout;
         while (SystemClock.uptimeMillis() < end) {
             if ("true".equals(eval(app, js))) return;
             Thread.sleep(250);
@@ -53,7 +57,7 @@ public class AppTest {
     }
 
     /** Runs an async expression, then returns what it resolved to as JSON. */
-    private static String evalAsync(ActivityScenario<MainActivity> app, String js) throws Exception {
+    static String evalAsync(ActivityScenario<MainActivity> app, String js) throws Exception {
         eval(app, "window.__r = undefined; Promise.resolve().then(() => " + js + ")"
                 + ".then((v) => { window.__r = JSON.stringify({ ok: v === undefined ? null : v }); },"
                 + " (e) => { window.__r = JSON.stringify({ error: String(e) }); }); 0");
@@ -61,7 +65,7 @@ public class AppTest {
         return eval(app, "window.__r");
     }
 
-    private static ActivityScenario<MainActivity> launch() throws Exception {
+    static ActivityScenario<MainActivity> launch() throws Exception {
         ActivityScenario<MainActivity> app = ActivityScenario.launch(MainActivity.class);
         waitFor(app, "document.body.classList.contains('ready')");
         return app;

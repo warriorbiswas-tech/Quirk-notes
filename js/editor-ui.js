@@ -539,6 +539,7 @@
     const idx = this.pageIndex(page.id);
     UI.menu(anchor, [
       { header: `Page ${idx + 1} of ${this.pages.length}` },
+      Q.ai.supported ? { label: 'Study with AI…', icon: 'quick', onClick: () => this.openStudy() } : null,
       { label: 'Export…', icon: 'share', onClick: () => this.openExport() },
       { label: page.bm ? 'Remove bookmark' : 'Bookmark page', icon: page.bm ? 'bookmarkFill' : 'bookmark', onClick: () => this.toggleBookmark(page.id) },
       { label: 'Change template…', icon: 'template', onClick: () => this.openTemplateSheet(page) },

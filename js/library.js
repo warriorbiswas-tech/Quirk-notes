@@ -459,6 +459,7 @@
           UI.row('Hold to draw shapes', UI.toggle(s.shapeHold, (v) => { s.shapeHold = v; save(); }, 'Hold to draw shapes'), 'Pause at the end of a stroke to turn it into a perfect line, circle or box.'),
           UI.row('Shape snapping strength', UI.slider(0, 1, 0.05, s.snap == null ? 0.5 : s.snap, (v) => { s.snap = v; app.saveSettingsSoon(); }, (v) => Math.round(v * 100) + '%'), 'Higher snaps sooner and accepts rougher shapes.'),
           UI.row('Two-finger tap to undo', UI.toggle(s.tapUndo, (v) => { s.tapUndo = v; save(); }, 'Two-finger tap to undo'), 'Three-finger tap redoes.')),
+        Q.ai.supported ? sec('AI', UI.row('Study tools', h('button', { class: 'btn sm', onclick: () => Q.study.openSettings() }, 'Set up…'), 'Use your own free NVIDIA key, or an on-device model.')) : null,
         sec('Appearance', UI.row('Theme', theme)),
         sec('Storage & backup',
           UI.row('Space used', est),
