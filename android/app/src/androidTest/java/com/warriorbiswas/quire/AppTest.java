@@ -168,24 +168,25 @@ public class AppTest {
         }
     }
 
-    /** A stylus line across the middle of the page, with pressure, sent as real input events. */
-    private static void drawWithStylus(ActivityScenario<MainActivity> app) {
-        AtomicReference<int[]> at = new AtomicReference<>();
+    /** A stylus line across the middle of the page, with pressure, sent as real input events to the app's own view. */
+    private static void drawWithStylus(ActivityScenario<MainActivity> app) throws Exception {
+        long end = SystemClock.uptimeMillis() + WAIT_MS;
+        AtomicReference<Boolean> focused = new AtomicReference<>(false);
+        while (!focused.get() && SystemClock.uptimeMillis() < end) {
+            app.onActivity(a -> focused.set(a.hasWindowFocus()));
+            if (!focused.get()) Thread.sleep(250);
+        }
+        assertTrue("something is covering the app", focused.get());
         app.onActivity(a -> {
             View v = a.web;
-            int[] loc = new int[2];
-            v.getLocationOnScreen(loc);
-            at.set(new int[] {loc[0] + v.getWidth() / 3, loc[1] + v.getHeight() / 2, v.getWidth() / 3});
+            float x = v.getWidth() / 3f, y = v.getHeight() / 2f, length = v.getWidth() / 3f;
+            long down = SystemClock.uptimeMillis();
+            a.web.dispatchTouchEvent(stylus(down, down, MotionEvent.ACTION_DOWN, x, y));
+            for (int i = 1; i <= 20; i++) {
+                a.web.dispatchTouchEvent(stylus(down, down + i * 16L, MotionEvent.ACTION_MOVE, x + length * i / 20f, y + 10 * (i % 2)));
+            }
+            a.web.dispatchTouchEvent(stylus(down, down + 400, MotionEvent.ACTION_UP, x + length, y));
         });
-        int x = at.get()[0], y = at.get()[1], length = at.get()[2];
-        Instrumentation inst = InstrumentationRegistry.getInstrumentation();
-        long down = SystemClock.uptimeMillis();
-        inst.sendPointerSync(stylus(down, down, MotionEvent.ACTION_DOWN, x, y));
-        for (int i = 1; i <= 20; i++) {
-            long t = down + i * 16L;
-            inst.sendPointerSync(stylus(down, t, MotionEvent.ACTION_MOVE, x + length * i / 20f, y + 10 * (i % 2)));
-        }
-        inst.sendPointerSync(stylus(down, down + 400, MotionEvent.ACTION_UP, x + length, y));
     }
 
     private static MotionEvent stylus(long down, long time, int action, float x, float y) {

@@ -48,13 +48,13 @@
       this.notice = h('div', { class: 'ai-notice', hidden: true });
       const tabs = UI.seg(
         [
-          { value: 'chat', label: 'Chat' },
-          { value: 'summary', label: 'Summary' },
-          { value: 'points', label: 'Key points' },
-          { value: 'cards', label: 'Cards' },
-          { value: 'quiz', label: 'Quiz' },
-          { value: 'map', label: 'Mind map' },
-          { value: 'teach', label: 'Teach back' },
+          { id: 'chat', label: 'Chat' },
+          { id: 'summary', label: 'Summary' },
+          { id: 'points', label: 'Key points' },
+          { id: 'cards', label: 'Cards' },
+          { id: 'quiz', label: 'Quiz' },
+          { id: 'map', label: 'Mind map' },
+          { id: 'teach', label: 'Teach back' },
         ],
         this.tab,
         (tab) => this.show(tab),
