@@ -497,8 +497,8 @@ textarea.field { height: auto; padding: 10px 12px; line-height: 1.45; resize: ve
 }
 @media (max-width: 860px) {
   .library { grid-template-columns: minmax(0, 1fr); }
-  .lib-side { position: fixed; z-index: 20; top: 0; bottom: 0; left: 0; width: 280px; transform: translateX(-102%); transition: transform 0.22s; box-shadow: var(--shadow-2); }
-  .library.side-open .lib-side { transform: none; }
+  .lib-side { position: fixed; z-index: 20; top: 0; bottom: 0; left: 0; width: 280px; transform: translateX(-102%); transition: transform 0.22s; }
+  .library.side-open .lib-side { transform: none; box-shadow: var(--shadow-2); }
   .side-scrim { display: block; position: fixed; inset: 0; z-index: 19; background: var(--scrim); opacity: 0; pointer-events: none; transition: opacity 0.22s; }
   .library.side-open .side-scrim { opacity: 1; pointer-events: auto; }
   .side-toggle { display: inline-grid; margin-left: -8px; }
@@ -517,7 +517,7 @@ textarea.field { height: auto; padding: 10px 12px; line-height: 1.45; resize: ve
 @media (max-width: 560px) {
   .lib-title { font-size: 25px; }
   .lib-actions { width: 100%; }
-  .search { flex: 1; width: auto; }
+  .search { flex: 1; width: auto; min-width: 0; }
   .nb-grid { grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 24px 16px; }
   .tool { width: 38px; }
   .ed-right .tool-sep { display: none; }
