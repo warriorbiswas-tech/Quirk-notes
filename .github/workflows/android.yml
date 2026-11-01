@@ -62,7 +62,9 @@ jobs:
             adb exec-out screencap -p > build/screens/phone.png
             adb shell wm size 1600x2560
             adb shell wm density 280
-            sleep 6
+            adb shell am force-stop com.warriorbiswas.quire
+            adb shell am start -W -n com.warriorbiswas.quire/.MainActivity
+            sleep 8
             adb exec-out screencap -p > build/screens/tablet.png
       - uses: actions/upload-artifact@v7
         if: always()

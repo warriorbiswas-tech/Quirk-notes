@@ -23,6 +23,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
+import android.window.OnBackInvokedDispatcher;
 
 import androidx.webkit.WebViewAssetLoader;
 
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
     private OutputStream exportStream;
 
     @SuppressLint("SetJavaScriptEnabled")
+    @SuppressWarnings("deprecation")
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
@@ -114,6 +116,23 @@ public class MainActivity extends Activity {
 
         setContentView(root);
         web.loadUrl(START_URL);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(OnBackInvokedDispatcher.PRIORITY_DEFAULT, this::goBack);
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public void onBackPressed() {
+        goBack();
+    }
+
+    /** Back leaves an open note first, and only then the app. */
+    void goBack() {
+        web.evaluateJavascript("!!Q.app.editor && (Q.app.closeEditor(), true)", open -> {
+            if (!"true".equals(open)) finish();
+        });
     }
 
     @Override

@@ -93,6 +93,18 @@ public class AppTest {
     }
 
     @Test
+    public void shrinksLargeImagesKeepingTheirShape() throws Exception {
+        try (ActivityScenario<MainActivity> app = launch()) {
+            String r = evalAsync(app, "(async () => { const c = Q.util.makeCanvas(3000, 1500);"
+                    + " c.getContext('2d').fillRect(0, 0, 9, 9);"
+                    + " const b = await Q.util.canvasToBlob(c, 'image/png');"
+                    + " const p = await Q.io.prepareImage(new File([b], 'wide.png', { type: 'image/png' }));"
+                    + " return p.w + 'x' + p.h; })()");
+            assertEquals(r, "{\"ok\":\"2400x1200\"}", unquote(r));
+        }
+    }
+
+    @Test
     public void opensAPdf() throws Exception {
         String pdf = "%PDF-1.4\\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\\n"
                 + "2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj\\n"
@@ -146,8 +158,8 @@ public class AppTest {
             assertEquals("0", eval(app, count));
             drawWithStylus(app);
             waitFor(app, count + " === 1");
-            // Later launches should start at the library again.
-            eval(app, "Q.app.settings.openNb = null; Q.app.saveSettings(); 0");
+            app.onActivity(MainActivity::goBack);
+            waitFor(app, "!Q.app.editor");
             Thread.sleep(500);
         }
     }
