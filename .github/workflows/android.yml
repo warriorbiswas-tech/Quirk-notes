@@ -112,9 +112,9 @@ jobs:
       - name: Check the signature
         run: |
           "$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)/apksigner" verify --print-certs app/build/outputs/apk/release/app-release.apk
-          cp app/build/outputs/apk/release/app-release.apk Quire-Notes.apk
+          cp app/build/outputs/apk/release/app-release.apk Quirk-Notes.apk
       - uses: actions/upload-artifact@v7
         with:
-          name: Quire-Notes-apk
-          path: android/Quire-Notes.apk
+          name: Quirk-Notes-apk
+          path: android/Quirk-Notes.apk
           retention-days: 30

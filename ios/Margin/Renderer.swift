@@ -426,7 +426,7 @@ enum Renderer {
 
     enum CutoutError: LocalizedError {
         case noSubject
-        var errorDescription: String? { "Quire Notes couldn't find a clear subject in that image." }
+        var errorDescription: String? { "Quirk Notes couldn't find a clear subject in that image." }
     }
 
     /// Lifts the subject off its background with Vision, as a PNG the size of the original.

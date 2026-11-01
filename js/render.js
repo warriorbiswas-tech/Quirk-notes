@@ -52,7 +52,7 @@
           return img;
         } catch (err) {
           e.failed = true;
-          console.warn('[Quire] image unavailable', key, err);
+          console.warn('[Quirk] image unavailable', key, err);
           return null;
         } finally {
           e.loading = null;

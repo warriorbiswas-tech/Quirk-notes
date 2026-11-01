@@ -61,8 +61,8 @@
         document.fonts.addEventListener && document.fonts.addEventListener('loadingdone', refresh);
         if (document.fonts.load) document.fonts.load('16px Caveat').then(refresh, () => {});
       }
-      window.addEventListener('error', (e) => console.error('[Quire]', e.error || e.message));
-      window.addEventListener('unhandledrejection', (e) => console.error('[Quire]', e.reason));
+      window.addEventListener('error', (e) => console.error('[Quirk]', e.error || e.message));
+      window.addEventListener('unhandledrejection', (e) => console.error('[Quirk]', e.reason));
     },
 
     isDark() {
@@ -264,7 +264,7 @@
         const blob = await Q.io.exportBackup(this.library, (f, t) => prog.set(f, t));
         prog.close();
         const d = new Date();
-        Q.io.offerFile(blob, `Quire backup ${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}.zip`, 'Backup ready');
+        Q.io.offerFile(blob, `Quirk backup ${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}.zip`, 'Backup ready');
       } catch (e) {
         prog.close();
         console.error(e);
@@ -307,7 +307,7 @@
       };
       const p1 = M.newPage({ size: 'a4', tpl: 'dots', paper: 'white' });
       p1.els = [
-        T(56, 58, 420, 'Welcome to Quire', 30, { f: 'serif', b: 1 }),
+        T(56, 58, 420, 'Welcome to Quirk', 30, { f: 'serif', b: 1 }),
         wave(58, 104, 248, '#2453C6'),
         T(56, 122, 470, `A notebook for ${U.stylusName()}. Everything is unlocked: pens, shapes, PDFs, planners, stickers and export.`, 13, { c: '#48484A' }),
         T(56, 186, 220, 'Write', 17, { b: 1 }),
@@ -332,7 +332,7 @@
       ].map(fix);
       const p2 = M.newPage({ size: 'a4', tpl: 'ruled', paper: 'ivory' });
       p2.els = [T(70, 40, 400, 'Try it here', 22, { f: 'hand', c: '#2453C6' })].map(fix);
-      const welcome = await this.createNotebook({ title: 'Welcome to Quire', cover: { color: '#1E5B4A', style: 'linen' }, pages: [p1, p2] });
+      const welcome = await this.createNotebook({ title: 'Welcome to Quirk', cover: { color: '#1E5B4A', style: 'linen' }, pages: [p1, p2] });
       const plan = M.newPage({ size: 'a4', tpl: 'weekly', paper: 'white' });
       await this.createNotebook({ title: 'Week planner', cover: { color: '#C9A23F', style: 'band' }, pages: [plan, M.newPage({ size: 'a4', tpl: 'daily', paper: 'white' })] });
       await this.createNotebook({ title: 'Notes', cover: { color: '#2E4A7A', style: 'linen' }, page: { size: 'a4', tpl: 'ruled', paper: 'white' } });
@@ -349,7 +349,7 @@
     App.start().catch((e) => {
       console.error(e);
       const el = document.getElementById('splash');
-      if (el) el.textContent = 'Quire couldn’t start: ' + (e && e.message ? e.message : e);
+      if (el) el.textContent = 'Quirk couldn’t start: ' + (e && e.message ? e.message : e);
     });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();

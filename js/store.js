@@ -110,7 +110,7 @@
       });
       S.available = true;
     } catch (e) {
-      console.warn('[Quire] storage unavailable, using memory only', e);
+      console.warn('[Quirk] storage unavailable, using memory only', e);
       S.available = false;
     }
     try {

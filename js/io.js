@@ -257,7 +257,7 @@
     const d = new Date();
     const pad = (x) => String(x).padStart(2, '0');
     const date = `D:${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
-    obj(info, [`<< /Title ${pdfString(title || 'Notes')} /Producer (Quire Notes) /CreationDate (${date}) >>`]);
+    obj(info, [`<< /Title ${pdfString(title || 'Notes')} /Producer (Quirk Notes) /CreationDate (${date}) >>`]);
     const xref = pos;
     let x = `xref\n0 ${info + 1}\n0000000000 65535 f \n`;
     for (let i = 1; i <= info; i++) x += String(offsets[i]).padStart(10, '0') + ' 00000 n \n';
@@ -422,9 +422,9 @@
   IO.importBackup = async function (file, library, onProgress) {
     const entries = await IO.unzip(file);
     const head = entries.get('quire.json');
-    if (!head) throw new Error('This file is not a Quire backup');
+    if (!head) throw new Error('This file is not a Quirk backup');
     const meta = JSON.parse(await head.text());
-    if (meta.app !== 'quire') throw new Error('This file is not a Quire backup');
+    if (meta.app !== 'quire') throw new Error('This file is not a Quirk backup');
     let added = 0;
     let updated = 0;
     const folders = meta.library.folders || [];

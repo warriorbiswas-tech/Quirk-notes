@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = 'Quire Notes'
+rootProject.name = 'Quirk Notes'
 include ':app'

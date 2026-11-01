@@ -1,4 +1,4 @@
-# Quire Notes
+# Quirk Notes
 
 Handwriting notes for iPad and Android.
 
@@ -6,8 +6,8 @@ Handwriting notes for iPad and Android.
 
 Get both apps from the [latest release](https://github.com/warriorbiswas-tech/Quire-notes/releases/latest).
 
-- **iPad (`Quire-Notes.ipa`):** for iPadOS 17 or later. It has PencilKit ink, PDF annotation, audio recording with a live transcript, iCloud Drive sync, and AI study tools that use your own free NVIDIA key online and a downloadable on-device model otherwise. It is unsigned, so install it with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io) from a Windows PC or Mac, signing in with your Apple ID. With a free Apple ID it has to be reinstalled every 7 days. [ios/README.md](ios/README.md) has more.
-- **Android (`Quire-Notes.apk`):** for Android 8 or later. Open the file on your device and allow the install when asked.
+- **iPad (`Quirk-Notes.ipa`):** for iPadOS 17 or later. It has PencilKit ink, PDF annotation, audio recording with a live transcript, iCloud Drive sync, and AI study tools that use your own free NVIDIA key online and a downloadable on-device model otherwise. It is unsigned, so install it with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io) from a Windows PC or Mac, signing in with your Apple ID. With a free Apple ID it has to be reinstalled every 7 days. [ios/README.md](ios/README.md) has more.
+- **Android (`Quirk-Notes.apk`):** for Android 8 or later. Open the file on your device and allow the install when asked.
 
 ## Web version
 
@@ -19,7 +19,7 @@ The rest of this page is about the installable web version, in this folder, whic
 
 1. Open the link above in **Safari** on the iPad. Other browsers can't install apps on iPadOS.
 2. Tap the **Share** button (the square with an arrow), then **Add to Home Screen**, then **Add**.
-3. Open **Quire** from the Home Screen. It runs full screen like a regular app and works offline.
+3. Open **Quirk** from the Home Screen. It runs full screen like a regular app and works offline.
 
 Use the Home Screen icon from then on. A Home Screen app keeps its own storage, separate from Safari, so Safari's automatic clean-up of unused website data doesn't remove your notes. Deleting the app from the Home Screen does delete them, so make a backup first.
 

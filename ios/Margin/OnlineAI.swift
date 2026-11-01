@@ -32,7 +32,7 @@ final class OnlineAI: @unchecked Sendable {
             case .rejectedKey: "NVIDIA didn't accept the API key. Check it in Settings."
             case .busy: "NVIDIA's free tier is busy right now. Try again in a minute."
             case .retired: "That model isn't available from NVIDIA any more. Choose another one in Settings."
-            case .noneAvailable: "This key can't reach any of the models Quire Notes uses."
+            case .noneAvailable: "This key can't reach any of the models Quirk Notes uses."
             case .empty: "NVIDIA's model sent back an empty answer."
             case let .failed(status): "NVIDIA couldn't answer (error \(status)). Try again later."
             }

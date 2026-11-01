@@ -36,7 +36,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Runs the Quire web app from the files bundled in the APK, on a private https origin. */
+/** Runs the Quirk web app from the files bundled in the APK, on a private https origin. */
 public class MainActivity extends Activity {
     private static final String HOST = "appassets.androidplatform.net";
     private static final String START_URL = "https://" + HOST + "/assets/www/index.html";

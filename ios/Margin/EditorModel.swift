@@ -1228,7 +1228,7 @@ final class EditorModel: NSObject, UIGestureRecognizerDelegate, Identifiable, PK
     private func startRecording() async {
         if playing != nil { stopPlayback() }
         guard await AVAudioApplication.requestRecordPermission() else {
-            message = "Quire Notes needs microphone access. Turn it on in Settings › Privacy & Security › Microphone."
+            message = "Quirk Notes needs microphone access. Turn it on in Settings › Privacy & Security › Microphone."
             return
         }
         let transcribe = Prefs.liveTranscribe && LocalWhisper.isAvailable
