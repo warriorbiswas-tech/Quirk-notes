@@ -4,7 +4,7 @@ Handwriting notes for iPad and Android.
 
 ## Download
 
-Get both apps from the [latest release](https://github.com/warriorbiswas-tech/freenotees/releases/latest).
+Get both apps from the [latest release](https://github.com/warriorbiswas-tech/Quire-notes/releases/latest).
 
 - **iPad (`Quire-Notes.ipa`):** for iPadOS 17 or later. It has PencilKit ink, PDF annotation, audio recording with a live transcript, iCloud Drive sync, and AI study tools that use your own free NVIDIA key online and a downloadable on-device model otherwise. It is unsigned, so install it with [Sideloadly](https://sideloadly.io) or [AltStore](https://altstore.io) from a Windows PC or Mac, signing in with your Apple ID. With a free Apple ID it has to be reinstalled every 7 days. [ios/README.md](ios/README.md) has more.
 - **Android (`Quire-Notes.apk`):** for Android 8 or later. Open the file on your device and allow the install when asked.
@@ -13,7 +13,7 @@ Get both apps from the [latest release](https://github.com/warriorbiswas-tech/fr
 
 The rest of this page is about the installable web version, in this folder, which the Android app is built from. It needs no App Store, Mac or Apple ID. Everything is included: no subscription, no ads, no account, and your notes stay on your device.
 
-**Open it:** https://warriorbiswas-tech.github.io/freenotees/
+**Open it:** https://warriorbiswas-tech.github.io/Quire-notes/
 
 ## Install on iPad (A16 or any iPad)
 

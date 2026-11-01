@@ -9,7 +9,6 @@ import static org.junit.Assert.fail;
 import android.app.Activity;
 import android.app.Instrumentation;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.SystemClock;
 import android.view.InputDevice;
@@ -111,10 +110,15 @@ public class AppTest {
         File out = new File(inst.getTargetContext().getCacheDir(), "saved.bin");
         out.delete();
         out.createNewFile();
-        Instrumentation.ActivityMonitor picker = inst.addMonitor(
-                new IntentFilter(Intent.ACTION_CREATE_DOCUMENT),
-                new Instrumentation.ActivityResult(Activity.RESULT_OK, new Intent().setData(Uri.fromFile(out))),
-                true);
+        // Stands in for the system's save screen, answering as if the person chose this file.
+        Instrumentation.ActivityMonitor picker = new Instrumentation.ActivityMonitor() {
+            @Override
+            public Instrumentation.ActivityResult onStartActivity(Intent intent) {
+                if (!Intent.ACTION_CREATE_DOCUMENT.equals(intent.getAction())) return null;
+                return new Instrumentation.ActivityResult(Activity.RESULT_OK, new Intent().setData(Uri.fromFile(out)));
+            }
+        };
+        inst.addMonitor(picker);
         int size = 7_000_003; // crosses two chunk boundaries and ends mid-chunk
         try (ActivityScenario<MainActivity> app = launch()) {
             String r = evalAsync(app, "(() => { const b = new Uint8Array(" + size + ");"
