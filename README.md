@@ -16,8 +16,10 @@ Quirk Notes lets you handwrite with a stylus, mark up PDFs and keep everything i
   <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk"><strong>Download for Android</strong></a> ·
   <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa"><strong>Download for iPad</strong></a> ·
   <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/"><strong>Try it in your browser</strong></a> ·
-  <a href="https://warriorbiswas-tech.github.io/Quirk-notes/"><strong>Website</strong></a>
+  <a href="https://quirk-notes.vercel.app/"><strong>Website</strong></a>
 </p>
+
+<p align="center"><a href="https://quirk-notes.vercel.app/">Watch the 20-second video</a></p>
 
 <p align="center"><img src="site/media/demo.gif" width="720" alt="Quirk Notes in use: opening a notebook, handwriting a title, sketching a labelled diagram and highlighting a word"></p>
 
@@ -35,7 +37,7 @@ Quirk Notes lets you handwrite with a stylus, mark up PDFs and keep everything i
 docker run -p 8080:80 ghcr.io/warriorbiswas-tech/quirk-notes
 ```
 
-The [guide](https://warriorbiswas-tech.github.io/Quirk-notes/guide.html) covers installing, setting up AI and backups.
+The [guide](https://quirk-notes.vercel.app/guide.html) covers installing, setting up AI and backups.
 
 ## Why Quirk Notes
 
