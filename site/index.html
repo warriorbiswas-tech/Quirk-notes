@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Quirk Notes: free handwriting note-taking app for iPad and Android</title>
   <meta name="description" content="Quirk Notes is a free note-taking app for iPad and Android. Handwrite with a stylus, annotate PDFs and study with AI. No subscription, no account, no ads.">
   <link rel="canonical" href="https://quirk-notes.vercel.app/">
-  <meta name="theme-color" content="#FBF8F2">
+  <meta name="theme-color" content="#FFFFFF">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Quirk Notes: free handwriting notes for iPad and Android">
   <meta property="og:description" content="Handwrite with a stylus, annotate PDFs and study with AI. No subscription, no account, no ads.">
@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..700,100&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
   <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
@@ -35,199 +35,165 @@
   </script>
 </head>
 <body>
-  <header class="bar">
-    <a class="brand" href="./"><img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="" width="30" height="30"> Quirk Notes</a>
-    <nav>
-      <a class="hide-sm" href="#features">Features</a>
-      <a class="hide-sm" href="#devices">Devices</a>
-      <a class="hide-sm" href="#faq">FAQ</a>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav glass">
+    <a class="brand" href="./"><img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="" width="28" height="28"><span>Quirk Notes</span></a>
+    <nav aria-label="Main">
+      <a href="#write">Write</a>
+      <a href="#study">Study</a>
+      <a href="#devices">Devices</a>
+      <a href="#faq">FAQ</a>
       <a href="guide.html">Guide</a>
-      <a class="pill" href="https://github.com/warriorbiswas-tech/Quirk-notes">
-        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-        GitHub
-      </a>
     </nav>
+    <div class="nav-end">
+      <a class="icon-link" href="https://github.com/warriorbiswas-tech/Quirk-notes" aria-label="Quirk Notes on GitHub">
+        <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      </a>
+      <a class="btn primary small" href="#get">Download</a>
+    </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
-      <svg class="sticker star" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5l5.6 11.6 12.8 1.7-9.3 8.9 2.3 12.6L24 33.8l-11.4 6 2.3-12.6-9.3-8.9 12.8-1.7z"/></svg>
-      <svg class="sticker heart" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 41S7 31 7 18.5A9 9 0 0 1 24 13a9 9 0 0 1 17 5.5C41 31 24 41 24 41z"/></svg>
-      <svg class="sticker spark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c1.8 11 5 14.2 16 16-11 1.8-14.2 5-16 16-1.8-11-5-14.2-16-16 11-1.8 14.2-5 16-16z"/></svg>
-
-      <a class="eyebrow" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest"><span class="dot"></span> Version 1.1 is here <span class="arrow" aria-hidden="true">→</span></a>
-      <h1>Handwritten notes,<br><em>completely <span class="mark">free<svg viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true"><path d="M6 27 C 70 17, 170 31, 294 19"/></svg></span>.</em></h1>
-      <p class="lead">A cozy notebook for iPad and Android. Write with a stylus, mark up PDFs and turn your notes into flashcards with AI.</p>
-
-      <div class="cta">
-        <div class="actions">
-          <a class="btn primary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
-            Download for Android
-          </a>
-          <a class="btn" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M10.5 18h3"/></svg>
-            Download for iPad
-          </a>
-        </div>
-        <p class="note"><svg viewBox="0 0 92 36" aria-hidden="true"><path d="M88 26C66 8 34 6 8 20M20 10L7 20.5 21 27"/></svg>no subscription, <br>pinky promise ♡</p>
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <a class="chip glass" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest"><span class="dot"></span>Version 1.1 for iPad and Android<span class="chev" aria-hidden="true">›</span></a>
+      <h1>Handwritten notes.<br>Completely <em class="mark">free<svg viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true"><path d="M6 26 C 70 16, 170 30, 294 18"/></svg></em>.</h1>
+      <p class="lead">Write with a stylus, mark up PDFs and turn your notes into flashcards with AI. No subscription, no account, no ads.</p>
+      <div class="actions" id="get">
+        <a class="btn primary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>Download for Android
+        </a>
+        <a class="btn secondary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M10.5 18h3"/></svg>Download for iPad
+        </a>
       </div>
-      <p class="small"><a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">Try it in your browser</a><span aria-hidden="true">·</span><a href="guide.html#ipad">How to install on iPad</a></p>
-    </section>
+      <p class="fine"><a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">Try it in your browser</a><span aria-hidden="true">·</span><a href="guide.html#ipad">How to install on iPad</a></p>
 
-    <section class="stage" aria-label="Quirk Notes on a tablet and a phone">
-      <div class="tablet">
-        <span class="tape a" aria-hidden="true"></span>
-        <div class="screen">
-          <video id="film" src="https://warriorbiswas-tech.github.io/Quirk-notes/media/quirk-notes.mp4" poster="https://warriorbiswas-tech.github.io/Quirk-notes/media/quirk-notes.jpg" width="1920" height="1080" autoplay muted loop playsinline preload="metadata" aria-label="Quirk Notes launch video: writing in a notebook, then studying with AI flashcards"></video>
-          <button id="sound" class="sound" type="button" aria-pressed="false">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="wave" d="M16 9a4.2 4.2 0 0 1 0 6M18.6 6.5a8 8 0 0 1 0 11"/></svg>
-            <span>Sound on</span>
-          </button>
-        </div>
-      </div>
-      <div class="phone">
-        <span class="tape b" aria-hidden="true"></span>
-        <img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/android-phone.png" alt="The Quirk Notes library on an Android phone, with three notebooks" width="495" height="1100" loading="lazy">
-      </div>
-      <p class="sticky" aria-hidden="true">ch. 4 · the cell<br>flashcards ready ✓</p>
-    </section>
-
-    <ul class="facts" aria-label="At a glance">
-      <li><strong>$0</strong><span>every feature</span></li>
-      <li><strong>0</strong><span>accounts to make</span></li>
-      <li><strong>3</strong><span>iPad, Android, browser</span></li>
-      <li><strong>1.1 GB</strong><span>on-device AI, offline</span></li>
-    </ul>
-
-    <div class="ribbon" aria-hidden="true">
-      <ul class="track">
-        <li><i style="--c:#FFD95E"></i>Fountain pen</li><li><i style="--c:#FF9DB5"></i>Highlighters</li><li><i style="--c:#9DB8FF"></i>PDF markup</li><li><i style="--c:#8EDDB5"></i>Flashcards</li><li><i style="--c:#C3B1FF"></i>Mind maps</li><li><i style="--c:#FFB48A"></i>Cornell paper</li><li><i style="--c:#FFD95E"></i>Stickers</li><li><i style="--c:#9DB8FF"></i>Works offline</li><li><i style="--c:#FF9DB5"></i>Dark mode</li><li><i style="--c:#8EDDB5"></i>Quizzes</li>
-      </ul>
-      <ul class="track">
-        <li><i style="--c:#FFD95E"></i>Fountain pen</li><li><i style="--c:#FF9DB5"></i>Highlighters</li><li><i style="--c:#9DB8FF"></i>PDF markup</li><li><i style="--c:#8EDDB5"></i>Flashcards</li><li><i style="--c:#C3B1FF"></i>Mind maps</li><li><i style="--c:#FFB48A"></i>Cornell paper</li><li><i style="--c:#FFD95E"></i>Stickers</li><li><i style="--c:#9DB8FF"></i>Works offline</li><li><i style="--c:#FF9DB5"></i>Dark mode</li><li><i style="--c:#8EDDB5"></i>Quizzes</li>
-      </ul>
-    </div>
-
-    <section id="features" class="section">
-      <header class="head reveal">
-        <p class="kicker">the good stuff</p>
-        <h2>Everything a good notebook needs.</h2>
-        <p class="sub">The tools you’d expect from a paid note app, with nothing locked behind a plan.</p>
-      </header>
-
-      <div class="bento">
-        <article class="card butter wide reveal">
-          <div class="copy">
-            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.2-4.4L15.5 5.3a2.1 2.1 0 0 1 3 3L8.2 18.6 4 20z"/><path d="M13.8 7l3.2 3.2"/></svg></span>
-            <h3>Ink that feels right</h3>
-            <p>Fountain pen, ballpoint, brush and pencil, with pressure, tapering and palm rejection.</p>
+      <div class="scene">
+        <p class="hand" aria-hidden="true">made for<br>your messy brain ♡</p>
+        <div class="tablet">
+          <div class="screen">
+            <video id="film" src="https://warriorbiswas-tech.github.io/Quirk-notes/media/quirk-notes.mp4" poster="https://warriorbiswas-tech.github.io/Quirk-notes/media/quirk-notes.jpg" width="1920" height="1080" autoplay muted loop playsinline preload="metadata" aria-label="Quirk Notes launch video: writing in a notebook, then studying with AI flashcards"></video>
+            <button id="sound" class="sound glass" type="button" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="wave" d="M16 9a4.2 4.2 0 0 1 0 6M18.6 6.5a8 8 0 0 1 0 11"/></svg>
+              <span>Sound on</span>
+            </button>
           </div>
-          <img class="shot" src="https://warriorbiswas-tech.github.io/Quirk-notes/media/editor.png" alt="A handwritten page about the cell, with the word nucleus highlighted" width="800" height="561" loading="lazy">
-        </article>
+        </div>
+        <div class="phone">
+          <img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/android-phone.png" alt="The Quirk Notes library on an Android phone, with three notebooks" width="495" height="1100" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-        <article class="card blush reveal">
-          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></span>
-          <h3>AI that studies with you</h3>
-          <p>Chat with your notes, then get summaries, flashcards, quizzes and mind maps.</p>
-          <div class="flip" aria-hidden="true">
+    <section class="numbers" aria-labelledby="numbers-title">
+      <h2 id="numbers-title" class="label">By the numbers</h2>
+      <dl>
+        <div><dt>Price, for every feature</dt><dd>$0</dd></div>
+        <div><dt>Accounts to make</dt><dd>0</dd></div>
+        <div><dt>Ways to use it</dt><dd>3<small>iPad, Android, browser</small></dd></div>
+        <div><dt>On-device AI, works offline</dt><dd>1.1<small>GB, one download</small></dd></div>
+      </dl>
+    </section>
+
+    <section id="write" class="chapter tint-sky reveal">
+      <div class="chapter-copy">
+        <p class="label">Write</p>
+        <h2>Ink that feels <em>like ink.</em></h2>
+        <p>Fountain pen, ballpoint, brush and pencil, with pressure, tapering and palm rejection. Lasso, shapes that snap into place, stickers, and a highlighter that never smudges.</p>
+      </div>
+      <figure class="chapter-media">
+        <img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/editor.png" alt="A handwritten page about the cell, with the word nucleus highlighted" width="800" height="561" loading="lazy">
+      </figure>
+    </section>
+
+    <section id="study" class="chapter tint-blush flip-side reveal">
+      <div class="chapter-copy">
+        <p class="label">Study</p>
+        <h2>Your notes, now a <em>study partner.</em></h2>
+        <p>Chat with a notebook, or turn it into the format you learn best from.</p>
+        <ul class="tools">
+          <li>Summaries</li><li>Key points</li><li>Flashcards</li><li>Quizzes</li><li>Mind maps</li><li>Teach back</li>
+        </ul>
+      </div>
+      <div class="chapter-media cards" aria-hidden="true">
+        <div class="card-stack">
+          <div class="flash ghost-2"></div>
+          <div class="flash ghost-1"></div>
+          <div class="flash main">
             <div class="flip-in">
-              <div class="face front"><small>question</small>Which part of the cell holds its DNA?</div>
-              <div class="face back"><small>answer</small>The nucleus ✦</div>
+              <div class="face front"><small>Question</small>Which part of the cell holds its DNA?</div>
+              <div class="face back"><small>Answer</small>The nucleus ✦</div>
             </div>
           </div>
-        </article>
-
-        <article class="card sky reveal">
-          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h4"/></svg></span>
-          <h3>PDFs you can write on</h3>
-          <p>Annotate textbooks and worksheets, search their text and export them again.</p>
-          <div class="pdf" aria-hidden="true">
-            <span class="tag">PDF</span>
-            <i class="l t"></i><i class="l hl"></i><i class="l"></i><i class="l s"></i><i class="l u"></i><i class="l"></i>
-            <svg viewBox="0 0 120 40"><path d="M8 26c14-14 26 8 40-4s22-12 34 0 18 6 30-6"/></svg>
-          </div>
-        </article>
-
-        <article class="card mint reveal">
-          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9.3h16M4 14.6h16M9.3 4v16M14.6 4v16"/></svg></span>
-          <h3>Paper for every subject</h3>
-          <p>Ruled, grid, dot, Cornell, music staff and planners, plus stickers and shapes that snap into place.</p>
-          <div class="papers" aria-hidden="true"><span class="ruled"></span><span class="grid"></span><span class="dots"></span><span class="cornell"></span></div>
-        </article>
-
-        <article class="card lilac reveal">
-          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l2.5 2.5M14 9l2 2"/></svg></span>
-          <h3>Your key, or no key</h3>
-          <p>Add your own free NVIDIA key for big online models, or download one that runs on your device.</p>
-          <ul class="modes" aria-hidden="true">
-            <li><b>Online</b><span>your NVIDIA key</span><i class="on"></i></li>
-            <li><b>On-device</b><span>1.1 GB, offline</span><i class="on"></i></li>
-          </ul>
-        </article>
-
-        <article class="card peach wide reveal">
-          <div class="copy">
-            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg></span>
-            <h3>Your notes stay yours</h3>
-            <p>They live on your device, with no account to make. Nothing goes to NVIDIA unless you add a key, and you can back everything up to one file.</p>
-          </div>
-          <ul class="chips" aria-hidden="true">
-            <li>No account</li>
-            <li>Stored on your device</li>
-            <li>One-file backup</li>
-            <li>Works offline</li>
-          </ul>
-        </article>
-
-        <article class="card free reveal">
-          <p class="price">$0</p>
-          <h3>Every feature included</h3>
-          <p>No trial, no paywall, no ads.</p>
-        </article>
+        </div>
+        <p class="caption">Sample card. Answers come from your own notes.</p>
       </div>
     </section>
 
-    <section class="section">
-      <header class="head reveal">
-        <p class="kicker">three little steps</p>
-        <h2>From blank page to study set.</h2>
-      </header>
-      <ol class="steps">
-        <li class="reveal"><span class="num">1</span><h3>Write</h3><p>Pick a paper, grab a pen and take notes the way you would on paper.</p></li>
-        <li class="reveal"><span class="num">2</span><h3>Mark up</h3><p>Import your PDFs and highlight, scribble and search right on the page.</p></li>
-        <li class="reveal"><span class="num">3</span><h3>Study</h3><p>Turn a notebook into flashcards, quizzes and mind maps in a tap.</p></li>
-      </ol>
+    <section class="tiles" aria-label="More features">
+      <article class="tile tint-lilac reveal">
+        <p class="label">Read</p>
+        <h3>PDFs you can write on.</h3>
+        <p>Annotate textbooks and worksheets, search their text and export them again.</p>
+        <div class="pdf" aria-hidden="true">
+          <span class="tag">PDF</span>
+          <i class="l t"></i><i class="l hl"></i><i class="l"></i><i class="l s"></i><i class="l u"></i><i class="l"></i>
+          <svg viewBox="0 0 120 40"><path d="M8 26c14-14 26 8 40-4s22-12 34 0 18 6 30-6"/></svg>
+        </div>
+      </article>
+      <article class="tile tint-mint reveal">
+        <p class="label">Paper</p>
+        <h3>A page for every subject.</h3>
+        <p>Ruled, grid, dot, Cornell, music staff and planners.</p>
+        <div class="papers" aria-hidden="true"><span class="ruled"></span><span class="grid"></span><span class="dots"></span><span class="cornell"></span></div>
+      </article>
+      <article class="tile tint-butter reveal">
+        <p class="label">AI, your way</p>
+        <h3>Your key, or no key.</h3>
+        <p>Add your own free NVIDIA key for large online models, or download one that runs on your device. With both, the on-device model steps in if the online one fails.</p>
+        <ul class="modes" aria-hidden="true">
+          <li><b>Online</b><span>your NVIDIA key</span><i></i></li>
+          <li><b>On-device</b><span>1.1 GB, offline</span><i></i></li>
+        </ul>
+      </article>
+      <article class="tile tint-peach reveal">
+        <p class="label">Privacy</p>
+        <h3>Your notes stay yours.</h3>
+        <p>They live on your device, with no account to make. Nothing goes to NVIDIA unless you add a key, and one file backs everything up.</p>
+        <ul class="badges" aria-hidden="true"><li>No account</li><li>On your device</li><li>One-file backup</li><li>Offline</li></ul>
+      </article>
     </section>
 
-    <section id="devices" class="section">
-      <header class="head reveal">
-        <p class="kicker">pick your screen</p>
-        <h2>One notebook, every device.</h2>
-        <p class="sub">A free alternative to paid note apps like GoodNotes and Notability, with the gaps stated plainly.</p>
+    <section id="devices" class="section reveal">
+      <header class="section-head">
+        <p class="label">Devices</p>
+        <h2>One notebook.<br><em>Every screen.</em></h2>
+        <p>A free alternative to paid note apps like GoodNotes and Notability, with the gaps stated plainly.</p>
       </header>
-      <div class="table reveal">
+      <div class="table">
         <table>
-          <thead><tr><th><span class="sr">Feature</span></th><th>iPad</th><th>Android</th><th>Browser</th></tr></thead>
+          <thead><tr><th scope="col"><span class="sr">Feature</span></th><th scope="col">iPad</th><th scope="col">Android</th><th scope="col">Browser</th></tr></thead>
           <tbody>
-            <tr><th>Handwriting and stylus</th><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td></tr>
-            <tr><th>PDF annotation</th><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td></tr>
-            <tr><th>AI study tools</th><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td><td><span class="n">No</span></td></tr>
-            <tr><th>On-device AI, one 1.1 GB download</th><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td><td><span class="n">No</span></td></tr>
-            <tr><th>Recording with live transcript</th><td><span class="y">Yes</span></td><td><span class="s">Not yet</span></td><td><span class="n">No</span></td></tr>
-            <tr><th>Sync</th><td><span class="y">iCloud Drive</span></td><td><span class="s">Not yet</span></td><td><span class="n">No</span></td></tr>
+            <tr><th scope="row">Handwriting and stylus</th><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td></tr>
+            <tr><th scope="row">PDF annotation</th><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td></tr>
+            <tr><th scope="row">AI study tools</th><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td><td><span class="n">No</span></td></tr>
+            <tr><th scope="row">On-device AI, one 1.1 GB download</th><td><span class="y">Yes</span></td><td><span class="y">Yes</span></td><td><span class="n">No</span></td></tr>
+            <tr><th scope="row">Recording with live transcript</th><td><span class="y">Yes</span></td><td><span class="s">Not yet</span></td><td><span class="n">No</span></td></tr>
+            <tr><th scope="row">Sync</th><td><span class="y">iCloud Drive</span></td><td><span class="s">Not yet</span></td><td><span class="n">No</span></td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section id="faq" class="section faq">
-      <header class="head reveal">
-        <p class="kicker">ask away</p>
-        <h2>Little questions.</h2>
-        <p class="sub">Something else? <a href="https://github.com/warriorbiswas-tech/Quirk-notes/issues">Ask on GitHub</a>.</p>
+    <section id="faq" class="section faq reveal">
+      <header class="section-head">
+        <p class="label">FAQ</p>
+        <h2>Good <em>questions.</em></h2>
+        <p>Something else? <a href="https://github.com/warriorbiswas-tech/Quirk-notes/issues">Ask on GitHub</a>.</p>
       </header>
-      <div class="qs reveal">
+      <div class="qs">
         <details>
           <summary>Is it really free?</summary>
           <p>Yes. Every feature is included, with no subscription, ads or account. NVIDIA’s free key has its own limits, and the on-device model has none.</p>
@@ -251,43 +217,47 @@
       </div>
     </section>
 
-    <section class="cover reveal">
-      <span class="band" aria-hidden="true"></span>
-      <div class="label">
-        <h2>Start your first notebook.</h2>
-        <p>free today, free tomorrow ♡</p>
-      </div>
+    <section class="finale reveal">
+      <div class="aurora soft" aria-hidden="true"><i></i><i></i><i></i></div>
+      <h2>Start your first<br><em>notebook.</em></h2>
+      <p>Free on iPad, Android and the web.</p>
       <div class="actions">
-        <a class="btn light" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest">Get Quirk Notes</a>
-        <a class="btn ghost" href="https://github.com/warriorbiswas-tech/Quirk-notes">View on GitHub</a>
+        <a class="btn primary" href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest">Get Quirk Notes</a>
+        <a class="btn secondary" href="https://github.com/warriorbiswas-tech/Quirk-notes">View on GitHub</a>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="foot-brand">
-      <a class="brand" href="./"><img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="" width="26" height="26"> Quirk Notes</a>
+      <a class="brand" href="./"><img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="" width="24" height="24"><span>Quirk Notes</span></a>
       <p>Free handwriting notes for iPad and Android.</p>
     </div>
-    <div class="foot-col">
+    <nav class="foot-col" aria-label="Download">
       <h4>Download</h4>
       <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">Android</a>
       <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">iPad</a>
       <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">Browser</a>
-    </div>
-    <div class="foot-col">
+    </nav>
+    <nav class="foot-col" aria-label="Help">
       <h4>Help</h4>
       <a href="guide.html">Guide</a>
       <a href="guide.html#ai">Set up AI</a>
       <a href="https://github.com/warriorbiswas-tech/Quirk-notes/issues">Report a problem</a>
-    </div>
-    <div class="foot-col">
+    </nav>
+    <nav class="foot-col" aria-label="Project">
       <h4>Project</h4>
       <a href="https://github.com/warriorbiswas-tech/Quirk-notes">GitHub</a>
       <a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases">Releases</a>
-    </div>
-    <p class="made">made with ♡ by <a href="https://github.com/warriorbiswas-tech">warriorbiswas-tech</a></p>
+    </nav>
+    <p class="made">Made with ♡ by <a href="https://github.com/warriorbiswas-tech">warriorbiswas-tech</a></p>
   </footer>
+
+  <div class="dock glass" id="dock">
+    <img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="" width="34" height="34">
+    <p><strong>Quirk Notes</strong><span>Free for iPad and Android</span></p>
+    <a class="btn primary small" href="#get">Download</a>
+  </div>
 
   <script>
     (function () {
@@ -303,6 +273,9 @@
         }
       });
 
+      var dock = document.getElementById('dock');
+      var hero = document.querySelector('.hero .actions');
+      var finale = document.querySelector('.finale');
       var items = document.querySelectorAll('.reveal');
       if (!('IntersectionObserver' in window)) {
         items.forEach(function (el) { el.classList.add('in'); });
@@ -315,8 +288,13 @@
             io.unobserve(e.target);
           }
         });
-      }, { rootMargin: '0px 0px -6% 0px' });
+      }, { rootMargin: '0px 0px -8% 0px' });
       items.forEach(function (el) { io.observe(el); });
+
+      var heroVisible = true, finaleVisible = false;
+      function update() { dock.classList.toggle('show', !heroVisible && !finaleVisible); }
+      new IntersectionObserver(function (e) { heroVisible = e[0].isIntersecting || e[0].boundingClientRect.top > 0; update(); }).observe(hero);
+      new IntersectionObserver(function (e) { finaleVisible = e[0].isIntersecting; update(); }).observe(finale);
     })();
   </script>
 </body>
