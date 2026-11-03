@@ -62,6 +62,10 @@ The [guide](https://quirk-notes.vercel.app/guide.html) covers installing, settin
   <img src="site/media/android-phone.png" width="190" alt="Quirk Notes on an Android phone">
 </p>
 
+## Sister app: Margin
+
+[Margin](https://github.com/warriorbiswas-tech/margin-app) is made by the same developer for the same job: free handwritten notes, PDF markup and AI study tools, with no account and no subscription. It is written natively for iPad and Android, and its AI can run entirely on your device. [See Margin](https://margin-notes-app.vercel.app).
+
 ## Web version
 
 The rest of this page is about the installable web version, in this folder, which the Android app is built from. It needs no App Store, Mac or Apple ID, and your notes stay on your device.
