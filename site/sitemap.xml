@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url>
-    <loc>https://quirknotes.vercel.app/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <video:video>
-      <video:thumbnail_loc>https://quirknotes.vercel.app/media/brag.jpg</video:thumbnail_loc>
-      <video:title>Quirk Notes Launch Film — Free Handwriting &amp; AI Study App</video:title>
-      <video:description>Official 21-second product showcase of Quirk Notes featuring real stylus handwriting on iPad/Android and instant AI study flashcards with zero subscriptions.</video:description>
-      <video:content_loc>https://quirknotes.vercel.app/media/brag.mp4</video:content_loc>
-      <video:duration>21</video:duration>
-      <video:publication_date>2026-11-01T23:00:00+05:30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-  </url>
-  <url>
-    <loc>https://quirknotes.vercel.app/guide.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://quirk-notes.vercel.app/</loc></url>
+  <url><loc>https://quirk-notes.vercel.app/guide.html</loc></url>
 </urlset>

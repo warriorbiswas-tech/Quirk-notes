@@ -3,167 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installation &amp; Setup Guide — Quirk Notes</title>
-  <meta name="description" content="Step-by-step guide to install Quirk Notes on Android and iPad, set up AI study tools with a free NVIDIA NIM key or offline local model, and backup notes.">
-  <link rel="canonical" href="https://quirknotes.vercel.app/guide.html">
-  <meta name="theme-color" content="#FBF9F5">
+  <title>Quirk Notes guide: install on iPad and Android, set up AI</title>
+  <meta name="description" content="How to install Quirk Notes on Android and iPad, set up AI study tools with a free NVIDIA key or an on-device model, and back up your notes.">
+  <link rel="canonical" href="https://quirk-notes.vercel.app/guide.html">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .guide-wrap {
-      max-width: 760px;
-      margin: 48px auto 96px;
-    }
-    .guide-doc-card {
-      background: var(--surface);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--r-xl);
-      padding: 36px;
-      margin-bottom: 28px;
-      box-shadow: var(--shadow-card);
-    }
-    .guide-doc-card h2 {
-      margin-top: 0;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--ink-primary);
-    }
-    .guide-doc-card h3 {
-      font-size: 16px;
-      margin-top: 24px;
-      color: var(--ink-primary);
-    }
-    ol, ul {
-      padding-left: 20px;
-      color: var(--ink-secondary);
-      line-height: 1.7;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    li strong {
-      color: var(--ink-primary);
-    }
-    code {
-      background: var(--surface-subtle);
-      border: 1px solid var(--border-hairline);
-      padding: 2px 7px;
-      border-radius: 6px;
-      font-size: 13.5px;
-      color: var(--ink-primary);
-    }
-    pre {
-      background: var(--surface-subtle);
-      border: 1px solid var(--border-hairline);
-      border-radius: var(--r-sm);
-      padding: 14px 18px;
-      overflow-x: auto;
-      font-size: 13px;
-    }
-    .lead-text {
-      font-size: 17px;
-      color: var(--ink-secondary);
-      margin-bottom: 36px;
-    }
-  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="./">
-        <img class="brand-logo" src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="Quirk Notes Icon" width="28" height="28">
-        <span class="brand-name">Quirk Notes</span>
-      </a>
-
-      <nav class="site-nav">
-        <a class="nav-link" href="./">Home</a>
-        <a class="nav-link" href="./#film">Film</a>
-        <a class="nav-link" href="./#workbench">Interactive</a>
-        <a class="nav-link" href="./#capabilities">Features</a>
-        <a class="nav-link" href="./#builder">Builder</a>
-      </nav>
-
-      <div class="header-actions">
-        <a class="btn-github" href="https://github.com/warriorbiswas-tech/Quirk-notes" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-          <span>GitHub</span>
-        </a>
-      </div>
-    </div>
+  <header class="bar">
+    <a class="brand" href="./"><img src="https://warriorbiswas-tech.github.io/Quirk-notes/media/logo.png" alt="" width="28" height="28"> Quirk Notes</a>
+    <nav>
+      <a href="guide.html">Guide</a>
+      <a href="https://github.com/warriorbiswas-tech/Quirk-notes">GitHub</a>
+    </nav>
   </header>
 
-  <main class="guide-wrap">
-    <h1 style="font-size: 38px; font-weight: 700; letter-spacing: -0.03em; margin: 0 0 12px; color: var(--ink-primary);">Installation &amp; Setup Guide</h1>
-    <p class="lead-text">Everything you need to install Quirk Notes on iPad, Android, or in your browser, and set up local or cloud AI study tools.</p>
+  <main class="guide">
+    <h1>Guide</h1>
 
-    <section class="guide-doc-card" id="android">
+    <section id="android">
       <h2>Install on Android</h2>
-      <p style="color: var(--ink-secondary);">Compatible with 64-bit devices on Android 8 or later (tablets and phones).</p>
+      <p>You need a 64-bit device on Android 8 or later.</p>
       <ol>
-        <li><a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk" style="font-weight: 600; text-decoration: underline;">Download Quirk-Notes.apk</a> directly onto your Android device.</li>
-        <li>Open the downloaded APK. If prompted by Android, tap <strong>Settings</strong> and allow your browser to install unknown apps.</li>
-        <li>Tap <strong>Install</strong>, then launch <strong>Quirk Notes</strong> from your home screen or app drawer.</li>
+        <li><a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.apk">Download Quirk-Notes.apk</a> on your device.</li>
+        <li>Open the file. If Android asks, allow your browser to install apps.</li>
+        <li>Open <strong>Quirk Notes</strong> from your home screen.</li>
       </ol>
-      <p style="color: var(--ink-tertiary); font-size: 14px;">To update in the future, simply install the newer APK over the existing one. Your notebooks and notes will be preserved.</p>
+      <p>To update, install the newer file over the old one. Your notes stay.</p>
     </section>
 
-    <section class="guide-doc-card" id="ipad">
-      <h2>Install on iPad (iPadOS 17+)</h2>
-      <p style="color: var(--ink-secondary);">Requires iPadOS 17 or later, an Apple Pencil or capacitive stylus, and a Mac or PC for initial sideloading.</p>
+    <section id="ipad">
+      <h2>Install on iPad</h2>
+      <p>You need iPadOS 17 or later, and a Windows PC or Mac for the install.</p>
       <ol>
-        <li><a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa" style="font-weight: 600; text-decoration: underline;">Download Quirk-Notes.ipa</a> onto your computer.</li>
-        <li>Install <a href="https://sideloadly.io" target="_blank" rel="noopener" style="text-decoration: underline;">Sideloadly</a> (Mac or Windows) or <a href="https://altstore.io" target="_blank" rel="noopener" style="text-decoration: underline;">AltStore</a>.</li>
-        <li>Connect your iPad via USB cable to your computer.</li>
-        <li>Drag <code>Quirk-Notes.ipa</code> into Sideloadly, enter your Apple ID credentials, and click <strong>Start</strong>.</li>
-        <li>On your iPad, navigate to <strong>Settings › General › VPN &amp; Device Management</strong> and tap <strong>Trust</strong> on your developer certificate.</li>
+        <li><a href="https://github.com/warriorbiswas-tech/Quirk-notes/releases/latest/download/Quirk-Notes.ipa">Download Quirk-Notes.ipa</a> on your computer.</li>
+        <li>Install <a href="https://sideloadly.io">Sideloadly</a> or <a href="https://altstore.io">AltStore</a>, and connect your iPad.</li>
+        <li>Open the file with it and sign in with your Apple ID.</li>
       </ol>
-      <p style="color: var(--ink-tertiary); font-size: 14px;">Note: With a free Apple ID, personal developer certificates renew every 7 days via Wi-Fi or cable.</p>
+      <p>With a free Apple ID, the app has to be reinstalled every 7 days.</p>
     </section>
 
-    <section class="guide-doc-card" id="web">
-      <h2>Use in Browser (PWA)</h2>
-      <p style="color: var(--ink-secondary);">For Chromebooks, desktop PCs, or instant handwriting on any tablet without installation.</p>
-      <ol>
-        <li>Open the <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/" target="_blank" rel="noopener" style="font-weight: 600; text-decoration: underline;">Quirk Notes Web Edition</a>.</li>
-        <li>In Safari (iPad), tap <strong>Share</strong> and select <strong>Add to Home Screen</strong>. In Chrome/Brave, tap the install icon in the address bar.</li>
-        <li>The web app launches full-screen and works 100% offline via service worker caching.</li>
-      </ol>
+    <section id="web">
+      <h2>Use it in a browser</h2>
+      <p>On any iPad, <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">open the web version</a> in Safari, tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>. It runs full screen and works offline. It has writing and PDFs, but no AI, recording or sync.</p>
     </section>
 
-    <section class="guide-doc-card" id="ai-setup">
-      <h2>Configuring AI Study Tools</h2>
-      <p style="color: var(--ink-secondary);">Quirk Notes gives you two private options for study flashcards, summaries, and quizzes:</p>
-      
-      <h3>Option 1: Free NVIDIA NIM Online Key (Fastest &amp; Highest Quality)</h3>
+    <section id="ai">
+      <h2>Set up AI</h2>
+      <p>Use either option, or both. With both, your key answers first and the on-device model takes over if that fails.</p>
+      <h3>With a free NVIDIA key</h3>
       <ol>
-        <li>Visit <a href="https://build.nvidia.com" target="_blank" rel="noopener" style="text-decoration: underline;">build.nvidia.com</a> and sign up for a free developer account.</li>
-        <li>Generate a free personal API key (includes 1,000 free monthly LLM calls).</li>
-        <li>Open Quirk Notes, go to <strong>Settings › Online AI</strong>, and paste your key.</li>
+        <li>Get a free key from <a href="https://build.nvidia.com">build.nvidia.com</a>.</li>
+        <li>Add it in Settings. On Android that's <strong>Settings › AI › Set up</strong>, and on iPad <strong>Settings › Online AI</strong>.</li>
       </ol>
+      <p>Your key is stored on your device. The notes the study tools work on are sent to NVIDIA.</p>
+      <h3>With the on-device model</h3>
+      <p>In the same place, tap <strong>Download model</strong>. It's a one-time 1.1 GB download, best on Wi-Fi, and nothing leaves your device afterwards. On Android it needs about 4 GB of memory, and answers are slower than online.</p>
+      <h3>Study with your notes</h3>
+      <p>On Android, open a notebook, tap <strong>⋯</strong> and choose <strong>Study with AI</strong> for chat, summaries, key points, flashcards, quizzes, mind maps and teach back. The handwriting reader downloads once the first time, so connect to the internet for that.</p>
+    </section>
 
-      <h3>Option 2: 100% Offline On-Device Model (Zero Internet Needed)</h3>
-      <ol>
-        <li>In Quirk Notes, open <strong>Settings › On-Device AI</strong>.</li>
-        <li>Tap <strong>Download Local Model</strong> (1.1 GB one-time download: quantized Qwen 1.7B).</li>
-        <li>Once downloaded, all note summaries, quizzes, and flashcards run directly on your iPad or Android processor without a single packet leaving your device.</li>
-      </ol>
+    <section id="backup">
+      <h2>Back up your notes</h2>
+      <p>Notes live on your device, so uninstalling the app or clearing its data removes them. In <strong>Settings › Storage &amp; backup</strong>, tap <strong>Create backup</strong> to save everything as one file, and <strong>Restore from backup</strong> to bring it back.</p>
+    </section>
+
+    <section id="docker">
+      <h2>Host the web version yourself</h2>
+      <pre><code>docker run -p 8080:80 ghcr.io/warriorbiswas-tech/quirk-notes</code></pre>
+      <p>Then open <code>http://localhost:8080</code>.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <span class="footer-copy">Quirk Notes &nbsp;·&nbsp; Crafted by <a href="https://warriorbiswas.vercel.app/" target="_blank" rel="noopener">Arpan Biswas</a></span>
-      </div>
-      <div class="footer-nav">
-        <a href="./#builder">Builder</a>
-        <a href="https://warriorbiswas.vercel.app/" target="_blank" rel="noopener">warriorbiswas.vercel.app</a>
-        <a href="guide.html">Installation</a>
-        <a href="https://warriorbiswas-tech.github.io/Quirk-notes/app/">Web App</a>
-        <a href="https://github.com/warriorbiswas-tech/Quirk-notes">GitHub</a>
-      </div>
-    </div>
+  <footer>
+    <a href="./">Home</a>
+    <a href="https://github.com/warriorbiswas-tech/Quirk-notes">Source on GitHub</a>
+    <a href="https://github.com/warriorbiswas-tech/Quirk-notes/issues">Report a problem</a>
   </footer>
 </body>
 </html>
